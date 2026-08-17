@@ -248,14 +248,12 @@ if (!function_exists('iptv_plan_currency_format')) {
 
         $symbols = array(
             'usd' => '$',
-            'eur' => '€',
-            'sek' => 'kr',
-            'nok' => 'kr',
-            'dkk' => 'kr',
-            'isk' => 'kr',
+            'cad' => '$',
         );
 
-        $before = in_array($currency, array('usd', 'eur'), true);
+        // Both remaining currencies are dollar-denominated, so the symbol always
+        // leads; the position stays configurable for whatever gets added next.
+        $before = in_array($currency, array('usd', 'cad'), true);
 
         return array(
             'symbol'   => isset($symbols[$currency]) ? $symbols[$currency] : '$',

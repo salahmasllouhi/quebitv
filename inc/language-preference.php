@@ -77,13 +77,13 @@ function nordictv_lang_slugs()
  */
 function nordictv_lang_by_currency()
 {
+    // French is the site's primary language and English its second; both are
+    // Quebec-facing, so the pair is split by the currency a visitor is most
+    // likely to pay in rather than by country: CAD for the local French market,
+    // USD for the English-language international one.
     $map = apply_filters('nordictv_lang_by_currency', array(
+        'cad' => 'fr',
         'usd' => 'en',
-        'sek' => 'sv',
-        'nok' => 'no',
-        'dkk' => 'dk',
-        'eur' => 'fi',
-        'isk' => 'is',
     ));
 
     $active = nordictv_lang_slugs();

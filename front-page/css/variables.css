@@ -18,20 +18,20 @@
 
     /* Legacy --violet-* names, kept so older rules keep resolving.
        They point at the brand blue scale, not violet. */
-    --violet-500: #1089F2;
-    --violet-600: #0B70D0;
-    --violet-700: #095BAA;
+    --violet-500: #fc6c34;
+    --violet-600: #e85519;
+    --violet-700: #c04412;
 
     /* Amber/Gold - Secondary Accent */
     --amber-400: #FBBF24;
     --amber-500: #F59E0B;
 
-    /* Brand blue scale, derived from #1089F2 */
+    /* Brand blue scale, derived from #fc6c34 */
     --blue-50: #F2F8FE;
-    --blue-100: #E2EFFD;
-    --blue-500: #1089F2;
-    --blue-600: #0B70D0;
-    --blue-700: #07447E;
+    --blue-100: #ffe9df;
+    --blue-500: #fc6c34;
+    --blue-600: #e85519;
+    --blue-700: #8f320c;
 
     /* Status Colors */
     --green-500: #22c55e;

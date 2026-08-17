@@ -19,11 +19,7 @@
 
 $currency_codes = array(
     'usd' => 'USD',
-    'eur' => 'EUR',
-    'sek' => 'SEK',
-    'nok' => 'NOK',
-    'dkk' => 'DKK',
-    'isk' => 'ISK',
+    'cad' => 'CAD',
 );
 
 $currency = iptv_plan_currency();

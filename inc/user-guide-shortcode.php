@@ -35,7 +35,7 @@ function render_user_guide_shortcode($atts)
             --ug-bg: #FFFFFF;
             --ug-tint: #F2F8FE;
             --ug-text: #1F2937;
-            --ug-accent: #1089F2;
+            --ug-accent: #fc6c34;
             --ug-border: #E5E7EB;
         }
 

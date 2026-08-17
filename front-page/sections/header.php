@@ -24,18 +24,17 @@ if (empty($site_slug)) {
     $request_uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
     $path_parts = explode('/', trim($request_uri, '/'));
     $first_segment = isset($path_parts[0]) ? $path_parts[0] : '';
-    if (in_array($first_segment, array('sv', 'no', 'dk', 'fi', 'is'))) {
+    if (in_array($first_segment, array('fr'))) {
         $site_slug = $first_segment;
     }
 }
 
-// Map subsite to its language label (flag + native language name)
+// Map subsite to its language label (flag + native language name). French is
+// the site's primary language and English its second, both Quebec-facing. The
+// flag is Canada's, not France's or Quebec's: the CA-QC subdivision flag is not
+// in Unicode's RGI set and renders as a blank flag on most platforms.
 $site_language_map = array(
-    'sv' => array('flag' => '🇸🇪', 'name' => 'Svenska'),
-    'no' => array('flag' => '🇳🇴', 'name' => 'Norsk'),
-    'dk' => array('flag' => '🇩🇰', 'name' => 'Dansk'),
-    'fi' => array('flag' => '🇫🇮', 'name' => 'Suomi'),
-    'is' => array('flag' => '🇮🇸', 'name' => 'Íslenska'),
+    'fr' => array('flag' => '🇨🇦', 'name' => 'Français'),
 );
 
 // Get default based on current subsite (main site = English)
@@ -108,23 +107,11 @@ $nav_guide = function_exists('iptv_page_url')
                     </svg>
                 </button>
                 <div class="country-dropdown" id="countryDropdown">
+                    <div class="country-option" data-currency="cad" data-symbol="$" data-flag="🇨🇦">
+                        <span class="country-flag">🇨🇦</span><span>Français</span>
+                    </div>
                     <div class="country-option" data-currency="usd" data-symbol="$" data-flag="🇺🇸">
                         <span class="country-flag">🇺🇸</span><span>English</span>
-                    </div>
-                    <div class="country-option" data-currency="sek" data-symbol="kr" data-flag="🇸🇪">
-                        <span class="country-flag">🇸🇪</span><span>Svenska</span>
-                    </div>
-                    <div class="country-option" data-currency="nok" data-symbol="kr" data-flag="🇳🇴">
-                        <span class="country-flag">🇳🇴</span><span>Norsk</span>
-                    </div>
-                    <div class="country-option" data-currency="dkk" data-symbol="kr" data-flag="🇩🇰">
-                        <span class="country-flag">🇩🇰</span><span>Dansk</span>
-                    </div>
-                    <div class="country-option" data-currency="eur" data-symbol="€" data-flag="🇫🇮">
-                        <span class="country-flag">🇫🇮</span><span>Suomi</span>
-                    </div>
-                    <div class="country-option" data-currency="isk" data-symbol="kr" data-flag="🇮🇸">
-                        <span class="country-flag">🇮🇸</span><span>Íslenska</span>
                     </div>
                 </div>
             </div>
@@ -161,12 +148,8 @@ $nav_guide = function_exists('iptv_page_url')
     <div class="mobile-language-selector">
         <span class="mobile-language-label"><?php echo esc_html(iptv_text('nav_region_label', 'Language')); ?></span>
         <div class="mobile-language-options">
+            <button class="mobile-lang-btn" data-currency="cad" onclick="redirectToRegion('cad')">🇨🇦 Français</button>
             <button class="mobile-lang-btn" data-currency="usd" onclick="redirectToRegion('usd')">🇺🇸 English</button>
-            <button class="mobile-lang-btn" data-currency="sek" onclick="redirectToRegion('sek')">🇸🇪 Svenska</button>
-            <button class="mobile-lang-btn" data-currency="nok" onclick="redirectToRegion('nok')">🇳🇴 Norsk</button>
-            <button class="mobile-lang-btn" data-currency="dkk" onclick="redirectToRegion('dkk')">🇩🇰 Dansk</button>
-            <button class="mobile-lang-btn" data-currency="eur" onclick="redirectToRegion('eur')">🇫🇮 Suomi</button>
-            <button class="mobile-lang-btn" data-currency="isk" onclick="redirectToRegion('isk')">🇮🇸 Íslenska</button>
         </div>
     </div>
 

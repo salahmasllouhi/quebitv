@@ -7,12 +7,12 @@
 :root {
     /* Primary Blues - Trust & Professionalism */
     --color-navy: #0F2847;
-    --color-indigo: #095BAA;
-    --color-indigo-hover: #1089F2;
+    --color-indigo: #c04412;
+    --color-indigo-hover: #fc6c34;
     
     /* Accent Colors - Energy & Action */
-    --color-teal: #1089F2;
-    --color-teal: #55A7F6;
+    --color-teal: #fc6c34;
+    --color-teal: #fda37a;
     --color-coral: #FF6B4A;
     --color-gold: #FFB830;
     

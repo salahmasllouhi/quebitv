@@ -54,11 +54,7 @@ class IPTV_Rates_API
      * ones IPTV_Currency_Settings stores rates under.
      */
     private static $symbols = array(
-        'eur' => 'EUR',
-        'sek' => 'SEK',
-        'nok' => 'NOK',
-        'dkk' => 'DKK',
-        'isk' => 'ISK',
+        'cad' => 'CAD',
     );
 
     public static function boot()

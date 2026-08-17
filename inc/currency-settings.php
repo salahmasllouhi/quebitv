@@ -15,14 +15,12 @@ class IPTV_Currency_Settings
     /** Where the computed price matrix is stored. See get_price_table(). */
     const PRICE_TABLE_OPTION = 'iptv_price_table';
 
-    // Currencies (USD is base, others are calculated)
+    // Currencies (USD is base, others are calculated). CAD is the local Quebec
+    // currency and pairs with French; USD stays the base and pairs with English.
+    // See nordictv_lang_by_currency() in inc/language-preference.php.
     private $currencies = array(
         'usd' => array('name' => 'US Dollar', 'symbol' => '$', 'flag' => '🇺🇸', 'code' => 'USD', 'decimals' => true),
-        'eur' => array('name' => 'Euro (Finland)', 'symbol' => '€', 'flag' => '🇫🇮', 'code' => 'EUR', 'decimals' => true),
-        'sek' => array('name' => 'Swedish Krona', 'symbol' => 'kr', 'flag' => '🇸🇪', 'code' => 'SEK', 'decimals' => false),
-        'nok' => array('name' => 'Norwegian Krone', 'symbol' => 'kr', 'flag' => '🇳🇴', 'code' => 'NOK', 'decimals' => false),
-        'dkk' => array('name' => 'Danish Krone', 'symbol' => 'kr', 'flag' => '🇩🇰', 'code' => 'DKK', 'decimals' => false),
-        'isk' => array('name' => 'Icelandic Króna', 'symbol' => 'kr', 'flag' => '🇮🇸', 'code' => 'ISK', 'decimals' => false),
+        'cad' => array('name' => 'Canadian Dollar', 'symbol' => '$', 'flag' => '🇨🇦', 'code' => 'CAD', 'decimals' => true),
     );
 
     private $durations = array(
@@ -39,13 +37,10 @@ class IPTV_Currency_Settings
         '4_devices' => '4 Devices',
     );
 
-    // Default conversion rates (USD to X)
+    // Default conversion rates (USD to X). Only a starting point: the live rate
+    // is fetched by inc/currency-rates-api.php and stored in iptv_conversion_rates.
     private $default_rates = array(
-        'eur' => 0.92,
-        'sek' => 10.5,
-        'nok' => 10.8,
-        'dkk' => 6.9,
-        'isk' => 138,
+        'cad' => 1.37,
     );
 
     // Default USD prices (prefilled)
@@ -104,12 +99,10 @@ class IPTV_Currency_Settings
         $parts = explode('/', $path);
         $site_slug = end($parts);
 
+        // Multisite subsite slug => its currency. The Nordic subsites are gone;
+        // 'ca' is here so a Quebec subsite, if one is ever spun up, bills in CAD.
         $currency_map = array(
-            'se' => 'sek',
-            'no' => 'nok',
-            'dk' => 'dkk',
-            'fi' => 'eur',
-            'is' => 'isk'
+            'ca' => 'cad',
         );
 
         return isset($currency_map[$site_slug]) ? $currency_map[$site_slug] : 'usd';

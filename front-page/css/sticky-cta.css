@@ -94,7 +94,7 @@ body .activity-ticker {
     margin: 0 auto 8px;
     padding: 4px 12px;
     border-radius: var(--dv2-radius-pill, 999px);
-    background: var(--dv2-surface-tint, #e2effd);
+    background: var(--dv2-surface-tint, #ffe9df);
     font-family: var(--dv2-font-body, 'Space Grotesk', sans-serif);
     font-size: 12.5px;
     line-height: 1.2;
@@ -116,7 +116,7 @@ body .activity-ticker {
 
 .dv2-sticky-timer-value {
     font-weight: 700;
-    color: var(--dv2-blue-700, #095baa);
+    color: var(--dv2-blue-700, #c04412);
     /* Fixed-width digits so the row does not twitch once a second. */
     font-variant-numeric: tabular-nums;
     font-feature-settings: "tnum";
@@ -151,14 +151,14 @@ body .activity-ticker {
 }
 
 .dv2-sticky-btn--primary {
-    background: var(--dv2-blue, #1089f2);
+    background: var(--dv2-blue, #fc6c34);
     color: #ffffff;
     box-shadow: 0 8px 22px rgba(16, 137, 242, 0.28);
 }
 
 .dv2-sticky-btn--ghost {
-    background: var(--dv2-surface-tint, #e2effd);
-    color: var(--dv2-blue-700, #095baa);
+    background: var(--dv2-surface-tint, #ffe9df);
+    color: var(--dv2-blue-700, #c04412);
     border: 1px solid var(--dv2-border-strong, rgba(16, 137, 242, 0.30));
 }
 
@@ -167,24 +167,24 @@ body .activity-ticker {
    as a stuck highlight. Touch feedback is :active, which always releases. */
 @media (hover: hover) and (pointer: fine) {
     .dv2-sticky-btn--primary:hover {
-        background: var(--dv2-blue-600, #0b70d0);
+        background: var(--dv2-blue-600, #e85519);
         color: #ffffff;
     }
 
     .dv2-sticky-btn--ghost:hover {
-        background: #e2effd;
-        color: var(--dv2-blue-700, #095baa);
+        background: #ffe9df;
+        color: var(--dv2-blue-700, #c04412);
     }
 }
 
 .dv2-sticky-btn--primary:active {
-    background: var(--dv2-blue-600, #0b70d0);
+    background: var(--dv2-blue-600, #e85519);
     color: #ffffff;
 }
 
 .dv2-sticky-btn--ghost:active {
-    background: #e2effd;
-    color: var(--dv2-blue-700, #095baa);
+    background: #ffe9df;
+    color: var(--dv2-blue-700, #c04412);
 }
 
 /* --- Desktop: one centered row --- */

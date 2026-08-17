@@ -53,7 +53,7 @@ http_response_code(404);
             font-size: clamp(6rem, 20vw, 10rem);
             font-weight: 800;
             line-height: 1;
-            background: linear-gradient(135deg, #1089F2 0%, #095BAA 100%);
+            background: linear-gradient(135deg, #fc6c34 0%, #c04412 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -85,7 +85,7 @@ http_response_code(404);
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: linear-gradient(135deg, #1089F2 0%, #095BAA 100%);
+            background: linear-gradient(135deg, #fc6c34 0%, #c04412 100%);
             color: #fff;
             text-decoration: none;
             padding: 0.75rem 1.75rem;
@@ -104,18 +104,18 @@ http_response_code(404);
             align-items: center;
             gap: 0.5rem;
             background: transparent;
-            color: var(--blue-600, #095BAA);
+            color: var(--blue-600, #c04412);
             text-decoration: none;
             padding: 0.75rem 1.75rem;
             border-radius: 9999px;
             font-weight: 600;
             font-size: 0.95rem;
-            border: 2px solid var(--blue-600, #095BAA);
+            border: 2px solid var(--blue-600, #c04412);
             transition: background 0.2s, color 0.2s;
         }
 
         .btn-secondary:hover {
-            background: var(--blue-600, #095BAA);
+            background: var(--blue-600, #c04412);
             color: #fff;
         }
     </style>

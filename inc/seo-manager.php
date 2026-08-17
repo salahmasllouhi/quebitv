@@ -16,14 +16,12 @@ class Theme_SEO_Manager
 {
 
     /**
-     * Hreflang mapping for Nordic countries
+     * Hreflang mapping. French is the site's primary language and English its
+     * second; both target Canada, so the region subtag is CA in each.
      */
     private $hreflang_map = array(
-        'se' => 'sv-SE',  // Swedish
-        'no' => 'nb-NO',  // Norwegian
-        'dk' => 'da-DK',  // Danish
-        'fi' => 'fi-FI',  // Finnish
-        'is' => 'is-IS',  // Icelandic
+        'fr' => 'fr-CA',  // Quebec French
+        'en' => 'en-CA',  // Canadian English
     );
 
     /**

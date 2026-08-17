@@ -28,16 +28,13 @@ function rememberLanguageChoice(currency) {
 // Prefer this page's counterpart in the chosen language — window.nordictvLangUrl
 // is printed by inc/language-preference.php from Polylang, which knows each
 // translation's URL and falls back to that language's front page by itself.
-// Switching language from /sv/about-us used to drop you on /no/ rather than
-// /no/about-us, because only the language roots below were ever consulted.
+// Switching language from a sub-page used to drop you on the other language's
+// front page rather than its counterpart, because only the language roots
+// below were ever consulted.
 function languageTargetUrl(currency) {
     const countryUrls = {
         usd: '/',
-        eur: '/fi/',
-        sek: '/sv/',
-        nok: '/no/',
-        dkk: '/dk/',
-        isk: '/is/'
+        cad: '/fr/'
     };
 
     const translated = window.nordictvLangUrl && window.nordictvLangUrl(currency);
@@ -90,22 +87,14 @@ document.addEventListener('click', function (e) {
 // Currency data — `name` is the native language label shown in the switcher,
 // `code` stays for price formatting and anything reading the currency code.
 const currencyData = {
-    usd: { symbol: '$', flag: '🇺🇸', code: 'USD', name: 'English', position: 'before' },
-    eur: { symbol: '€', flag: '🇫🇮', code: 'EUR', name: 'Suomi', position: 'before' },
-    sek: { symbol: 'kr', flag: '🇸🇪', code: 'SEK', name: 'Svenska', position: 'after' },
-    nok: { symbol: 'kr', flag: '🇳🇴', code: 'NOK', name: 'Norsk', position: 'after' },
-    dkk: { symbol: 'kr', flag: '🇩🇰', code: 'DKK', name: 'Dansk', position: 'after' },
-    isk: { symbol: 'kr', flag: '🇮🇸', code: 'ISK', name: 'Íslenska', position: 'after' }
+    cad: { symbol: '$', flag: '🇨🇦', code: 'CAD', name: 'Français', position: 'before' },
+    usd: { symbol: '$', flag: '🇺🇸', code: 'USD', name: 'English', position: 'before' }
 };
 
 // URL mappings for each currency/country
 const countryUrls = {
     usd: '/',
-    eur: '/fi/',
-    sek: '/sv/',
-    nok: '/no/',
-    dkk: '/dk/',
-    isk: '/is/'
+    cad: '/fr/'
 };
 
 // Get default currency from URL path or localStorage
@@ -117,11 +106,7 @@ function getDefaultCurrency() {
 // Detect current currency from URL
 function getCurrentCurrencyFromUrl() {
     const currentPath = window.location.pathname;
-    if (currentPath.startsWith('/sv')) return 'sek';
-    if (currentPath.startsWith('/no')) return 'nok';
-    if (currentPath.startsWith('/dk')) return 'dkk';
-    if (currentPath.startsWith('/fi')) return 'eur';
-    if (currentPath.startsWith('/is')) return 'isk';
+    if (currentPath.startsWith('/fr')) return 'cad';
     return 'usd';
 }
 

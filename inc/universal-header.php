@@ -57,11 +57,7 @@ include get_template_directory() . '/front-page/sections/header.php';
     function redirectToRegion(currency) {
         const countryUrls = {
             usd: '/',
-            eur: '/fi/',
-            sek: '/sv/',
-            nok: '/no/',
-            dkk: '/dk/',
-            isk: '/is/'
+            cad: '/fr/'
         };
 
         // Remember the choice for next visit. window.nordictvLang is printed

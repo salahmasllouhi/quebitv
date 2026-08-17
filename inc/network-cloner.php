@@ -19,11 +19,7 @@ class Theme_Network_Cloner
      * Target sub-sites (path slugs)
      */
     private $target_sites = array(
-        'se',
-        'no',
-        'dk',
-        'fi',
-        'is',
+        'ca',
     );
 
     /**
@@ -62,17 +58,13 @@ class Theme_Network_Cloner
 
     /**
      * Get currency code for a subsite slug
-     * @param string $site_slug e.g. 'se', 'no', 'dk', 'fi', 'is'
-     * @return string Currency code e.g. 'sek', 'nok', 'dkk', 'eur', 'isk'
+     * @param string $site_slug e.g. 'ca'
+     * @return string Currency code e.g. 'cad'
      */
     private function get_currency_for_site($site_slug)
     {
         $map = array(
-            'se' => 'sek',  // Sweden -> Swedish Krona
-            'no' => 'nok',  // Norway -> Norwegian Krone
-            'dk' => 'dkk',  // Denmark -> Danish Krone
-            'fi' => 'eur',  // Finland -> Euro
-            'is' => 'isk',  // Iceland -> Icelandic Króna
+            'ca' => 'cad',  // Canada -> Canadian Dollar
         );
         return isset($map[$site_slug]) ? $map[$site_slug] : 'usd';
     }
@@ -80,7 +72,7 @@ class Theme_Network_Cloner
     /**
      * Convert a USD price to target currency using IPTV_Currency_Settings rates
      * @param float $usd_price The price in USD
-     * @param string $currency_code Target currency (sek, nok, dkk, eur, isk)
+     * @param string $currency_code Target currency (cad)
      * @return float Converted and rounded price
      */
     private function convert_price($usd_price, $currency_code)
@@ -92,11 +84,7 @@ class Theme_Network_Cloner
         // Get conversion rates from options (same as IPTV_Currency_Settings)
         $rates = get_option('iptv_conversion_rates', array());
         $default_rates = array(
-            'eur' => 0.92,
-            'sek' => 10.5,
-            'nok' => 10.8,
-            'dkk' => 6.9,
-            'isk' => 138,
+            'cad' => 1.37,
         );
 
         $rate = isset($rates[$currency_code]) ? floatval($rates[$currency_code]) :

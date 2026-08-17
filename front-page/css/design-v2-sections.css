@@ -1765,7 +1765,7 @@
     width: calc(100% - 2 * var(--dv2-gutter));
     max-width: calc(var(--dv2-shell) - 2 * var(--dv2-gutter));
     margin: 64px auto 0;
-    background: radial-gradient(ellipse at 30% 20%, #55a7f6, #0b70d0 70%);
+    background: radial-gradient(ellipse at 30% 20%, #fda37a, #e85519 70%);
     border: 8px solid var(--dv2-bg);
     border-radius: 32px;
     padding: 48px;
@@ -2005,7 +2005,7 @@
     /* No bottom margin: the footer's 80px top padding provides the gap, and it
        sits inside the footer's tint so no band of page colour appears. */
     margin: 64px auto 0;
-    background: radial-gradient(ellipse at 30% 20%, #55a7f6, #0b70d0 70%);
+    background: radial-gradient(ellipse at 30% 20%, #fda37a, #e85519 70%);
     border: 8px solid var(--dv2-bg);
     border-radius: 32px;
     padding: 48px;
@@ -2118,7 +2118,7 @@
 .cta .cta-box {
     max-width: var(--dv2-shell);
     margin: 0 auto;
-    background: radial-gradient(ellipse at 30% 20%, #55a7f6, #0b70d0 70%);
+    background: radial-gradient(ellipse at 30% 20%, #fda37a, #e85519 70%);
     border-radius: var(--dv2-radius-xl);
     padding: 56px var(--dv2-gutter);
     text-align: center;

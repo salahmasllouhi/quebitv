@@ -74,14 +74,14 @@ get_header();
         padding: 0 1rem;
         font-size: 1.125rem;
         font-weight: 700;
-        color: #1089F2;
+        color: #fc6c34;
     }
 
     .woocommerce ul.products li.product .button {
         display: block;
         margin: 1rem;
         padding: 0.75rem 1rem;
-        background: #1089F2;
+        background: #fc6c34;
         color: #fff;
         border-radius: 8px;
         text-align: center;
@@ -90,7 +90,7 @@ get_header();
     }
 
     .woocommerce ul.products li.product .button:hover {
-        background: #0B70D0;
+        background: #e85519;
     }
 
     .woocommerce ul.products li.product .onsale {

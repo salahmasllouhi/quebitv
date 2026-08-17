@@ -100,7 +100,7 @@ get_header();
     .woocommerce .checkout-button {
         width: 100%;
         padding: 1rem;
-        background: #1089F2;
+        background: #fc6c34;
         color: #fff;
         border: none;
         border-radius: 8px;
@@ -110,7 +110,7 @@ get_header();
     }
 
     .woocommerce .checkout-button:hover {
-        background: #0B70D0;
+        background: #e85519;
     }
 
     @media (max-width: 768px) {

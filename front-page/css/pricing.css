@@ -170,13 +170,13 @@
 }
 
 .badge-green {
-    background: #1089F2 !important;
+    background: #fc6c34 !important;
     color: #fff !important;
     border: none !important;
 }
 
 .badge-orange {
-    background: linear-gradient(135deg, #1089F2, #1089F2) !important;
+    background: linear-gradient(135deg, #fc6c34, #fc6c34) !important;
     color: #fff !important;
     border: none !important;
 }
@@ -233,7 +233,7 @@
     justify-content: center !important;
     width: 100% !important;
     padding: 1.15rem 2rem !important;
-    background: linear-gradient(90deg, #095BAA 0%, #1089F2 50%, #55A7F6 100%) !important;
+    background: linear-gradient(90deg, #c04412 0%, #fc6c34 50%, #fda37a 100%) !important;
     background-size: unset !important;
     color: #ffffff !important;
     border-radius: var(--radius-full) !important;

@@ -10,18 +10,20 @@
 
 :root {
     /* --- Design v2 palette --- */
-    --dv2-bg: #f7fbff;
+    --dv2-bg: #fff9f6;
     --dv2-surface: #ffffff;
-    --dv2-surface-alt: #eef6fe;
-    --dv2-surface-tint: #e2effd;
+    --dv2-surface-alt: #fff2ec;
+    --dv2-surface-tint: #ffe9df;
 
-    /* Brand blue scale, all derived from #1089f2 (h 209deg). */
-    --dv2-blue: #1089f2;
-    --dv2-blue-600: #0b70d0;
-    --dv2-blue-700: #095baa;
-    --dv2-blue-800: #07447e;
-    --dv2-blue-900: #042a4e;
-    --dv2-blue-soft: #55a7f6;
+    /* Brand accent scale, all derived from #fc6c34 (h 18deg). The --dv2-blue-*
+       names are kept because they are referenced across every stylesheet and
+       template; renaming them is a separate mechanical pass. */
+    --dv2-blue: #fc6c34;
+    --dv2-blue-600: #e85519;
+    --dv2-blue-700: #c04412;
+    --dv2-blue-800: #8f320c;
+    --dv2-blue-900: #5c1f07;
+    --dv2-blue-soft: #fda37a;
 
     --dv2-ink: #0b1f33;
     --dv2-ink-2: #22364c;
@@ -363,7 +365,7 @@ h6,
 }
 
 .dv2-btn-soft:hover {
-    background: #e2effd;
+    background: #ffe9df;
     color: var(--dv2-ink);
 }
 

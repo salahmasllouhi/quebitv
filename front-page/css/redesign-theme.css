@@ -12,15 +12,15 @@
    ------------------------------------------- */
 :root {
     --color-navy: #0F2847;
-    --color-indigo: #1089F2;
-    --color-indigo-hover: #0B70D0;
-    --color-teal: #1089F2;
+    --color-indigo: #fc6c34;
+    --color-indigo-hover: #e85519;
+    --color-teal: #fc6c34;
     --color-coral: #FF6B4A;
     --color-gold: #FFB830;
     --color-live: #FF4757;
 
     --bg-page: #F2F8FE;
-    --bg-section: #E2EFFD;
+    --bg-section: #ffe9df;
     --bg-card: #FFFFFF;
     --bg-nav: #FFFFFF;
     --bg-dark: #0F2847;
@@ -35,7 +35,7 @@
     --border-subtle: rgba(15, 40, 71, 0.07);
     --border-indigo: rgba(16, 137, 242, 0.15);
     --border-teal: rgba(16, 137, 242, 0.35);
-    --color-teal-text: #0b70d0;
+    --color-teal-text: #e85519;
     --border-medium: rgba(15, 40, 71, 0.12);
     --shadow-sm: 0 2px 8px rgba(15, 40, 71, 0.06);
     --shadow-md: 0 8px 32px rgba(15, 40, 71, 0.08);

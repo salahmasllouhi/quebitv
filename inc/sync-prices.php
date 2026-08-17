@@ -24,12 +24,10 @@ function iptv_get_subsite_rate()
     $parts = explode('/', $path);
     $site_slug = end($parts);
 
+    // Multisite subsite slug => its currency. The Nordic subsites are gone;
+    // 'ca' is here so a Quebec subsite, if one is ever spun up, bills in CAD.
     $currency_map = array(
-        'se' => 'sek',
-        'no' => 'nok',
-        'dk' => 'dkk',
-        'fi' => 'eur',
-        'is' => 'isk'
+        'ca' => 'cad',
     );
 
     $currency = isset($currency_map[$site_slug]) ? $currency_map[$site_slug] : 'usd';
@@ -44,11 +42,7 @@ function iptv_get_subsite_rate()
 
     // Default rates
     $default_rates = array(
-        'eur' => 0.92,
-        'sek' => 10.5,
-        'nok' => 10.8,
-        'dkk' => 6.9,
-        'isk' => 138
+        'cad' => 1.37,
     );
 
     $rate = isset($rates[$currency]) ? floatval($rates[$currency]) :
