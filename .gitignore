@@ -12,3 +12,6 @@ vendor/
 # (uncomment if you compile assets)
 # *.min.js
 # *.min.css
+
+# Local Claude Code settings (may contain API keys)
+.claude/settings.local.json
