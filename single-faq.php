@@ -7,7 +7,7 @@
  *   1. h1 — post title
  *   2. First <p> from content as highlighted answer capsule
  *   3. Remaining content blocks (h2 + p Q&A pairs)
- *   4. CTA section — "Watch Nordic TV from anywhere"
+ *   4. CTA section — "Watch Quebec IPTV from anywhere"
  */
 
 get_header();
@@ -248,13 +248,13 @@ body.single-faq .faq-single {
     <?php
     $lang    = function_exists('pll_current_language') ? pll_current_language() : 'en';
     $cta_url = ($lang === 'en')
-        ? 'https://nordictv.io/#pricing'
-        : 'https://nordictv.io/' . $lang . '/home/#pricing';
+        ? 'https://quebeciptv.co/#pricing'
+        : 'https://quebeciptv.co/' . $lang . '/home/#pricing';
     ?>
     <section class="cta">
         <div class="cta-box">
             <div class="cta-content">
-                <h2><?php echo esc_html(iptv_text('faq_cta_title', 'Watch Nordic TV from anywhere')); ?></h2>
+                <h2><?php echo esc_html(iptv_text('faq_cta_title', 'Watch Quebec IPTV from anywhere')); ?></h2>
                 <p><?php echo esc_html(iptv_text('faq_cta_subtitle', 'Get instant access to live channels, movies, and series — on any device, any time.')); ?></p>
                 <a href="<?php echo esc_url($cta_url); ?>" class="btn btn-primary">
                     <?php echo esc_html(iptv_text('cta_btn_text', 'Start Streaming Now')); ?>

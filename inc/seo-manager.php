@@ -4,7 +4,7 @@
  * 
  * Provides SEO meta boxes, live preview, hreflang tags, and admin columns.
  * 
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 // Prevent direct access
@@ -219,7 +219,7 @@ class Theme_SEO_Manager
             <div class="seo-field">
                 <label for="seo_focus_keyword">Focus Keyword</label>
                 <input type="text" id="seo_focus_keyword" name="seo_focus_keyword"
-                    value="<?php echo esc_attr($focus_keyword); ?>" placeholder="e.g., IPTV streaming, Nordic IPTV">
+                    value="<?php echo esc_attr($focus_keyword); ?>" placeholder="e.g., IPTV streaming, Quebec IPTV">
             </div>
 
             <div class="seo-preview">

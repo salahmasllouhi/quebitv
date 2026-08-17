@@ -1,4 +1,4 @@
-# NordicTV Redesign - Implementation Guide
+# Quebec IPTV Redesign - Implementation Guide
 
 ## Files Overview
 

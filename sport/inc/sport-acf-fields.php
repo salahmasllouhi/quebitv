@@ -70,7 +70,7 @@ function iptv_register_sport_acf_fields()
                 'type' => 'textarea',
                 'instructions' => 'Short description shown below the headline in the hero section. Keep it under 200 characters for best display.',
                 'required' => 0,
-                'placeholder' => 'e.g. Stream live sport with NordicTV. No cable required. No blackouts. No restrictions.',
+                'placeholder' => 'e.g. Stream live sport with Quebec IPTV. No cable required. No blackouts. No restrictions.',
                 'maxlength' => 250,
                 'rows' => 3,
                 'new_lines' => 'br',

@@ -24,13 +24,13 @@ if (!empty($sport_short_desc)) {
 } elseif (has_excerpt()) {
     $hero_subtitle_html = wp_kses_post(get_the_excerpt());
 } else {
-    $fallback_tpl = spl_str('Stream <strong>%s</strong> live with NordicTV. No cable required. <strong>No blackouts. No restrictions.</strong>');
+    $fallback_tpl = spl_str('Stream <strong>%s</strong> live with Quebec IPTV. No cable required. <strong>No blackouts. No restrictions.</strong>');
     $hero_subtitle_html = wp_kses_post(sprintf($fallback_tpl, esc_html($sport_name)));
 }
 
 // ── Polylang strings ─────────────────────────────────────────────────────────
 $hero_prefix = spl_str('Watch');
-$hero_suffix = spl_str('& Thousands of Live Sport Events with Nordic IPTV');
+$hero_suffix = spl_str('& Thousands of Live Sport Events with Quebec IPTV');
 $live_badge = spl_str('· Live Now');
 $savings_badge = spl_str('Save Over $1,500 Annually!');
 $feature_1 = spl_str('40,000+ Channels');

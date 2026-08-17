@@ -12,18 +12,18 @@ $post_id = 'options_' . $lang;
 
 $faq_tag = spl_str('FAQ');
 $faq_title = spl_str('Frequently Asked <span class="gradient-text">Questions</span>');
-$faq_subtitle = spl_str('Common questions about watching %s with NordicTV');
+$faq_subtitle = spl_str('Common questions about watching %s with Quebec IPTV');
 $faq_items = function_exists('get_field') ? get_field('tpl_sport_faq_items', $post_id) : [];
 
 // Default FAQ items — all go through spl_str() so they appear in Polylang Translations
 if (empty($faq_items)) {
     $faq_items = [
-        ['faq_q' => spl_str('How do I watch %s with NordicTV?'), 'faq_a' => spl_str('Simply subscribe to any NordicTV plan, download our app on your device, and search for %s. You\'ll be streaming in minutes.')],
+        ['faq_q' => spl_str('How do I watch %s with Quebec IPTV?'), 'faq_a' => spl_str('Simply subscribe to any Quebec IPTV plan, download our app on your device, and search for %s. You\'ll be streaming in minutes.')],
         ['faq_q' => spl_str('Is %s available in 4K?'), 'faq_a' => spl_str('Yes! When available, %s streams in full 4K Ultra HD quality with Dolby audio support.')],
         ['faq_q' => spl_str('Can I record events from %s?'), 'faq_a' => spl_str('Yes, our built-in DVR feature lets you record any event from %s and watch it later. You can also use catch-up to rewind up to 7 days.')],
         ['faq_q' => spl_str('What devices can I watch %s on?'), 'faq_a' => spl_str('You can watch %s on Smart TV, Android, iOS, Amazon Firestick, Roku, Apple TV, MAG boxes, Windows, Mac, and more.')],
-        ['faq_q' => spl_str('Is there a trial?'), 'faq_a' => spl_str('Yes! All NordicTV plans come with a 24h trial. You can cancel anytime during the trial period.')],
-        ['faq_q' => spl_str('Do I need a cable subscription?'), 'faq_a' => spl_str('No! NordicTV is a standalone streaming service. No cable, no satellite dish, no contracts. Just an internet connection.')],
+        ['faq_q' => spl_str('Is there a trial?'), 'faq_a' => spl_str('Yes! All Quebec IPTV plans come with a 24h trial. You can cancel anytime during the trial period.')],
+        ['faq_q' => spl_str('Do I need a cable subscription?'), 'faq_a' => spl_str('No! Quebec IPTV is a standalone streaming service. No cable, no satellite dish, no contracts. Just an internet connection.')],
     ];
 }
 

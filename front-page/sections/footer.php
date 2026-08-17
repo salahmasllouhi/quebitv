@@ -14,7 +14,7 @@
                     <img src="<?php echo esc_url($iptv_footer_logo_2x); ?>"
                         srcset="<?php echo esc_url($iptv_footer_logo_2x); ?> 230w, <?php echo esc_url($iptv_footer_logo_3x); ?> 500w"
                         sizes="120px" width="500" height="150" loading="lazy" decoding="async"
-                        alt="Nordic IPTV" class="footer-logo-img">
+                        alt="Quebec IPTV" class="footer-logo-img">
                 </div>
                 <p class="footer-desc">
                     <?php echo esc_html(iptv_text('footer_desc', 'The leading IPTV service provider — 40,000+ live channels, 200,000+ movies and series, every sport, in 4K and 8K.')); ?>
@@ -157,7 +157,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            Nordic IPTV | <?php echo esc_html(iptv_text('footer_copyright', 'All Rights Reserved')); ?>
+            Quebec IPTV | <?php echo esc_html(iptv_text('footer_copyright', 'All Rights Reserved')); ?>
             <?php echo date('Y'); ?>
         </div>
     </div>

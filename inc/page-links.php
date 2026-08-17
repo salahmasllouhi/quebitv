@@ -15,7 +15,7 @@
  * translation does not exist yet it returns the page it did find, because a link
  * to the English page is more use than a dead one.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 if (!defined('ABSPATH')) {

@@ -14,7 +14,7 @@
  * sections that print them, so the registration loop and the templates read the
  * same array. Copy edited in one place cannot fall out of registration.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 if (!defined('ABSPATH')) {
@@ -283,5 +283,5 @@ add_action('init', function () {
     $register('plan_final_text_nofrom', 'Activated in about a minute, watchable on the TV you already own.', true);
 
     // ── Schema ───────────────────────────────────────────────────────────────
-    $register('plan_schema_description', '%s NordicTV IPTV subscription: 40,000+ live channels, 200,000+ movies and series in 4K and HD, on 1 to 4 screens. No contract and no auto-renew.', true);
+    $register('plan_schema_description', '%s Quebec IPTV subscription: 40,000+ live channels, 200,000+ movies and series in 4K and HD, on 1 to 4 screens. No contract and no auto-renew.', true);
 });

@@ -6,7 +6,7 @@
  */
 
 $cta_title = srs_str('Ready to Watch %s?');
-$cta_subtitle = srs_str('Join thousands binge-watching %s and 200,000+ movies & shows with NordicTV.');
+$cta_subtitle = srs_str('Join thousands binge-watching %s and 200,000+ movies & shows with Quebec IPTV.');
 $cta_btn_text = srs_str('Get Access Now');
 $cta_badge_1 = srs_str('256-bit SSL Encryption');
 $cta_badge_2 = srs_str('Instant Activation');

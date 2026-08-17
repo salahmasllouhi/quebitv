@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php the_title(); ?> - Nordic IPTV</title>
+    <title><?php the_title(); ?> - Quebec IPTV</title>
     <?php wp_head(); ?>
 
     <!-- Include Front Page CSS Files -->
@@ -106,7 +106,7 @@
                 <aside class="sidebar">
                     <!-- CTA Widget -->
                     <div class="sidebar-widget cta-widget">
-                        <h3>Get Nordic IPTV</h3>
+                        <h3>Get Quebec IPTV</h3>
                         <p>40,000+ channels, 200,000+ movies. Start streaming today!</p>
                         <a href="<?php echo home_url('/#pricing'); ?>" class="cta-btn">View Plans</a>
                     </div>

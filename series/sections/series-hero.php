@@ -24,13 +24,13 @@ if (!empty($series_desc)) {
 } elseif (has_excerpt()) {
     $hero_subtitle_html = wp_kses_post(get_the_excerpt());
 } else {
-    $fallback_tpl = srs_str('Stream <strong>%s</strong> with NordicTV. All seasons, all episodes. <strong>No restrictions.</strong>');
+    $fallback_tpl = srs_str('Stream <strong>%s</strong> with Quebec IPTV. All seasons, all episodes. <strong>No restrictions.</strong>');
     $hero_subtitle_html = wp_kses_post(sprintf($fallback_tpl, esc_html($series_name)));
 }
 
 // ── Polylang strings ─────────────────────────────────────────────────────────
 $hero_prefix = srs_str('Watch');
-$hero_suffix = srs_str('Plus Thousands of Series with NordicTV');
+$hero_suffix = srs_str('Plus Thousands of Series with Quebec IPTV');
 $streaming_badge = srs_str('· Streaming Now');
 $savings_badge = srs_str('Save Over $1,500 Annually!');
 $feature_1 = srs_str('200K+ Movies & Shows');

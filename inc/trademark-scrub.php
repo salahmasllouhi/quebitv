@@ -12,7 +12,7 @@
  * Runs once, guarded by an option, then can be deleted along with its require
  * in functions.php. See inc/sport-retire.php for the same pattern.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 if (!defined('ABSPATH')) {

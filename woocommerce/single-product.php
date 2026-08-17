@@ -3,7 +3,7 @@
  * The template for displaying single WooCommerce products
  * 
  * This file overrides WooCommerce's default single-product.php
- * Styled to match the Nordic IPTV theme
+ * Styled to match the Quebec IPTV theme
  */
 
 defined('ABSPATH') || exit;

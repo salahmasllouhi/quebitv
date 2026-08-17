@@ -12,7 +12,7 @@
  */
 
 $total_months = ($offer_paid_months ?? 12) + ($offer_free_months ?? 3);
-$hero_image = 'https://nordictv.io/wp-content/uploads/2026/03/offer-123.png';
+$hero_image = 'https://quebeciptv.co/wp-content/uploads/2026/03/offer-123.png';
 ?>
 
 <section class="offer-hero">

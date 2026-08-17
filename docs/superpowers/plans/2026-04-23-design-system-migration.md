@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Replace all existing CSS color/font/spacing variables with the canonical NordicTV design system tokens from `redesign/nordictv-design-system.md`.
+**Goal:** Replace all existing CSS color/font/spacing variables with the canonical Quebec IPTV design system tokens from `redesign/quebeciptv-design-system.md`.
 
 **Architecture:** Consolidate two competing variable systems (`variables.css` legacy tokens and `redesign-theme.css` ad-hoc tokens) into one single source of truth in `variables.css`. Then do a full search-and-replace pass on every CSS file to swap old variable names for the new canonical ones. Primary accent changes from Teal (`#00D4AA`) to Indigo (`#5B4FE8`); teal is demoted to its new decorative role (checkmarks, badge borders).
 
@@ -71,7 +71,7 @@ Use this table throughout all tasks. Old name → New canonical name:
 Replace the entire contents of `front-page/css/variables.css` with:
 
 ```css
-/* NordicTV Design System — canonical tokens */
+/* Quebec IPTV Design System — canonical tokens */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 
 :root {
@@ -551,5 +551,5 @@ Expected: only `DM Sans` references remain. No `Outfit`, `Space Mono`, or `Brico
 
 ```bash
 git add -A
-git commit -m "design: complete NordicTV design system migration"
+git commit -m "design: complete Quebec IPTV design system migration"
 ```

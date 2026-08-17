@@ -71,7 +71,7 @@ function iptv_register_series_acf_fields()
                 'type' => 'textarea',
                 'instructions' => 'Short description shown below the headline in the hero section. Keep it under 200 characters.',
                 'required' => 0,
-                'placeholder' => 'e.g. Stream Breaking Bad with NordicTV. All 5 seasons available.',
+                'placeholder' => 'e.g. Stream Breaking Bad with Quebec IPTV. All 5 seasons available.',
                 'maxlength' => 250,
                 'rows' => 3,
                 'new_lines' => 'br',

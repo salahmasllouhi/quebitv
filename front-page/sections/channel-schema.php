@@ -13,15 +13,15 @@ $channel_website = $has_acf ? get_field('channel_website') : '';
 $schema = [
     '@context' => 'https://schema.org',
     '@type' => 'BroadcastService',
-    'name' => get_the_title() . ' on NordicTV',
+    'name' => get_the_title() . ' on Quebec IPTV',
     'description' => has_excerpt()
         ? get_the_excerpt()
-        : 'Watch ' . get_the_title() . ' live stream with NordicTV. No cable required.',
+        : 'Watch ' . get_the_title() . ' live stream with Quebec IPTV. No cable required.',
     'url' => get_permalink(),
     'broadcastDisplayName' => get_the_title(),
     'broadcaster' => [
         '@type' => 'Organization',
-        'name' => 'NordicTV',
+        'name' => 'Quebec IPTV',
         'url' => home_url('/'),
         'logo' => [
             '@type' => 'ImageObject',
@@ -72,10 +72,10 @@ $schema['offers'] = [
     'priceCurrency' => 'USD',
     'availability' => 'https://schema.org/InStock',
     'url' => home_url('/subscribe/'),
-    'description' => 'NordicTV subscription including ' . get_the_title() . ' and 40,000+ channels',
+    'description' => 'Quebec IPTV subscription including ' . get_the_title() . ' and 40,000+ channels',
     'seller' => [
         '@type' => 'Organization',
-        'name' => 'NordicTV',
+        'name' => 'Quebec IPTV',
     ],
 ];
 ?>

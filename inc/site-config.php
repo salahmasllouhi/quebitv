@@ -23,9 +23,9 @@ add_action('acf/init', function () {
     }
 
     acf_add_options_page(array(
-        'page_title'  => 'NordicTV Site Config',
+        'page_title'  => 'Quebec IPTV Site Config',
         'menu_title'  => 'Site Config',
-        'menu_slug'   => 'nordictv-site-config',
+        'menu_slug'   => 'quebeciptv-site-config',
         'parent_slug' => 'options-general.php',
         'capability'  => 'manage_options',
         'redirect'    => false,

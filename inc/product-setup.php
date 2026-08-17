@@ -5,7 +5,7 @@
  * Ensures the 4 core Variable Products (1, 3, 6, 12 Months) exist
  * with their Device variations (1-4).
  * 
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 // Prevent direct access

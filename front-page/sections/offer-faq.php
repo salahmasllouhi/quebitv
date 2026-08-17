@@ -10,7 +10,7 @@
 $default_faq = [
     [
         'question' => iptv_text('offer_faq_q1', 'What devices does it work on?'),
-        'answer' => iptv_text('offer_faq_a1', 'NordicTV works on Smart TVs, Android, iPhone & iPad, Amazon Firestick, MAG boxes, Windows and macOS — basically any device with an internet connection.'),
+        'answer' => iptv_text('offer_faq_a1', 'Quebec IPTV works on Smart TVs, Android, iPhone & iPad, Amazon Firestick, MAG boxes, Windows and macOS — basically any device with an internet connection.'),
     ],
     [
         'question' => iptv_text('offer_faq_q2', 'Is there a contract or auto-renewal?'),
@@ -30,7 +30,7 @@ $default_faq = [
     ],
     [
         'question' => iptv_text('offer_faq_q6', 'Can I get support if I need help?'),
-        'answer' => wp_kses_post(iptv_text('offer_faq_a6', 'Absolutely. Our support team is available 24/7 via email at <a href="mailto:support@nordictv.io">support@nordictv.io</a>.')),
+        'answer' => wp_kses_post(iptv_text('offer_faq_a6', 'Absolutely. Our support team is available 24/7 via email at <a href="mailto:support@quebeciptv.co">support@quebeciptv.co</a>.')),
     ],
 ];
 

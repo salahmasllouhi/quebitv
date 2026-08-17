@@ -62,7 +62,7 @@ $description = get_the_excerpt();
 if (!$description) {
     $description = sprintf(
         /* translators: %s = plan length, e.g. "1 Month" */
-        plan_str('%s NordicTV IPTV subscription: 40,000+ live channels, 200,000+ movies and series in 4K and HD, on 1 to 4 screens. No contract and no auto-renew.'),
+        plan_str('%s Quebec IPTV subscription: 40,000+ live channels, 200,000+ movies and series in 4K and HD, on 1 to 4 screens. No contract and no auto-renew.'),
         $plan_label
     );
 }
@@ -77,7 +77,7 @@ $graph = array(
         'category'    => 'IPTV subscription',
         'brand'       => array(
             '@type' => 'Brand',
-            'name'  => 'NordicTV',
+            'name'  => 'Quebec IPTV',
         ),
         'offers'      => array(
             '@type'         => 'AggregateOffer',

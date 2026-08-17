@@ -35,7 +35,7 @@
  * own `vod_image_alt` / `sports_image_alt` field rather than from the media
  * library, so the images do not need duplicating per language in Polylang.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 if (!defined('ABSPATH')) {
@@ -47,7 +47,7 @@ if (!defined('ABSPATH')) {
  *
  * Rank Math builds the front page's canonical from home_url(), which is not
  * language-aware here: /dk/, /is/, /no/, /fi/ and /sv/ were all sending
- * `rel=canonical https://nordictv.io`, telling Google to fold every translated
+ * `rel=canonical https://quebeciptv.co`, telling Google to fold every translated
  * home page into the English one — while the hreflang set right above it said
  * they were separate. Subpages were never affected; they canonicalise off the
  * permalink already.
@@ -167,31 +167,31 @@ if (!function_exists('iptv_front_page_analysis_elements')) {
         $out = array();
 
         // Hero (H1).
-        $out[] = array('structure', '<h1>' . $f('hero_title', 'Nordic IPTV Without Limits. Every Match. Every Channel.')
+        $out[] = array('structure', '<h1>' . $f('hero_title', 'Quebec IPTV Without Limits. Every Match. Every Channel.')
             . ' ' . $f('hero_title_span', 'One Subscription.')
             . ' ' . $f('hero_title_3', '$1,000 Saved. Zero Compromises.') . '</h1>');
-        $out[] = array('copy', '<p>' . $f('hero_subtitle', 'Looking for Nordic IPTV? NordicTV offers 40,000+ live channels, 200,000+ movies & series, and every sport in 4K/8K — on any device, instantly.') . '</p>');
+        $out[] = array('copy', '<p>' . $f('hero_subtitle', 'Looking for Quebec IPTV? We offer 40,000+ live channels, 200,000+ movies & series, and every sport in 4K/8K — on any device, instantly.') . '</p>');
 
         // Live channels.
         $out[] = array('structure', '<h3>' . $f('showcase_title', 'Explore')
             . ' ' . $f('showcase_title_span', '40,000+')
             . ' ' . $f('showcase_title_3', 'live TV channels') . '</h3>');
-        $out[] = array('copy', '<p>' . $f('showcase_subtitle', 'From local Nordic news to global sports, entertainment, kids, and international channels — 198 countries covered.') . '</p>');
+        $out[] = array('copy', '<p>' . $f('showcase_subtitle', 'From local Quebec news to global sports, entertainment, kids, and international channels — 198 countries covered.') . '</p>');
 
         // Movies & series, with the image the section renders.
         $out[] = array('structure', '<h3>' . $f('vod_title', 'Indulge in')
             . ' ' . $f('vod_title_span', '200,000+')
             . ' ' . $f('vod_title_3', 'movies and series') . '</h3>');
         $out[] = array('copy', '<p>' . $f('vod_subtitle', 'All genres and languages, on demand whenever it suits you.') . '</p>');
-        $out[] = array('structure', '<img src="https://nordictv.io/wp-content/uploads/2026/08/vodnordic.webp" alt="'
-            . esc_attr($f('vod_image_alt', 'A selection of movies and series available on NordicTV')) . '" />');
+        $out[] = array('structure', '<img src="https://quebeciptv.co/wp-content/uploads/2026/08/vodnordic.webp" alt="'
+            . esc_attr($f('vod_image_alt', 'A selection of movies and series available on Quebec IPTV')) . '" />');
 
         // Sport, with its image.
         $out[] = array('structure', '<h3>' . $f('sports_title', 'Never Miss a')
             . ' ' . $f('sports_title_span', 'Game') . '</h3>');
         $out[] = array('copy', '<p>' . $f('sports_desc', 'Never miss a game again. Every major league, every tournament, every PPV event.') . '</p>');
-        $out[] = array('structure', '<img src="https://nordictv.io/wp-content/uploads/2026/08/nordicsport.webp" alt="'
-            . esc_attr($f('sports_image_alt', 'Live sport available on NordicTV')) . '" />');
+        $out[] = array('structure', '<img src="https://quebeciptv.co/wp-content/uploads/2026/08/nordicsport.webp" alt="'
+            . esc_attr($f('sports_image_alt', 'Live sport available on Quebec IPTV')) . '" />');
 
         // Features.
         $out[] = array('structure', '<h2>' . $f('features_title', 'Built for global viewers') . '</h2>');
@@ -281,8 +281,8 @@ if (!function_exists('iptv_front_page_support_cards')) {
         return array(
             array(
                 'label' => iptv_front_page_field($post_id, 'contact_card_email_label', 'Email Support'),
-                'value' => iptv_front_page_field($post_id, 'contact_card_email_value', 'support@nordictv.io'),
-                'link'  => 'mailto:support@nordictv.io',
+                'value' => iptv_front_page_field($post_id, 'contact_card_email_value', 'support@quebeciptv.co'),
+                'link'  => 'mailto:support@quebeciptv.co',
             ),
             array(
                 'label' => iptv_front_page_field($post_id, 'contact_card_whatsapp_label', 'WhatsApp'),
@@ -291,8 +291,8 @@ if (!function_exists('iptv_front_page_support_cards')) {
             ),
             array(
                 'label' => iptv_front_page_field($post_id, 'contact_card_telegram_label', 'Telegram'),
-                'value' => iptv_front_page_field($post_id, 'contact_card_telegram_value', '@NordicTV'),
-                'link'  => 'https://t.me/NordicTV',
+                'value' => iptv_front_page_field($post_id, 'contact_card_telegram_value', '@QuebecIPTV'),
+                'link'  => 'https://t.me/QuebecIPTV',
             ),
         );
     }
@@ -382,7 +382,7 @@ add_action('admin_enqueue_scripts', function ($hook) {
         return;
     }
 
-    wp.hooks.addFilter('rank_math_content', 'nordictv/front-page', function (content) {
+    wp.hooks.addFilter('rank_math_content', 'quebeciptv/front-page', function (content) {
         content = content || '';
 
         var words = content.replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length;

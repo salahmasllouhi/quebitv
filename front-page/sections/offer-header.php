@@ -63,7 +63,7 @@ if (isset($site_language_map[$site_slug])) {
             ?>
             <img src="<?php echo esc_url($iptv_offer_logo_2x); ?>"
                 srcset="<?php echo esc_url($iptv_offer_logo_2x); ?> 230w, <?php echo esc_url($iptv_offer_logo_3x); ?> 500w"
-                sizes="115px" width="500" height="150" alt="Nordic IPTV"
+                sizes="115px" width="500" height="150" alt="Quebec IPTV"
                 class="logo-img" fetchpriority="high">
         </a>
 

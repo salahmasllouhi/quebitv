@@ -1,6 +1,6 @@
 <?php
 /**
- * Section: Hero (Design v2 — NordicTV Blue & White)
+ * Section: Hero (Design v2 — Quebec IPTV Blue & White)
  */
 
 // Hero backdrop. This is deliberately a *new* key rather than the old
@@ -9,7 +9,7 @@
 // would have pulled those per-language images in as backgrounds.
 $hero_bg_url = iptv_text(
     'hero_background_url',
-    'https://nordictv.io/wp-content/uploads/2026/08/hero-background-scaled.webp'
+    'https://quebeciptv.co/wp-content/uploads/2026/08/hero-background-scaled.webp'
 );
 
 $primary_label   = iptv_text('hero_primary_cta_label', 'Get Access Now');
@@ -47,7 +47,7 @@ $secondary_url   = iptv_text('hero_secondary_cta_url', '#pricing');
             ?>
             <h1 class="dv2-hero-title">
                 <span class="dv2-hero-line">
-                    <?php echo esc_html(iptv_text('hero_title', 'Nordic IPTV Without Limits. Every Match. Every Channel.')); ?>
+                    <?php echo esc_html(iptv_text('hero_title', 'Quebec IPTV Without Limits. Every Match. Every Channel.')); ?>
                 </span>
                 <span class="dv2-hero-line">
                     <span class="dv2-hero-accent"><?php echo esc_html(iptv_text('hero_title_span', 'One Subscription.')); ?></span>
@@ -56,7 +56,7 @@ $secondary_url   = iptv_text('hero_secondary_cta_url', '#pricing');
             </h1>
 
             <p class="dv2-hero-sub">
-                <?php echo wp_kses_post(iptv_text('hero_subtitle', 'Looking for Nordic IPTV? NordicTV offers 40,000+ live channels, 200,000+ movies & series, and every sport in 4K/8K — on any device, instantly.')); ?>
+                <?php echo wp_kses_post(iptv_text('hero_subtitle', 'Looking for Quebec IPTV? We offer 40,000+ live channels, 200,000+ movies & series, and every sport in 4K/8K — on any device, instantly.')); ?>
             </p>
 
             <div class="dv2-hero-actions">

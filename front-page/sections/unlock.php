@@ -10,7 +10,7 @@ $devices = array_filter(array_map('trim', explode(',', $devices_str)));
     <div class="devices-inner">
         <div class="dv2-section-head">
             <h2><?php echo esc_html(iptv_text('devices_section_title', 'Works on every screen')); ?></h2>
-            <p><?php echo esc_html(iptv_text('devices_subtitle', 'Stream NordicTV on any device you already own. No new hardware needed.')); ?></p>
+            <p><?php echo esc_html(iptv_text('devices_subtitle', 'Stream Quebec IPTV on any device you already own. No new hardware needed.')); ?></p>
         </div>
 
         <div class="dv2-device-chips">

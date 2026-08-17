@@ -49,7 +49,7 @@ $sections_dir = $front_page_dir . '/sections';
 
 <?php
 // Load all sections in order
-// Order follows the "NordicTV Blue & White" design.
+// Order follows the "Quebec IPTV Blue & White" design.
 $sections = array(
     'header',           // Front-page header (source of truth for all headers)
     'hero',             // Backdrop hero with Trustpilot badge
@@ -68,7 +68,7 @@ $sections = array(
     'footer'
     // Not in this list (files and styles still exist - add the slug back to
     // render them again):
-    //   'comparison'  - NordicTV vs. traditional services
+    //   'comparison'  - Quebec IPTV vs. traditional services
     //   'dashboard'   - Member area promo
     //   'dark-cta'    - second CTA block; the journey panel closes this design
 );

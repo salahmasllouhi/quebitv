@@ -3,7 +3,7 @@
  * The template for displaying WooCommerce pages (checkout, account, etc.)
  * 
  * Note: Single product pages use single-product.php template
- * Styled to match the Nordic IPTV theme
+ * Styled to match the Quebec IPTV theme
  */
 
 defined('ABSPATH') || exit;

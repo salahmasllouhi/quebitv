@@ -7,7 +7,7 @@
  */
 
 $cta_title = tpl_str('Ready to Watch %s?');
-$cta_subtitle = tpl_str('Join thousands of satisfied customers streaming %s and 40,000+ channels with NordicTV.');
+$cta_subtitle = tpl_str('Join thousands of satisfied customers streaming %s and 40,000+ channels with Quebec IPTV.');
 $cta_btn_text = tpl_str('Get Access Now');
 $cta_badge_1 = tpl_str('256-bit SSL Encryption');
 $cta_badge_2 = tpl_str('Instant Activation');

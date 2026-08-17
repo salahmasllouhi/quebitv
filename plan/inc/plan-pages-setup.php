@@ -23,7 +23,7 @@
  * that are published (iptv_plan_url() queries post_status=publish), so the
  * cross-links light up as you publish them.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 if (!defined('ABSPATH')) {

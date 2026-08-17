@@ -12,7 +12,7 @@
  * The posts are moved to draft as well, once, guarded by an option: without
  * that, re-registering the type later would silently republish 145 URLs.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 if (!defined('ABSPATH')) {

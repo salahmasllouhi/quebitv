@@ -5,8 +5,8 @@
  * Dynamic: $sport_name
  */
 
-$feat_tag = spl_str('Why NordicTV');
-$feat_title = spl_str('Watch %s with <span class="gradient-text">NordicTV</span>');
+$feat_tag = spl_str('Why Quebec IPTV');
+$feat_title = spl_str('Watch %s with <span class="gradient-text">Quebec IPTV</span>');
 $feat_subtitle = spl_str('Everything you need for the ultimate %s streaming experience');
 
 $feat_1_title = spl_str('40,000+ Live Channels');

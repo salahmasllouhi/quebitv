@@ -5,8 +5,8 @@
  * Dynamic: $channel_name
  */
 
-$feat_tag = tpl_str('Why NordicTV');
-$feat_title = tpl_str('Watch %s with <span class="gradient-text">NordicTV</span>');
+$feat_tag = tpl_str('Why Quebec IPTV');
+$feat_title = tpl_str('Watch %s with <span class="gradient-text">Quebec IPTV</span>');
 $feat_subtitle = tpl_str('Everything you need for the ultimate %s streaming experience');
 
 $feat_1_title = tpl_str('40,000+ Live Channels');

@@ -9,7 +9,7 @@
  * Nothing here changes markup, copy or layout. The rules are deliberately
  * narrow — each one names the thing it removes and why it is safe to remove.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 if (!defined('ABSPATH')) {
@@ -109,7 +109,7 @@ add_action('wp_head', function () {
         );
     }
 
-    echo '<style id="nordictv-fonts">' . $css . '</style>' . "\n";
+    echo '<style id="quebeciptv-fonts">' . $css . '</style>' . "\n";
 }, 1);
 
 /* -------------------------------------------------------------------------

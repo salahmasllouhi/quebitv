@@ -4,7 +4,7 @@
  * 
  * Adds a "Clone to Network" button to admin bar for syncing pages across multisite.
  * 
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 // Prevent direct access

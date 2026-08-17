@@ -24,13 +24,13 @@ if (!empty($channel_short_desc)) {
 } elseif (has_excerpt()) {
     $hero_subtitle_html = wp_kses_post(get_the_excerpt());
 } else {
-    $fallback_tpl = tpl_str('Stream <strong>%s</strong> live with NordicTV. No cable required. <strong>No blackouts. No restrictions.</strong>');
+    $fallback_tpl = tpl_str('Stream <strong>%s</strong> live with Quebec IPTV. No cable required. <strong>No blackouts. No restrictions.</strong>');
     $hero_subtitle_html = wp_kses_post(sprintf($fallback_tpl, esc_html($channel_name)));
 }
 
 // ── Polylang strings ─────────────────────────────────────────────────────────
 $hero_prefix = tpl_str('Watch');
-$hero_suffix = tpl_str('Plus Thousands of Channels with NordicTV');
+$hero_suffix = tpl_str('Plus Thousands of Channels with Quebec IPTV');
 $live_badge = tpl_str('· Live Now');
 $savings_badge = tpl_str('Save Over $1,500 Annually!');
 $feature_1 = tpl_str('40,000+ Channels');

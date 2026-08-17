@@ -15,7 +15,7 @@
  *                prints the page title, so this is off by default)
  *   intro="0"    drop the intro paragraph
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 if (!defined('ABSPATH')) {
@@ -54,8 +54,8 @@ if (!function_exists('iptv_contact_cards')) {
             $cards = array(
                 array(
                     'label' => iptv_text('contact_card_email_label', 'Email Support'),
-                    'value' => iptv_text('contact_card_email_value', 'support@nordictv.io'),
-                    'link'  => 'mailto:support@nordictv.io',
+                    'value' => iptv_text('contact_card_email_value', 'support@quebeciptv.co'),
+                    'link'  => 'mailto:support@quebeciptv.co',
                     'blank' => false,
                 ),
                 array(
@@ -66,8 +66,8 @@ if (!function_exists('iptv_contact_cards')) {
                 ),
                 array(
                     'label' => iptv_text('contact_card_telegram_label', 'Telegram'),
-                    'value' => iptv_text('contact_card_telegram_value', '@NordicTV'),
-                    'link'  => 'https://t.me/NordicTV',
+                    'value' => iptv_text('contact_card_telegram_value', '@QuebecIPTV'),
+                    'link'  => 'https://t.me/QuebecIPTV',
                     'blank' => true,
                 ),
             );

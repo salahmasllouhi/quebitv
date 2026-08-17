@@ -20,7 +20,7 @@
  * One request covers every currency — `symbols` returns them all in a single
  * response — so the cost does not grow if the disabled languages come back.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 if (!defined('ABSPATH')) {

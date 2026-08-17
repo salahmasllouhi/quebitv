@@ -1,4 +1,4 @@
-# NordicTV - Complete Color Palette & Design System
+# Quebec IPTV - Complete Color Palette & Design System
 
 ---
 

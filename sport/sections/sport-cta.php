@@ -6,7 +6,7 @@
  */
 
 $cta_title = spl_str('Ready to Watch %s?');
-$cta_subtitle = spl_str('Join thousands of satisfied customers streaming %s and 40,000+ channels with NordicTV.');
+$cta_subtitle = spl_str('Join thousands of satisfied customers streaming %s and 40,000+ channels with Quebec IPTV.');
 $cta_btn_text = spl_str('Get Access Now');
 $cta_badge_1 = spl_str('256-bit SSL Encryption');
 $cta_badge_2 = spl_str('Instant Activation');

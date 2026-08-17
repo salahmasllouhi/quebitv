@@ -6,7 +6,7 @@
  * match one character for character silently falls back to English, so copy
  * edited in plan-strings.php has to be mirrored here.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 return array(
@@ -122,6 +122,6 @@ return array(
         => 'Aktiveras på ungefär en minut och fungerar på tv:n du redan har.',
 
     // ── Schema ───────────────────────────────────────────────────────────────
-    '%s NordicTV IPTV subscription: 40,000+ live channels, 200,000+ movies and series in 4K and HD, on 1 to 4 screens. No contract and no auto-renew.'
-        => 'NordicTV IPTV-abonnemang %s: 40 000+ livekanaler, 200 000+ filmer och serier i 4K och HD, på 1–4 skärmar. Ingen bindningstid och ingen automatisk förnyelse.',
+    '%s Quebec IPTV subscription: 40,000+ live channels, 200,000+ movies and series in 4K and HD, on 1 to 4 screens. No contract and no auto-renew.'
+        => 'Quebec IPTV-abonnemang %s: 40 000+ livekanaler, 200 000+ filmer och serier i 4K och HD, på 1–4 skärmar. Ingen bindningstid och ingen automatisk förnyelse.',
 );

@@ -12,7 +12,7 @@
  * recalculation on a visitor's request. Checkout is the same panel URL the
  * configurator builds: {checkout_base}?connections=N&duration=M.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 if (!defined('ABSPATH')) {

@@ -8,7 +8,7 @@
 
 **My IPTV Theme** — A modern WordPress theme for selling IPTV streaming subscriptions with WooCommerce integration and multisite support.
 
-**Primary Domain:** nordictv.io
+**Primary Domain:** quebeciptv.co
 
 ---
 
@@ -60,7 +60,7 @@ my-iptv-theme/
 ## Environment & Deployment
 
 ### Constants
-- `IPTV_MAIN_SITE_URL` — Main site URL for cross-site cart (nordictv.io)
+- `IPTV_MAIN_SITE_URL` — Main site URL for cross-site cart (quebeciptv.co)
 
 ### Environment Variables (names only)
 - OpenAI API key (stored in WordPress options)

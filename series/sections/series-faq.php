@@ -12,18 +12,18 @@ $post_id = 'options_' . $lang;
 
 $faq_tag = srs_str('FAQ');
 $faq_title = srs_str('Frequently Asked <span class="gradient-text">Questions</span>');
-$faq_subtitle = srs_str('Common questions about watching %s with NordicTV');
+$faq_subtitle = srs_str('Common questions about watching %s with Quebec IPTV');
 $faq_items = function_exists('get_field') ? get_field('tpl_series_faq_items', $post_id) : [];
 
 // Default FAQ items — all go through srs_str() so they appear in Polylang Translations
 if (empty($faq_items)) {
     $faq_items = [
-        ['faq_q' => srs_str('How do I watch %s with NordicTV?'), 'faq_a' => srs_str('Simply subscribe to any NordicTV plan, download our app on your device, and search for %s. You\'ll be streaming in minutes.')],
-        ['faq_q' => srs_str('Are all seasons of %s available?'), 'faq_a' => srs_str('Yes! NordicTV gives you access to all seasons and every episode of %s, from the pilot to the latest release.')],
+        ['faq_q' => srs_str('How do I watch %s with Quebec IPTV?'), 'faq_a' => srs_str('Simply subscribe to any Quebec IPTV plan, download our app on your device, and search for %s. You\'ll be streaming in minutes.')],
+        ['faq_q' => srs_str('Are all seasons of %s available?'), 'faq_a' => srs_str('Yes! Quebec IPTV gives you access to all seasons and every episode of %s, from the pilot to the latest release.')],
         ['faq_q' => srs_str('Can I watch %s in 4K?'), 'faq_a' => srs_str('Yes! When available, %s streams in full 4K Ultra HD quality with Dolby audio support for the best viewing experience.')],
         ['faq_q' => srs_str('What devices can I watch %s on?'), 'faq_a' => srs_str('You can watch %s on Smart TV, Android, iOS, Amazon Firestick, Roku, Apple TV, MAG boxes, Windows, Mac, and more.')],
-        ['faq_q' => srs_str('Is there a trial?'), 'faq_a' => srs_str('Yes! All NordicTV plans come with a 24h trial. You can cancel anytime during the trial period.')],
-        ['faq_q' => srs_str('Do I need a cable subscription?'), 'faq_a' => srs_str('No! NordicTV is a standalone streaming service. No cable, no satellite dish, no contracts. Just an internet connection.')],
+        ['faq_q' => srs_str('Is there a trial?'), 'faq_a' => srs_str('Yes! All Quebec IPTV plans come with a 24h trial. You can cancel anytime during the trial period.')],
+        ['faq_q' => srs_str('Do I need a cable subscription?'), 'faq_a' => srs_str('No! Quebec IPTV is a standalone streaming service. No cable, no satellite dish, no contracts. Just an internet connection.')],
     ];
 }
 

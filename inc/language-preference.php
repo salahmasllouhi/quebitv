@@ -23,7 +23,7 @@
  * JavaScript (see front-page/js/currency.js) as well as through ?set_lang=,
  * which is the no-JavaScript path.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 if (!defined('ABSPATH')) {

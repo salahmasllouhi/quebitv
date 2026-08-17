@@ -16,7 +16,7 @@
  * analysis runs from wp-admin, which is English, while the page being analysed
  * may be Finnish.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 if (!defined('ABSPATH')) {

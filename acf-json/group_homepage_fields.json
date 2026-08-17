@@ -192,7 +192,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "https://nordictv.io/#pricing",
+            "default_value": "https://quebeciptv.co/#pricing",
             "placeholder": ""
         },
         {
@@ -306,7 +306,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "https://nordictv.io/wp-content/uploads/2026/07/hero-image-1.webp",
+            "default_value": "https://quebeciptv.co/wp-content/uploads/2026/07/hero-image-1.webp",
             "placeholder": ""
         },
         {
@@ -323,7 +323,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "NordicTV live sports and entertainment",
+            "default_value": "Quebec IPTV live sports and entertainment",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -832,7 +832,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Nordic TV?",
+            "default_value": "Quebec IPTV?",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -1190,7 +1190,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "A selection of movies and series available on NordicTV",
+            "default_value": "A selection of movies and series available on Quebec IPTV",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -1288,7 +1288,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "No more juggling multiple subscriptions. Get it all with Nordic IPTV.",
+            "default_value": "No more juggling multiple subscriptions. Get it all with Quebec IPTV.",
             "new_lines": "",
             "maxlength": "",
             "placeholder": "",
@@ -2022,7 +2022,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Live sport available on NordicTV",
+            "default_value": "Live sport available on Quebec IPTV",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -2128,7 +2128,7 @@
         },
         {
             "key": "field_comp_row_1_val_2",
-            "label": "Row 1 With Nordic IPTV",
+            "label": "Row 1 With Quebec IPTV",
             "name": "comp_row_1_val_2",
             "aria-label": "",
             "type": "text",
@@ -2188,7 +2188,7 @@
         },
         {
             "key": "field_comp_row_2_val_2",
-            "label": "Row 2 With Nordic IPTV",
+            "label": "Row 2 With Quebec IPTV",
             "name": "comp_row_2_val_2",
             "aria-label": "",
             "type": "text",
@@ -2248,7 +2248,7 @@
         },
         {
             "key": "field_comp_row_3_val_2",
-            "label": "Row 3 With Nordic IPTV",
+            "label": "Row 3 With Quebec IPTV",
             "name": "comp_row_3_val_2",
             "aria-label": "",
             "type": "text",
@@ -2308,7 +2308,7 @@
         },
         {
             "key": "field_comp_row_4_val_2",
-            "label": "Row 4 With Nordic IPTV",
+            "label": "Row 4 With Quebec IPTV",
             "name": "comp_row_4_val_2",
             "aria-label": "",
             "type": "text",
@@ -2368,7 +2368,7 @@
         },
         {
             "key": "field_comp_row_5_val_2",
-            "label": "Row 5 With Nordic IPTV",
+            "label": "Row 5 With Quebec IPTV",
             "name": "comp_row_5_val_2",
             "aria-label": "",
             "type": "text",
@@ -2428,7 +2428,7 @@
         },
         {
             "key": "field_comp_row_6_val_2",
-            "label": "Row 6 With Nordic IPTV",
+            "label": "Row 6 With Quebec IPTV",
             "name": "comp_row_6_val_2",
             "aria-label": "",
             "type": "text",
@@ -2488,7 +2488,7 @@
         },
         {
             "key": "field_comp_row_7_val_2",
-            "label": "Row 7 With Nordic IPTV",
+            "label": "Row 7 With Quebec IPTV",
             "name": "comp_row_7_val_2",
             "aria-label": "",
             "type": "text",
@@ -2560,7 +2560,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Nordic IPTV Annual Cost",
+            "default_value": "Quebec IPTV Annual Cost",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -2660,7 +2660,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "See how much you're really paying vs Nordic IPTV.",
+            "default_value": "See how much you're really paying vs Quebec IPTV.",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -2668,7 +2668,7 @@
         },
         {
             "key": "field_comp_price",
-            "label": "Nordic IPTV Price",
+            "label": "Quebec IPTV Price",
             "name": "comp_price",
             "aria-label": "",
             "type": "text",
@@ -4445,7 +4445,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Join thousands of cord-cutters across Scandinavia who've switched to NordicTV.",
+            "default_value": "Join thousands of cord-cutters across Scandinavia who've switched to Quebec IPTV.",
             "new_lines": "",
             "maxlength": "",
             "placeholder": "",

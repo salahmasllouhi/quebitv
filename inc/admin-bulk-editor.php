@@ -7,7 +7,7 @@
  * 
  * Also supports the Trial product.
  *
- * @package Nordic_IPTV
+ * @package Quebec_IPTV
  */
 
 // Prevent direct access

@@ -4,7 +4,7 @@
  */
 
 // Main site URL for cross-site cart (all subsites use main site checkout)
-define('IPTV_MAIN_SITE_URL', 'https://nordictv.io');
+define('IPTV_MAIN_SITE_URL', 'https://quebeciptv.co');
 
 // Auto-flush rewrite rules when Rank Math sitemap rules go missing.
 // On Hostinger/LiteSpeed, rewrite rules can get wiped after server restarts or
@@ -705,6 +705,11 @@ require_once get_template_directory() . '/inc/sync-prices.php';
 // before the string helpers below so sport/inc/sport-strings.php can stay out.
 require_once get_template_directory() . '/inc/sport-retire.php';
 
+// Retires the `channel` post type. Its posts were already on draft, so this
+// only unregisters the type. Loaded before the string helpers below so
+// inc/channel-strings.php can stay out for the same reason sport's does.
+require_once get_template_directory() . '/inc/channel-retire.php';
+
 // One-shot scrub of broadcaster / competition names left in post content.
 // Safe to delete along with the file once the option records it has run.
 require_once get_template_directory() . '/inc/trademark-scrub.php';
@@ -713,10 +718,10 @@ require_once get_template_directory() . '/inc/trademark-scrub.php';
 // rankmathseo account's history can be audited. Delete file + line when done.
 require_once get_template_directory() . '/inc/activity-log-reader.php';
 
-// Include Polylang string helpers for channel / sport / series templates.
-// sport-strings.php is not loaded: the post type it serves is retired, and
-// registering its strings would keep them in the Polylang translation UI.
-require_once get_template_directory() . '/inc/channel-strings.php';
+// Include Polylang string helpers for the series templates.
+// sport-strings.php and channel-strings.php are not loaded: the post types they
+// serve are retired, and registering their strings would keep them in the
+// Polylang translation UI.
 require_once get_template_directory() . '/series/inc/series-strings.php';
 require_once get_template_directory() . '/inc/front-page-strings.php';
 require_once get_template_directory() . '/inc/offer-strings.php';

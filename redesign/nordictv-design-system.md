@@ -1,4 +1,4 @@
-# NordicTV — Design System
+# Quebec IPTV — Design System
 
 ---
 

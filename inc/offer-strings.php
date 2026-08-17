@@ -62,7 +62,7 @@ add_action('init', function () {
     pll_register_string('offer_faq_tag', 'FAQ', $group);
     pll_register_string('offer_faq_title', "Any questions? We've got answers.", $group);
     pll_register_string('offer_faq_q1', 'What devices does it work on?', $group);
-    pll_register_string('offer_faq_a1', 'NordicTV works on Smart TVs, Android, iPhone & iPad, Amazon Firestick, MAG boxes, Windows and macOS — basically any device with an internet connection.', $group);
+    pll_register_string('offer_faq_a1', 'Quebec IPTV works on Smart TVs, Android, iPhone & iPad, Amazon Firestick, MAG boxes, Windows and macOS — basically any device with an internet connection.', $group);
     pll_register_string('offer_faq_q2', 'Is there a contract or auto-renewal?', $group);
     pll_register_string('offer_faq_a2', "No contract. No auto-renewal. You pay once and your subscription runs for the full period. When it expires, it's up to you to renew.", $group);
     pll_register_string('offer_faq_q3', 'How do I get the free months?', $group);
@@ -72,7 +72,7 @@ add_action('init', function () {
     pll_register_string('offer_faq_q5', 'Is payment secure?', $group);
     pll_register_string('offer_faq_a5', 'Yes. Payments are processed via industry-standard secure gateways with 256-bit SSL encryption. We never store your card details.', $group);
     pll_register_string('offer_faq_q6', 'Can I get support if I need help?', $group);
-    pll_register_string('offer_faq_a6', 'Absolutely. Our support team is available 24/7 via email at <a href="mailto:support@nordictv.io">support@nordictv.io</a>.', $group, true);
+    pll_register_string('offer_faq_a6', 'Absolutely. Our support team is available 24/7 via email at <a href="mailto:support@quebeciptv.co">support@quebeciptv.co</a>.', $group, true);
 
     // ── Final CTA section ────────────────────────────────────────────────────
     pll_register_string('offer_final_cta_title', "Don't miss %d months for the price of %d", $group);

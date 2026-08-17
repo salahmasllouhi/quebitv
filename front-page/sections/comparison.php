@@ -1,6 +1,6 @@
 <?php
 /**
- * Section: NordicTV vs. traditional services (Design v2)
+ * Section: Quebec IPTV vs. traditional services (Design v2)
  */
 
 $comp_rows = [
@@ -16,16 +16,16 @@ $comp_rows = [
 <section class="comparison dv2-section">
     <div class="comparison-inner">
         <div class="dv2-section-head">
-            <h2><?php echo esc_html(iptv_text('comp_title_main', 'NordicTV vs. Traditional Services')); ?></h2>
+            <h2><?php echo esc_html(iptv_text('comp_title_main', 'Quebec IPTV vs. Traditional Services')); ?></h2>
             <p>
-                <?php echo esc_html(iptv_text('comp_desc', 'As the most affordable IPTV service provider, stop paying for streaming apps, a sports package, and cable TV separately. NordicTV replaces them all.')); ?>
+                <?php echo esc_html(iptv_text('comp_desc', 'As the most affordable IPTV service provider, stop paying for streaming apps, a sports package, and cable TV separately. Quebec IPTV replaces them all.')); ?>
             </p>
         </div>
 
         <div class="dv2-compare">
             <div class="dv2-compare-head">
                 <div class="dv2-compare-head-ours">
-                    <div class="dv2-compare-head-label"><?php echo esc_html(iptv_text('comp_ours_label', 'NordicTV')); ?></div>
+                    <div class="dv2-compare-head-label"><?php echo esc_html(iptv_text('comp_ours_label', 'Quebec IPTV')); ?></div>
                     <div class="dv2-compare-head-price"><?php echo esc_html(iptv_text('comp_ours_price', 'from $8/mo')); ?></div>
                 </div>
                 <div class="dv2-compare-head-theirs">

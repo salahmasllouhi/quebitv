@@ -1,4 +1,4 @@
-# NordicTV - Font Configuration
+# Quebec IPTV - Font Configuration
 
 ---
 

@@ -12,7 +12,7 @@
     // <title> tags on every page of the site, and the hardcoded one came first
     // — so search engines read that one: wp_title() followed by a bare
     // bloginfo('name'), which rendered as
-    // "IPTV Service Provider: 40,000 Channels, Instant Setup        nordictv.io"
+    // "IPTV Service Provider: 40,000 Channels, Instant Setup        quebeciptv.co"
     // with no separator and 72 characters, while Rank Math's correct 52-character
     // title sat below it being ignored.
     ?>

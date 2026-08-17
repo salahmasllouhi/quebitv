@@ -29,7 +29,7 @@ if (empty($faq_items)) {
         ['q' => 'Do you offer a free trial?',                 'a' => 'Yes, a 24-hour trial is available so you can test the service before committing. Every paid plan also carries a 30-day money-back guarantee.'],
         ['q' => 'What payment methods do you accept?',        'a' => 'Visa, Mastercard, PayPal and Bitcoin, all through a secure SSL checkout.'],
         ['q' => 'What countries and languages are available?', 'a' => 'Content spans 198 countries with multi-language subtitles and full EPG support.'],
-        ['q' => 'How can I contact support?',                 'a' => 'You can reach our support team 24/7 at <a href="mailto:support@nordictv.io">support@nordictv.io</a>.'],
+        ['q' => 'How can I contact support?',                 'a' => 'You can reach our support team 24/7 at <a href="mailto:support@quebeciptv.co">support@quebeciptv.co</a>.'],
     ];
 }
 ?>
