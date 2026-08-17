@@ -181,7 +181,7 @@ img {
 .woocommerce input.button,
 .woocommerce #respond input#submit {
     background: var(--color-indigo);
-    color: #3A1405;
+    color: #ffffff;
     padding: 0.875rem 2rem;
     border-radius: 0.5rem;
     font-weight: 600;
@@ -196,7 +196,7 @@ img {
 .woocommerce input.button:hover {
     background: var(--color-indigo-hover);
     transform: translateY(-2px);
-    color: #3A1405;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -211,7 +211,7 @@ img {
 .woocommerce button.button.alt,
 .woocommerce a.button.alt {
     background: linear-gradient(135deg, var(--color-indigo), var(--color-indigo-hover));
-    color: #3A1405;
+    color: #ffffff;
 }
 
 .woocommerce button.button.alt:hover,

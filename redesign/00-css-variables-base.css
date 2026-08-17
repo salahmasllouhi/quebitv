@@ -127,7 +127,7 @@ body {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--color-teal), var(--color-indigo-hover));
-    color: #3A1405;
+    color: #ffffff;
     box-shadow: var(--shadow-glow);
 }
 

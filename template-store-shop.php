@@ -82,7 +82,7 @@ get_header();
         margin: 1rem;
         padding: 0.75rem 1rem;
         background: #fc6c34;
-        color: #3A1405;
+        color: #ffffff;
         border-radius: 8px;
         text-align: center;
         font-weight: 600;

@@ -173,7 +173,7 @@
 
 .site-header .nav-btn-primary {
     background: var(--dv2-blue);
-    color: #3A1405;
+    color: #ffffff;
     font-family: var(--dv2-font-body);
     font-weight: 700;
     font-size: 15px;
@@ -185,7 +185,7 @@
 
 .site-header .nav-btn-primary:hover {
     background: var(--dv2-blue-600);
-    color: #3A1405;
+    color: #ffffff;
 }
 
 .site-header .mobile-menu-toggle span {
@@ -771,7 +771,7 @@
     background: var(--dv2-blue-900);
     align-items: center;
     justify-content: center;
-    color: #3A1405;
+    color: #ffffff;
     font-family: var(--dv2-font-display);
     font-weight: 800;
     font-size: 13px;
@@ -788,7 +788,7 @@
     gap: 24px;
     margin-top: 34px;
     background: var(--dv2-blue);
-    color: #3A1405;
+    color: #ffffff;
     font-family: var(--dv2-font-display);
     font-weight: 800;
     font-size: 28px;
@@ -801,7 +801,7 @@
 
 .dv2-cta-bar:hover {
     background: var(--dv2-blue-600);
-    color: #3A1405;
+    color: #ffffff;
 }
 
 .dv2-cta-bar-arrow {
@@ -828,7 +828,7 @@
 
 .dv2-compare-head-ours {
     background: var(--dv2-blue);
-    color: #3A1405;
+    color: #ffffff;
     padding: 26px 30px;
 }
 
@@ -1257,7 +1257,7 @@
     flex-shrink: 0;
     border-radius: var(--dv2-radius-pill);
     background: var(--dv2-blue);
-    color: #3A1405;
+    color: #ffffff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1455,7 +1455,7 @@
 
 .dv2-trial-btn {
     background: var(--dv2-blue);
-    color: #3A1405;
+    color: #ffffff;
     font-size: 15px;
     padding: 13px 22px;
     box-shadow: none;
@@ -1463,7 +1463,7 @@
 
 .dv2-trial-btn:hover {
     background: var(--dv2-blue-600);
-    color: #3A1405;
+    color: #ffffff;
 }
 
 /* Payment methods */
@@ -1614,7 +1614,7 @@
 
 .badge-orange {
     background: var(--dv2-blue);
-    color: #3A1405;
+    color: #ffffff;
 }
 
 /* pricing.css paints this button with an !important indigo gradient. */
@@ -1871,7 +1871,7 @@
     font-family: var(--dv2-font-display);
     font-weight: 700;
     font-size: 13px;
-    color: #3A1405;
+    color: #ffffff;
     box-shadow: 0 4px 10px rgba(252, 108, 52, 0.35);
     flex-shrink: 0;
 }
@@ -1925,7 +1925,7 @@
     justify-content: center;
     gap: 6px;
     background: var(--dv2-blue);
-    color: #3A1405;
+    color: #ffffff;
     text-align: center;
     padding: 7px 10px;
     border-radius: 6px;
@@ -2122,7 +2122,7 @@
     border-radius: var(--dv2-radius-xl);
     padding: 56px var(--dv2-gutter);
     text-align: center;
-    color: #3A1405;
+    color: #ffffff;
 }
 
 .cta .cta-box h2 {

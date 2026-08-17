@@ -126,7 +126,7 @@ if (!empty($offer_steps_rows)) {
         height: 3rem;
         border-radius: 50%;
         background: linear-gradient(135deg, var(--color-teal), var(--color-indigo-hover));
-        color: #3A1405;
+        color: #ffffff;
         font-size: 1.25rem;
         font-weight: 800;
         display: flex;

@@ -152,7 +152,7 @@ body .activity-ticker {
 
 .dv2-sticky-btn--primary {
     background: var(--dv2-blue, #fc6c34);
-    color: #3A1405;
+    color: #ffffff;
     box-shadow: 0 8px 22px rgba(252, 108, 52, 0.28);
 }
 
@@ -168,7 +168,7 @@ body .activity-ticker {
 @media (hover: hover) and (pointer: fine) {
     .dv2-sticky-btn--primary:hover {
         background: var(--dv2-blue-600, #e85519);
-        color: #3A1405;
+        color: #ffffff;
     }
 
     .dv2-sticky-btn--ghost:hover {
@@ -179,7 +179,7 @@ body .activity-ticker {
 
 .dv2-sticky-btn--primary:active {
     background: var(--dv2-blue-600, #e85519);
-    color: #3A1405;
+    color: #ffffff;
 }
 
 .dv2-sticky-btn--ghost:active {

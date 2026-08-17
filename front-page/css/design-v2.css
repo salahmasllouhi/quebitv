@@ -153,7 +153,7 @@ body {
 body::selection,
 ::selection {
     background: var(--dv2-blue);
-    color: #3A1405;
+    color: #ffffff;
 }
 
 a {
@@ -324,7 +324,7 @@ h6,
 .cta-btn,
 .nav-btn-primary {
     background: var(--dv2-blue);
-    color: #3A1405;
+    color: #ffffff;
     box-shadow: 0 14px 40px rgba(252, 108, 52, 0.28);
 }
 
@@ -334,7 +334,7 @@ h6,
 .cta-btn:hover,
 .nav-btn-primary:hover {
     background: var(--dv2-blue-600);
-    color: #3A1405;
+    color: #ffffff;
 }
 
 /* Size modifier for the hero pair of CTAs. */
@@ -355,7 +355,7 @@ h6,
 .btn-secondary:hover,
 .button-secondary:hover {
     background: var(--dv2-blue-900);
-    color: #3A1405;
+    color: #ffffff;
 }
 
 .dv2-btn-soft {
