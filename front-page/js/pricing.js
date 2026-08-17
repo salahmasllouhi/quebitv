@@ -84,7 +84,7 @@
             setText('price-' + months + 'mo', formatPrice(price));
             setText(
                 'per-' + months + 'mo',
-                months === 1 ? 'per month' : '~' + formatPrice(price / months) + '/mo'
+                months === 1 ? (window.iptvPerMonthLabel || 'per month') : '~' + formatPrice(price / months) + '/mo'
             );
         });
 

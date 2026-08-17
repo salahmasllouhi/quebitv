@@ -100,6 +100,9 @@ $screen_plural   = iptv_text('screen_plural', 'Screens');
     window.iptvPrices = <?php echo json_encode($all_prices); ?>;
     window.iptvVariationIds = <?php echo json_encode($variation_map); ?>;
     window.iptvDefaultScreens = <?php echo (int) $default_screens; ?>;
+    // Price sublabel for the 1-month card. Printed from PHP so it goes
+    // through iptv_text() rather than sitting hardcoded in pricing.js.
+    window.iptvPerMonthLabel = <?php echo wp_json_encode(iptv_text('price_per_month_label', 'per month')); ?>;
     window.iptvDefaultMonths = <?php echo (int) $default_months; ?>;
     window.iptvCheckoutBase = '<?php echo esc_js($checkout_base); ?>';
 </script>
@@ -284,17 +287,21 @@ $screen_plural   = iptv_text('screen_plural', 'Screens');
 
             <!-- What every plan includes -->
             <?php
+            // Routed through iptv_text() so each line is translatable: the
+            // lookup falls back to post meta on the front page, and Polylang
+            // swaps that for the French page under /fr/. "handball" became
+            // basketball with the move off the Nordic market.
             $plan_includes = array(
-                1  => '40,000+ Live TV Channels',
-                2  => '200,000+ Movies & Series (VOD)',
-                3  => '4K, Ultra HD & HD quality',
-                4  => 'Stable, fast servers',
-                5  => 'Full TV guide (EPG)',
-                6  => 'Anti-Buffer™ 9.8',
-                7  => 'Live hockey, football & handball',
-                8  => 'Pay-Per-View (PPV) events',
-                9  => 'Auto-updating channels & VOD',
-                10 => '24/7 support',
+                1  => iptv_text('plan_include_1', '40,000+ Live TV Channels'),
+                2  => iptv_text('plan_include_2', '200,000+ Movies & Series (VOD)'),
+                3  => iptv_text('plan_include_3', '4K, Ultra HD & HD quality'),
+                4  => iptv_text('plan_include_4', 'Stable, fast servers'),
+                5  => iptv_text('plan_include_5', 'Full TV guide (EPG)'),
+                6  => iptv_text('plan_include_6', 'Anti-Buffer™ 9.8'),
+                7  => iptv_text('plan_include_7', 'Live hockey, football & basketball'),
+                8  => iptv_text('plan_include_8', 'Pay-Per-View (PPV) events'),
+                9  => iptv_text('plan_include_9', 'Auto-updating channels & VOD'),
+                10 => iptv_text('plan_include_10', '24/7 support'),
             );
             ?>
             <div class="dv2-loaded">
