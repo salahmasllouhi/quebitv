@@ -111,8 +111,8 @@
 
 .select-card.active {
     border-color: var(--color-teal);
-    background: rgba(16, 137, 242, 0.08);
-    box-shadow: 0 0 0 3px rgba(16, 137, 242, 0.15);
+    background: rgba(252, 108, 52, 0.08);
+    box-shadow: 0 0 0 3px rgba(252, 108, 52, 0.15);
 }
 
 .select-card .num {
@@ -171,13 +171,13 @@
 
 .badge-green {
     background: #fc6c34 !important;
-    color: #fff !important;
+    color: #3A1405 !important;
     border: none !important;
 }
 
 .badge-orange {
     background: linear-gradient(135deg, #fc6c34, #fc6c34) !important;
-    color: #fff !important;
+    color: #3A1405 !important;
     border: none !important;
 }
 
@@ -203,7 +203,7 @@
 .trust-badges .icon-circle {
     width: 2.5rem;
     height: 2.5rem;
-    background: rgba(16, 137, 242, 0.1);
+    background: rgba(252, 108, 52, 0.1);
     border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
@@ -235,13 +235,13 @@
     padding: 1.15rem 2rem !important;
     background: linear-gradient(90deg, #c04412 0%, #fc6c34 50%, #fda37a 100%) !important;
     background-size: unset !important;
-    color: #ffffff !important;
+    color: #3A1405 !important;
     border-radius: var(--radius-full) !important;
     font-weight: 800 !important;
     font-size: 1.15rem !important;
     letter-spacing: 0.02em !important;
     text-decoration: none !important;
-    box-shadow: 0 6px 32px rgba(9, 91, 170, 0.6) !important;
+    box-shadow: 0 6px 32px rgba(18, 48, 55, 0.6) !important;
     animation: none !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     margin-bottom: 1rem !important;
@@ -249,7 +249,7 @@
 
 .cta-btn:hover {
     transform: translateY(-3px) scale(1.015) !important;
-    box-shadow: 0 14px 52px rgba(9, 91, 170, 0.75) !important;
+    box-shadow: 0 14px 52px rgba(18, 48, 55, 0.75) !important;
     animation: none !important;
 }
 

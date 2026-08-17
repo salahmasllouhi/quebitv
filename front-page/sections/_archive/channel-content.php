@@ -194,8 +194,8 @@ $type_icon = $channel_type && isset($type_icons[$channel_type]) ? $type_icons[$c
     }
 
     .ch-network-badge {
-        background: linear-gradient(135deg, rgba(16, 137, 242, .12), rgba(61, 122, 184, .12));
-        border: 1px solid rgba(16, 137, 242, .3);
+        background: linear-gradient(135deg, rgba(252, 108, 52, .12), rgba(232, 85, 25, .12));
+        border: 1px solid rgba(252, 108, 52, .3);
         color: var(--text-primary);
         border-radius: var(--radius-sm, 8px);
         padding: .3rem .75rem;

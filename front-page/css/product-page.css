@@ -147,7 +147,7 @@
 .woocommerce div.product form.cart table.variations select:focus {
     outline: none !important;
     border-color: var(--color-teal) !important;
-    box-shadow: 0 0 0 3px rgba(16, 137, 242, 0.1) !important;
+    box-shadow: 0 0 0 3px rgba(252, 108, 52, 0.1) !important;
 }
 
 /* Quantity + Button Row */
@@ -181,7 +181,7 @@
 .single-product div.product .single_add_to_cart_button {
     flex: 1 !important;
     background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-indigo-hover) 100%) !important;
-    color: #fff !important;
+    color: #3A1405 !important;
     padding: 1.125rem 2rem !important;
     border-radius: 12px !important;
     font-size: 1.125rem !important;
@@ -465,7 +465,7 @@
 
 .woocommerce .related.products ul.products li.product:hover {
     transform: translateY(-4px) !important;
-    background: rgba(16, 137, 242, 0.05) !important;
+    background: rgba(252, 108, 52, 0.05) !important;
 }
 
 .woocommerce .related.products ul.products li.product a img {

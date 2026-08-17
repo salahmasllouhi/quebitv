@@ -101,7 +101,7 @@ get_header();
         width: 100%;
         padding: 1rem;
         background: #fc6c34;
-        color: #fff;
+        color: #3A1405;
         border: none;
         border-radius: 8px;
         font-size: 1rem;

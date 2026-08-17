@@ -126,7 +126,7 @@ if (!empty($offer_steps_rows)) {
         height: 3rem;
         border-radius: 50%;
         background: linear-gradient(135deg, var(--color-teal), var(--color-indigo-hover));
-        color: #fff;
+        color: #3A1405;
         font-size: 1.25rem;
         font-weight: 800;
         display: flex;
@@ -134,7 +134,7 @@ if (!empty($offer_steps_rows)) {
         justify-content: center;
         flex-shrink: 0;
         margin-bottom: 1rem;
-        box-shadow: 0 4px 16px rgba(16, 137, 242, 0.3);
+        box-shadow: 0 4px 16px rgba(252, 108, 52, 0.3);
     }
 
     .offer-steps__content {

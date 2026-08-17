@@ -34,8 +34,8 @@
     max-width: 100%;
     z-index: 9990;
     background: var(--dv2-surface, #ffffff);
-    border-top: 1px solid var(--dv2-border-strong, rgba(16, 137, 242, 0.30));
-    box-shadow: 0 -6px 28px rgba(7, 68, 126, 0.14);
+    border-top: 1px solid var(--dv2-border-strong, rgba(252, 108, 52, 0.30));
+    box-shadow: 0 -6px 28px rgba(22, 55, 63, 0.14);
     padding: 9px 12px calc(9px + env(safe-area-inset-bottom, 0px));
     transform: translateY(0);
     transition: transform .28s ease;
@@ -98,7 +98,7 @@ body .activity-ticker {
     font-family: var(--dv2-font-body, 'Space Grotesk', sans-serif);
     font-size: 12.5px;
     line-height: 1.2;
-    color: var(--dv2-ink-2, #22364c);
+    color: var(--dv2-ink-2, #123037);
 }
 
 .dv2-sticky-dot {
@@ -152,14 +152,14 @@ body .activity-ticker {
 
 .dv2-sticky-btn--primary {
     background: var(--dv2-blue, #fc6c34);
-    color: #ffffff;
-    box-shadow: 0 8px 22px rgba(16, 137, 242, 0.28);
+    color: #3A1405;
+    box-shadow: 0 8px 22px rgba(252, 108, 52, 0.28);
 }
 
 .dv2-sticky-btn--ghost {
     background: var(--dv2-surface-tint, #ffe9df);
     color: var(--dv2-blue-700, #c04412);
-    border: 1px solid var(--dv2-border-strong, rgba(16, 137, 242, 0.30));
+    border: 1px solid var(--dv2-border-strong, rgba(252, 108, 52, 0.30));
 }
 
 /* Hover is gated behind a real pointer. A touch tap otherwise leaves the
@@ -168,7 +168,7 @@ body .activity-ticker {
 @media (hover: hover) and (pointer: fine) {
     .dv2-sticky-btn--primary:hover {
         background: var(--dv2-blue-600, #e85519);
-        color: #ffffff;
+        color: #3A1405;
     }
 
     .dv2-sticky-btn--ghost:hover {
@@ -179,7 +179,7 @@ body .activity-ticker {
 
 .dv2-sticky-btn--primary:active {
     background: var(--dv2-blue-600, #e85519);
-    color: #ffffff;
+    color: #3A1405;
 }
 
 .dv2-sticky-btn--ghost:active {

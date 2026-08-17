@@ -181,7 +181,7 @@ img {
 .woocommerce input.button,
 .woocommerce #respond input#submit {
     background: var(--color-indigo);
-    color: #fff;
+    color: #3A1405;
     padding: 0.875rem 2rem;
     border-radius: 0.5rem;
     font-weight: 600;
@@ -196,7 +196,7 @@ img {
 .woocommerce input.button:hover {
     background: var(--color-indigo-hover);
     transform: translateY(-2px);
-    color: #fff;
+    color: #3A1405;
     text-decoration: none;
 }
 
@@ -211,13 +211,13 @@ img {
 .woocommerce button.button.alt,
 .woocommerce a.button.alt {
     background: linear-gradient(135deg, var(--color-indigo), var(--color-indigo-hover));
-    color: #fff;
+    color: #3A1405;
 }
 
 .woocommerce button.button.alt:hover,
 .woocommerce a.button.alt:hover {
     background: var(--color-indigo-hover);
-    box-shadow: 0 4px 15px rgba(16, 137, 242, 0.3);
+    box-shadow: 0 4px 15px rgba(252, 108, 52, 0.3);
 }
 
 /* Form Fields */
@@ -236,7 +236,7 @@ img {
 .woocommerce form .form-row select:focus {
     border-color: var(--color-indigo);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(16, 137, 242, 0.1);
+    box-shadow: 0 0 0 3px rgba(252, 108, 52, 0.1);
 }
 
 /* Notices / Alerts */

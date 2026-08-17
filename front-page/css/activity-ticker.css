@@ -4,13 +4,13 @@
     bottom: 1.5rem;
     left: 1.5rem;
     background: #FFFFFF;
-    border: 1px solid rgba(15, 40, 71, 0.08);
+    border: 1px solid rgba(7, 25, 29, 0.08);
     border-radius: 12px;
     padding: 0.75rem 1rem;
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    box-shadow: 0 8px 32px rgba(15, 40, 71, 0.08);
+    box-shadow: 0 8px 32px rgba(7, 25, 29, 0.08);
     z-index: 9999;
     max-width: 300px;
     font-family: 'DM Sans', sans-serif;
@@ -49,13 +49,13 @@
 .activity-content strong {
     display: block;
     font-size: 0.85rem;
-    color: #0F2847;
+    color: #07191d;
     font-weight: 600;
 }
 
 .activity-content span {
     font-size: 0.75rem;
-    color: #8B9DB8;
+    color: #6e9099;
 }
 
 /* Close button */
@@ -65,7 +65,7 @@
     right: -6px;
     width: 20px;
     height: 20px;
-    background: #0F2847;
+    background: #07191d;
     border: none;
     border-radius: 50%;
     color: white;

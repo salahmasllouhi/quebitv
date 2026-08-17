@@ -56,7 +56,7 @@ body.single-faq .faq-single {
 .faq-single__title {
     font-size: clamp(1.75rem, 4vw, 2.75rem);
     font-weight: 700;
-    color: var(--text-primary, #0F2847);
+    color: var(--text-primary, #07191d);
     letter-spacing: -0.02em;
     line-height: 1.25;
     margin-bottom: var(--space-lg, 2.5rem);
@@ -70,10 +70,10 @@ body.single-faq .faq-single {
     border-radius: var(--radius-lg, 20px);
     padding: var(--space-md, 1.5rem) var(--space-lg, 2rem);
     margin-bottom: var(--space-xl, 3rem);
-    box-shadow: var(--shadow-glow, 0 8px 40px rgba(16, 137, 242, 0.25));
+    box-shadow: var(--shadow-glow, 0 8px 40px rgba(252, 108, 52, 0.25));
     font-size: 1.1rem;
     line-height: 1.7;
-    color: var(--text-primary, #0F2847);
+    color: var(--text-primary, #07191d);
 }
 
 .faq-single__answer-capsule p {
@@ -87,14 +87,14 @@ body.single-faq .faq-single {
 .faq-single__body h2 {
     font-size: clamp(1.05rem, 2.5vw, 1.25rem);
     font-weight: 700;
-    color: #0F2847;
+    color: #07191d;
     margin: 2.5rem 0 0.6rem;
     padding: 0.85rem 1.25rem 0.85rem 1.25rem;
     background: #ffffff;
     border: 1px solid #e8e8f0;
     border-left: 4px solid #fc6c34;
     border-radius: 0 12px 12px 0;
-    box-shadow: 0 2px 8px rgba(15,40,71,0.06);
+    box-shadow: 0 2px 8px rgba(7, 25, 29, 0.06);
     display: block;
 }
 
@@ -103,7 +103,7 @@ body.single-faq .faq-single {
 }
 
 .faq-single__body p {
-    color: var(--text-secondary, #4A6282);
+    color: var(--text-secondary, #16373f);
     line-height: 1.75;
     margin-bottom: var(--space-sm, 1rem);
     padding: 0 0.25rem;
@@ -129,7 +129,7 @@ body.single-faq .faq-single {
 .faq-related__heading {
     font-size: 1.35rem;
     font-weight: 700;
-    color: var(--text-primary, #0F2847);
+    color: var(--text-primary, #07191d);
     margin-bottom: 1.5rem;
 }
 
@@ -151,21 +151,21 @@ body.single-faq .faq-single {
     border-radius: var(--radius-lg, 20px);
     padding: 1.25rem 1.5rem;
     text-decoration: none;
-    box-shadow: var(--shadow-sm, 0 2px 8px rgba(15,40,71,0.06));
+    box-shadow: var(--shadow-sm, 0 2px 8px rgba(7, 25, 29, 0.06));
     border: 1px solid transparent;
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
 .faq-related__card:hover {
     border-color: var(--color-teal, #fc6c34);
-    box-shadow: var(--shadow-glow, 0 8px 40px rgba(16,137,242,0.25));
+    box-shadow: var(--shadow-glow, 0 8px 40px rgba(252, 108, 52,0.25));
     transform: translateY(-2px);
 }
 
 .faq-related__card-title {
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--text-primary, #0F2847);
+    color: var(--text-primary, #07191d);
     line-height: 1.4;
     margin-bottom: 0.4rem;
 }

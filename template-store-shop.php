@@ -52,7 +52,7 @@ get_header();
 
     .woocommerce ul.products li.product:hover {
         transform: translateY(-4px);
-        box-shadow: 0 8px 24px rgba(16, 137, 242, 0.15);
+        box-shadow: 0 8px 24px rgba(252, 108, 52, 0.15);
     }
 
     .woocommerce ul.products li.product a img {
@@ -82,7 +82,7 @@ get_header();
         margin: 1rem;
         padding: 0.75rem 1rem;
         background: #fc6c34;
-        color: #fff;
+        color: #3A1405;
         border-radius: 8px;
         text-align: center;
         font-weight: 600;

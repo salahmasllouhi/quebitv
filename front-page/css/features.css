@@ -53,8 +53,8 @@
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px -15px rgba(16, 137, 242, 0.15);
-    border-color: rgba(16, 137, 242, 0.2);
+    box-shadow: 0 20px 40px -15px rgba(252, 108, 52, 0.15);
+    border-color: rgba(252, 108, 52, 0.2);
 }
 
 /* Icon Wrapper - Light Blue Circle with Hover Animation */

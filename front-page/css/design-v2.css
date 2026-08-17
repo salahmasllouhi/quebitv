@@ -25,22 +25,22 @@
     --dv2-blue-900: #5c1f07;
     --dv2-blue-soft: #fda37a;
 
-    --dv2-ink: #0b1f33;
-    --dv2-ink-2: #22364c;
-    --dv2-body: #4a5c70;
-    --dv2-faint: #5b6d80;
-    --dv2-muted: #6f8298;
+    --dv2-ink: #07191d;
+    --dv2-ink-2: #123037;
+    --dv2-body: #16373f;
+    --dv2-faint: #6e9099;
+    --dv2-muted: #6e9099;
 
     --dv2-green: #00b67a;
     --dv2-amber: #ffb800;
 
-    --dv2-border: rgba(7, 68, 126, 0.10);
-    --dv2-border-medium: rgba(7, 68, 126, 0.12);
-    --dv2-border-strong: rgba(16, 137, 242, 0.30);
+    --dv2-border: rgba(22, 55, 63, 0.10);
+    --dv2-border-medium: rgba(22, 55, 63, 0.12);
+    --dv2-border-strong: rgba(252, 108, 52, 0.30);
 
-    --dv2-shadow-sm: 0 2px 10px rgba(7, 68, 126, 0.05);
-    --dv2-shadow-md: 0 8px 30px rgba(7, 68, 126, 0.08);
-    --dv2-shadow-lg: 0 24px 60px rgba(16, 137, 242, 0.35);
+    --dv2-shadow-sm: 0 2px 10px rgba(22, 55, 63, 0.05);
+    --dv2-shadow-md: 0 8px 30px rgba(22, 55, 63, 0.08);
+    --dv2-shadow-lg: 0 24px 60px rgba(252, 108, 52, 0.35);
     --dv2-shadow-green: 0 18px 50px rgba(0, 182, 122, 0.32);
 
     --dv2-font-display: 'Sora', sans-serif;
@@ -82,7 +82,7 @@
     --text-primary: var(--dv2-ink);
     --text-secondary: var(--dv2-body);
     --text-muted: var(--dv2-muted);
-    --text-inverse: #ffffff;
+    --text-inverse: #EAF6F8;
     --text-nav: var(--dv2-ink);
 
     --border-subtle: var(--dv2-border);
@@ -93,7 +93,7 @@
     --shadow-sm: var(--dv2-shadow-sm);
     --shadow-md: var(--dv2-shadow-md);
     --shadow-lg: var(--dv2-shadow-md);
-    --shadow-glow: 0 18px 50px rgba(16, 137, 242, 0.30);
+    --shadow-glow: 0 18px 50px rgba(252, 108, 52, 0.30);
 
     /* --- Remap variables.css tokens --- */
     --white: #ffffff;
@@ -153,7 +153,7 @@ body {
 body::selection,
 ::selection {
     background: var(--dv2-blue);
-    color: #ffffff;
+    color: #3A1405;
 }
 
 a {
@@ -227,8 +227,8 @@ h6,
     position: fixed;
     inset: 0;
     background-image:
-        linear-gradient(rgba(16, 137, 242, 0.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(16, 137, 242, 0.07) 1px, transparent 1px);
+        linear-gradient(rgba(252, 108, 52, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(252, 108, 52, 0.07) 1px, transparent 1px);
     background-size: 64px 64px;
     /* Solid through the middle, gone by the edges and corners. */
     -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 50%, #000 35%, transparent 78%);
@@ -324,8 +324,8 @@ h6,
 .cta-btn,
 .nav-btn-primary {
     background: var(--dv2-blue);
-    color: #ffffff;
-    box-shadow: 0 14px 40px rgba(16, 137, 242, 0.28);
+    color: #3A1405;
+    box-shadow: 0 14px 40px rgba(252, 108, 52, 0.28);
 }
 
 .dv2-btn-primary:hover,
@@ -334,7 +334,7 @@ h6,
 .cta-btn:hover,
 .nav-btn-primary:hover {
     background: var(--dv2-blue-600);
-    color: #ffffff;
+    color: #3A1405;
 }
 
 /* Size modifier for the hero pair of CTAs. */
@@ -355,7 +355,7 @@ h6,
 .btn-secondary:hover,
 .button-secondary:hover {
     background: var(--dv2-blue-900);
-    color: #ffffff;
+    color: #3A1405;
 }
 
 .dv2-btn-soft {

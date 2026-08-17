@@ -86,7 +86,7 @@ http_response_code(404);
             align-items: center;
             gap: 0.5rem;
             background: linear-gradient(135deg, #fc6c34 0%, #c04412 100%);
-            color: #fff;
+            color: #3A1405;
             text-decoration: none;
             padding: 0.75rem 1.75rem;
             border-radius: 9999px;
@@ -116,7 +116,7 @@ http_response_code(404);
 
         .btn-secondary:hover {
             background: var(--blue-600, #c04412);
-            color: #fff;
+            color: #3A1405;
         }
     </style>
 </head>

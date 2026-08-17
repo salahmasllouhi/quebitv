@@ -313,7 +313,7 @@ function my_iptv_product_page_inline_css()
             .woocommerce div.product form.cart .button {
                 width: 100% !important;
                 background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-indigo-hover) 100%) !important;
-                color: #fff !important;
+                color: #3A1405 !important;
                 padding: 1rem 2rem !important;
                 border-radius: 8px !important;
                 font-weight: 600 !important;

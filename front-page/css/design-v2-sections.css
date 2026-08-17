@@ -66,18 +66,18 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    background: rgba(11, 31, 51, 0.78);
+    background: rgba(7, 25, 29, 0.78);
     backdrop-filter: blur(18px) saturate(140%);
     -webkit-backdrop-filter: blur(18px) saturate(140%);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: var(--dv2-radius-pill);
-    box-shadow: 0 8px 30px rgba(4, 20, 40, 0.28);
+    box-shadow: 0 8px 30px rgba(7, 25, 29, 0.28);
     transition: background .25s ease, box-shadow .25s ease;
 }
 
 .site-header.scrolled .nav-container {
-    background: rgba(11, 31, 51, 0.90);
-    box-shadow: 0 12px 38px rgba(4, 20, 40, 0.38);
+    background: rgba(7, 25, 29, 0.90);
+    box-shadow: 0 12px 38px rgba(7, 25, 29, 0.38);
 }
 
 /* Anchor targets stop below the floating bar instead of under it. */
@@ -173,19 +173,19 @@
 
 .site-header .nav-btn-primary {
     background: var(--dv2-blue);
-    color: #ffffff;
+    color: #3A1405;
     font-family: var(--dv2-font-body);
     font-weight: 700;
     font-size: 15px;
     padding: 10px 22px;
     border-radius: var(--dv2-radius-pill);
-    box-shadow: 0 6px 18px rgba(16, 137, 242, 0.35);
+    box-shadow: 0 6px 18px rgba(252, 108, 52, 0.35);
     white-space: nowrap;
 }
 
 .site-header .nav-btn-primary:hover {
     background: var(--dv2-blue-600);
-    color: #ffffff;
+    color: #3A1405;
 }
 
 .site-header .mobile-menu-toggle span {
@@ -290,10 +290,10 @@
     inset: 0;
     background:
         linear-gradient(90deg,
-            rgba(4, 22, 42, 0.72) 0%,
-            rgba(4, 22, 42, 0.46) 55%,
-            rgba(4, 22, 42, 0.30) 100%),
-        rgba(4, 22, 42, 0.42);
+            rgba(7, 25, 29, 0.72) 0%,
+            rgba(7, 25, 29, 0.46) 55%,
+            rgba(7, 25, 29, 0.30) 100%),
+        rgba(7, 25, 29, 0.42);
 }
 
 /* --- Hero copy inverted for the dark backdrop --- */
@@ -320,7 +320,7 @@
     padding: 8px 14px;
     font-size: 14px;
     color: var(--dv2-body);
-    box-shadow: 0 2px 10px rgba(7, 68, 126, 0.05);
+    box-shadow: 0 2px 10px rgba(22, 55, 63, 0.05);
 }
 
 .dv2-trustpilot-name {
@@ -390,14 +390,14 @@
     background: #ffffff;
     color: var(--dv2-blue-700);
     border: 1px solid var(--dv2-border-strong);
-    box-shadow: 0 6px 20px rgba(7, 68, 126, 0.08);
+    box-shadow: 0 6px 20px rgba(22, 55, 63, 0.08);
 }
 
 .dv2-hero-link:hover {
     background: #ffffff;
     color: var(--dv2-blue-600);
     border-color: var(--dv2-blue);
-    box-shadow: 0 10px 26px rgba(16, 137, 242, 0.16);
+    box-shadow: 0 10px 26px rgba(252, 108, 52, 0.16);
 }
 
 /* The front-page hero no longer has foreground artwork -- it is a backdrop now.
@@ -411,7 +411,7 @@
 .dv2-hero-glow {
     position: absolute;
     inset: -30px;
-    background: radial-gradient(ellipse 60% 55% at 50% 55%, rgba(16, 137, 242, 0.28), transparent 70%);
+    background: radial-gradient(ellipse 60% 55% at 50% 55%, rgba(252, 108, 52, 0.28), transparent 70%);
     filter: blur(20px);
     pointer-events: none;
 }
@@ -544,7 +544,7 @@
     width: calc(100% - 2 * var(--dv2-gutter));
     max-width: calc(var(--dv2-shell) - 2 * var(--dv2-gutter));
     margin: 26px auto 0;
-    /* --dv2-ink is #0b1f33. Dark panels, light type. */
+    /* --dv2-ink is #07191d. Dark panels, light type. */
     background: var(--dv2-ink);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--dv2-radius-xl);
@@ -578,7 +578,7 @@
     font-size: 42px;
 }
 
-/* --dv2-blue only clears 4.7:1 against the #0b1f33 panel; the lighter
+/* --dv2-blue only clears 4.7:1 against the #07191d panel; the lighter
    --dv2-blue-soft gets to 6.5:1, so the accent stays legible on the dark. */
 .dv2-split-title em {
     font-style: normal;
@@ -671,7 +671,7 @@
     align-items: center;
     gap: 10px;
     background: var(--dv2-surface);
-    border: 1px solid rgba(7, 68, 126, 0.08);
+    border: 1px solid rgba(22, 55, 63, 0.08);
     border-radius: var(--dv2-radius-sm);
     padding: 12px 14px;
     margin-bottom: 14px;
@@ -771,7 +771,7 @@
     background: var(--dv2-blue-900);
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: #3A1405;
     font-family: var(--dv2-font-display);
     font-weight: 800;
     font-size: 13px;
@@ -788,7 +788,7 @@
     gap: 24px;
     margin-top: 34px;
     background: var(--dv2-blue);
-    color: #ffffff;
+    color: #3A1405;
     font-family: var(--dv2-font-display);
     font-weight: 800;
     font-size: 28px;
@@ -796,12 +796,12 @@
     text-align: center;
     padding: 34px;
     border-radius: 16px;
-    box-shadow: 0 20px 60px rgba(16, 137, 242, 0.35);
+    box-shadow: 0 20px 60px rgba(252, 108, 52, 0.35);
 }
 
 .dv2-cta-bar:hover {
     background: var(--dv2-blue-600);
-    color: #ffffff;
+    color: #3A1405;
 }
 
 .dv2-cta-bar-arrow {
@@ -828,7 +828,7 @@
 
 .dv2-compare-head-ours {
     background: var(--dv2-blue);
-    color: #ffffff;
+    color: #3A1405;
     padding: 26px 30px;
 }
 
@@ -861,7 +861,7 @@
 .dv2-compare-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-top: 1px solid rgba(7, 68, 126, 0.08);
+    border-top: 1px solid rgba(22, 55, 63, 0.08);
 }
 
 .dv2-compare-good,
@@ -959,7 +959,7 @@
 
 .dv2-review-nav:hover:not(:disabled) {
     border-color: var(--dv2-blue);
-    box-shadow: 0 8px 22px rgba(16, 137, 242, 0.18);
+    box-shadow: 0 8px 22px rgba(252, 108, 52, 0.18);
 }
 
 /* Disabled at the ends of the row rather than hidden, so the control does not
@@ -1257,7 +1257,7 @@
     flex-shrink: 0;
     border-radius: var(--dv2-radius-pill);
     background: var(--dv2-blue);
-    color: #ffffff;
+    color: #3A1405;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1455,7 +1455,7 @@
 
 .dv2-trial-btn {
     background: var(--dv2-blue);
-    color: #ffffff;
+    color: #3A1405;
     font-size: 15px;
     padding: 13px 22px;
     box-shadow: none;
@@ -1463,7 +1463,7 @@
 
 .dv2-trial-btn:hover {
     background: var(--dv2-blue-600);
-    color: #ffffff;
+    color: #3A1405;
 }
 
 /* Payment methods */
@@ -1571,7 +1571,7 @@
 .select-card.active {
     border-color: var(--dv2-blue);
     background: var(--dv2-surface-tint);
-    box-shadow: 0 8px 26px rgba(16, 137, 242, 0.18);
+    box-shadow: 0 8px 26px rgba(252, 108, 52, 0.18);
 }
 
 .select-card .num,
@@ -1614,7 +1614,7 @@
 
 .badge-orange {
     background: var(--dv2-blue);
-    color: #ffffff;
+    color: #3A1405;
 }
 
 /* pricing.css paints this button with an !important indigo gradient. */
@@ -1622,13 +1622,13 @@
     display: flex;
     width: 100%;
     background: var(--dv2-blue) !important;
-    box-shadow: 0 14px 40px rgba(16, 137, 242, 0.28) !important;
+    box-shadow: 0 14px 40px rgba(252, 108, 52, 0.28) !important;
     font-family: var(--dv2-font-display) !important;
 }
 
 .cta-btn:hover {
     background: var(--dv2-blue-600) !important;
-    box-shadow: 0 18px 48px rgba(16, 137, 242, 0.38) !important;
+    box-shadow: 0 18px 48px rgba(252, 108, 52, 0.38) !important;
 }
 
 .trust-badges {
@@ -1826,14 +1826,14 @@
     position: relative;
     overflow: hidden;
     background: #ffffff;
-    border: 1px solid rgba(7, 68, 126, 0.08);
+    border: 1px solid rgba(22, 55, 63, 0.08);
     border-radius: var(--dv2-radius-md);
     padding: 18px 16px 16px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     min-width: 0;
-    box-shadow: 0 6px 18px rgba(4, 42, 78, 0.12);
+    box-shadow: 0 6px 18px rgba(92, 31, 7, 0.12);
     transition: transform .2s ease, box-shadow .2s ease;
 }
 
@@ -1850,7 +1850,7 @@
 
 .dv2-journey-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 34px rgba(4, 42, 78, 0.22);
+    box-shadow: 0 16px 34px rgba(92, 31, 7, 0.22);
 }
 
 .dv2-journey-head {
@@ -1871,8 +1871,8 @@
     font-family: var(--dv2-font-display);
     font-weight: 700;
     font-size: 13px;
-    color: #ffffff;
-    box-shadow: 0 4px 10px rgba(16, 137, 242, 0.35);
+    color: #3A1405;
+    box-shadow: 0 4px 10px rgba(252, 108, 52, 0.35);
     flex-shrink: 0;
 }
 
@@ -1925,7 +1925,7 @@
     justify-content: center;
     gap: 6px;
     background: var(--dv2-blue);
-    color: #ffffff;
+    color: #3A1405;
     text-align: center;
     padding: 7px 10px;
     border-radius: 6px;
@@ -2073,7 +2073,7 @@
 
 .dv2-support-cta--blue {
     background: var(--dv2-blue);
-    box-shadow: 0 8px 20px rgba(16, 137, 242, 0.26);
+    box-shadow: 0 8px 20px rgba(252, 108, 52, 0.26);
 }
 
 .dv2-support-cta--green {
@@ -2122,7 +2122,7 @@
     border-radius: var(--dv2-radius-xl);
     padding: 56px var(--dv2-gutter);
     text-align: center;
-    color: #ffffff;
+    color: #3A1405;
 }
 
 .cta .cta-box h2 {
@@ -2182,7 +2182,7 @@
    between the support section and the footer. The gap is padding instead, which
    sits inside the tinted area. */
 /* Dark footer. --dv2-ink is exactly the header bar's base colour
-   (rgba(11,31,51,.78) is this at 78%), so the two bookends match and both
+   (rgba(7, 25, 29,.78) is this at 78%), so the two bookends match and both
    carry the light logo. Everything inside is inverted to suit. */
 .site-footer {
     border-top: 1px solid rgba(255, 255, 255, 0.10);
@@ -2653,7 +2653,7 @@
     margin: 0 0 28px;
     font-size: 17px;
     line-height: 1.6;
-    color: var(--dv2-body, #4a5c70);
+    color: var(--dv2-body, #16373f);
 }
 
 .dv2-contact-page .dv2-support-grid {
