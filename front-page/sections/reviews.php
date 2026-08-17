@@ -5,7 +5,7 @@
  */
 
 $title    = iptv_text('reviews_title', 'What our customers actually say');
-$subtitle = iptv_text('reviews_subtitle', 'Join thousands of cord-cutters across Scandinavia who\'ve switched to Quebec IPTV.');
+$subtitle = iptv_text('reviews_subtitle', 'Join thousands of cord-cutters across Canada and the US who\'ve switched to Quebec IPTV.');
 
 // Reviews come from the `reviews_list` repeater on the front page, so they are
 // translated per language alongside the rest of the page copy. Title and date are
@@ -31,13 +31,13 @@ if (is_array($review_rows)) {
 
 if (empty($reviews)) {
     $reviews = [
-        ['title' => 'Crystal clear on every device', 'when' => 'Dec 2024', 'author' => 'Marcus L. · Stockholm, SE', 'text' => 'Crystal clear picture on all my devices. No buffering, no freezing — just pure streaming. Switched from cable 6 months ago and never looked back.'],
-        ['title' => 'The sports coverage is insane', 'when' => 'Jan 2025', 'author' => 'Anna K. · Oslo, NO', 'text' => 'Every big match, European club nights, basketball — all in HD. Setup took 5 minutes. Incredible service.'],
-        ['title' => 'The quality blew me away', 'when' => 'Nov 2024', 'author' => 'Thomas B. · Copenhagen, DK', 'text' => 'I was skeptical at first but the quality blew me away. 40,000+ channels and they all work perfectly. Customer support replied within the hour.'],
-        ['title' => 'Works on everything at once', 'when' => 'Feb 2025', 'author' => 'Erika V. · Helsinki, FI', 'text' => 'Finally a service that actually works on my Fire Stick AND smart TV at the same time. The 4-device plan is worth every penny.'],
-        ['title' => 'Zero downtime, ever', 'when' => 'Jan 2025', 'author' => 'Jonas H. · Gothenburg, SE', 'text' => 'Been with Quebec IPTV for over a year now. Zero downtime, constant channel list updates. This is how streaming should be done.'],
-        ['title' => 'Great value for the price', 'when' => '3 days ago', 'author' => 'Sofia N. · Bergen, NO', 'text' => 'Great value for the price. Support answered my questions within minutes on WhatsApp — no waiting around.'],
-        ['title' => 'Replaced four subscriptions', 'when' => '1 week ago', 'author' => 'Henrik D. · Malmö, SE', 'text' => 'I cancelled cable and three streaming apps. One bill, more content, and 4K on everything. Should have done it years ago.'],
+        ['title' => 'Crystal clear on every device', 'when' => 'Dec 2024', 'author' => 'Marc-André L. · Montréal, QC', 'text' => 'Crystal clear picture on all my devices. No buffering, no freezing — just pure streaming. Switched from cable 6 months ago and never looked back.'],
+        ['title' => 'The sports coverage is insane', 'when' => 'Jan 2025', 'author' => 'Ashley K. · Toronto, ON', 'text' => 'Every big game — NHL, NFL, NBA — all in HD. Setup took 5 minutes. Incredible service.'],
+        ['title' => 'The quality blew me away', 'when' => 'Nov 2024', 'author' => 'Thomas B. · Chicago, IL', 'text' => 'I was skeptical at first but the quality blew me away. 40,000+ channels and they all work perfectly. Customer support replied within the hour.'],
+        ['title' => 'Works on everything at once', 'when' => 'Feb 2025', 'author' => 'Émilie V. · Québec, QC', 'text' => 'Finally a service that actually works on my Fire Stick AND smart TV at the same time. The 4-device plan is worth every penny.'],
+        ['title' => 'Zero downtime, ever', 'when' => 'Jan 2025', 'author' => 'Jason H. · Denver, CO', 'text' => 'Been with Quebec IPTV for over a year now. Zero downtime, constant channel list updates. This is how streaming should be done.'],
+        ['title' => 'Great value for the price', 'when' => '3 days ago', 'author' => 'Sophie N. · Laval, QC', 'text' => 'Great value for the price. Support answered my questions within minutes on WhatsApp — no waiting around.'],
+        ['title' => 'Replaced four subscriptions', 'when' => '1 week ago', 'author' => 'Derek D. · Boston, MA', 'text' => 'I cancelled cable and three streaming apps. One bill, more content, and 4K on everything. Should have done it years ago.'],
     ];
 }
 

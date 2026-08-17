@@ -3,14 +3,20 @@
  * Generates random activities from names and plans
  */
 (function () {
-    // Names by country
+    // Names by city. Cities rather than countries because the ticker renders
+    // "<name> from <key>", and "Marc-André from Montréal" reads like a real
+    // customer where "from Canada" does not. Quebec first, then the rest of
+    // Canada, then the US.
     const names = {
-        "Sweden": ["Erik", "Linnea", "Oscar", "Astrid", "Viktor", "Alma", "Hugo", "Wilma", "Axel", "Ella", "Lucas", "Ebba", "Liam", "Saga", "Noah", "Freja", "Oliver", "Selma", "William", "Alice"],
-        "Norway": ["Magnus", "Ingrid", "Sander", "Nora", "Henrik", "Thea", "Emil", "Maja", "Odin", "Leah", "Jakob", "Emma", "Filip", "Sofia", "Aksel", "Olivia", "Mathias", "Amalie", "Tobias", "Ida"],
-        "Denmark": ["Mikkel", "Freja", "Rasmus", "Sofie", "Frederik", "Ida", "Noah", "Clara", "Oliver", "Alma", "Victor", "Ella", "Malthe", "Karla", "August", "Josefine", "Oscar", "Anna", "Carl", "Laura"],
-        "Finland": ["Elias", "Aino", "Onni", "Venla", "Leo", "Sofia", "Eetu", "Emma", "Väinö", "Olivia", "Oliver", "Aada", "Noel", "Helmi", "Eino", "Isla", "Leevi", "Aurora", "Niilo", "Ella"],
-        "Iceland": ["Aron", "Saga", "Gunnar", "Embla", "Bjarni", "Freyja", "Sigurður", "Guðrún", "Jón", "Anna", "Ólafur", "Kristín", "Einar", "María", "Ragnar", "Eva"],
-        "USA": ["Jake", "Emily", "Mike", "Sarah", "Chris", "Jessica", "David", "Ashley", "Ryan", "Amanda", "Brandon", "Megan", "Tyler", "Lauren", "Kevin", "Brittany", "Justin", "Stephanie", "Andrew", "Nicole", "Matt", "Jennifer", "Josh", "Rachel", "Brian", "Michelle", "Eric", "Amber", "Jason", "Samantha"]
+        "Montréal": ["Marc-André", "Émilie", "Olivier", "Camille", "Gabriel", "Léa", "Antoine", "Chloé", "Samuel", "Rosalie", "Félix", "Maude", "Xavier", "Juliette", "Alexis", "Charlotte"],
+        "Québec": ["Simon", "Ariane", "Vincent", "Noémie", "Étienne", "Sarah-Maude", "Guillaume", "Élodie", "Mathieu", "Catherine", "Nicolas", "Marilou"],
+        "Laval": ["Jean-François", "Sophie", "Philippe", "Andréanne", "Maxime", "Valérie", "Benoît", "Josée"],
+        "Gatineau": ["Patrick", "Geneviève", "Sébastien", "Mélanie", "Dominic", "Karine"],
+        "Toronto": ["Ashley", "Ryan", "Megan", "Brandon", "Lauren", "Kevin", "Nicole", "Justin", "Rachel", "Eric"],
+        "Vancouver": ["Tyler", "Brittany", "Andrew", "Michelle", "Josh", "Amber"],
+        "New York": ["Jake", "Emily", "Mike", "Sarah", "Chris", "Jessica", "David", "Jennifer"],
+        "Chicago": ["Matt", "Stephanie", "Brian", "Amanda", "Jason", "Samantha"],
+        "Boston": ["Derek", "Danielle", "Sean", "Katie"]
     };
 
     // Subscription plans (matching pricing)
@@ -33,14 +39,18 @@
         "12 Month 4 Devices"
     ];
 
-    // Country weights (higher = more frequent)
+    // City weights (higher = more frequent). Weighted to Quebec, which is the
+    // primary market, then the rest of Canada, then the US.
     const countryWeights = {
-        "Sweden": 20,
-        "Norway": 20,
-        "Denmark": 15,
-        "Finland": 15,
-        "Iceland": 5,
-        "USA": 25
+        "Montréal": 26,
+        "Québec": 16,
+        "Laval": 10,
+        "Gatineau": 7,
+        "Toronto": 13,
+        "Vancouver": 7,
+        "New York": 10,
+        "Chicago": 7,
+        "Boston": 4
     };
 
     // Randomizer functions

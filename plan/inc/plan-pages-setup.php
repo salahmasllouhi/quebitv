@@ -59,35 +59,11 @@ if (!function_exists('iptv_plan_page_definitions')) {
                 6  => array('title' => '6 Months IPTV Subscription', 'slug' => 'iptv-service-usa', 'label' => '6 Months'),
                 12 => array('title' => '12 Months IPTV Subscription', 'slug' => 'best-iptv-providers-reddit', 'label' => '12 Months'),
             ),
-            'sv' => array(
-                1  => array('title' => 'IPTV-abonnemang 1 månad', 'slug' => 'iptv-abonnemang', 'label' => '1 månad'),
-                3  => array('title' => 'IPTV-abonnemang 3 månader', 'slug' => 'kopa-iptv', 'label' => '3 månader'),
-                6  => array('title' => 'IPTV-abonnemang 6 månader', 'slug' => 'basta-iptv-leverantor', 'label' => '6 månader'),
-                12 => array('title' => 'IPTV-abonnemang 12 månader', 'slug' => 'basta-iptv-sverige', 'label' => '12 månader'),
-            ),
-            'no' => array(
-                1  => array('title' => 'IPTV-abonnement 1 måned', 'slug' => 'iptv-abonnement', 'label' => '1 måned'),
-                3  => array('title' => 'IPTV-abonnement 3 måneder', 'slug' => 'norge-iptv', 'label' => '3 måneder'),
-                6  => array('title' => 'IPTV-abonnement 6 måneder', 'slug' => 'iptv-norway', 'label' => '6 måneder'),
-                12 => array('title' => 'IPTV-abonnement 12 måneder', 'slug' => 'nordic-iptv', 'label' => '12 måneder'),
-            ),
-            'dk' => array(
-                1  => array('title' => 'IPTV-abonnement 1 måned', 'slug' => 'iptv-abonnement-danmark', 'label' => '1 måned'),
-                3  => array('title' => 'IPTV-abonnement 3 måneder', 'slug' => 'bedste-danske-iptv', 'label' => '3 måneder'),
-                6  => array('title' => 'IPTV-abonnement 6 måneder', 'slug' => 'kob-iptv', 'label' => '6 måneder'),
-                12 => array('title' => 'IPTV-abonnement 12 måneder', 'slug' => 'bedste-iptv-app', 'label' => '12 måneder'),
-            ),
-            'fi' => array(
-                1  => array('title' => 'IPTV-tilaus 1 kuukausi', 'slug' => 'iptv-hinta', 'label' => '1 kuukausi'),
-                3  => array('title' => 'IPTV-tilaus 3 kuukautta', 'slug' => 'paras-iptv', 'label' => '3 kuukautta'),
-                6  => array('title' => 'IPTV-tilaus 6 kuukautta', 'slug' => 'suomi-iptv-kokemuksia', 'label' => '6 kuukautta'),
-                12 => array('title' => 'IPTV-tilaus 12 kuukautta', 'slug' => 'nordic-iptv-suomi', 'label' => '12 kuukautta'),
-            ),
-            'is' => array(
-                1  => array('title' => 'IPTV áskrift 1 mánuður', 'slug' => 'iptv-askrift', 'label' => '1 mánuður'),
-                3  => array('title' => 'IPTV áskrift 3 mánuðir', 'slug' => 'iceland-iptv', 'label' => '3 mánuðir'),
-                6  => array('title' => 'IPTV áskrift 6 mánuðir', 'slug' => 'smart-iptv', 'label' => '6 mánuðir'),
-                12 => array('title' => 'IPTV áskrift 12 mánuðir', 'slug' => 'sjonvarp-simans-askrift', 'label' => '12 mánuðir'),
+            'fr' => array(
+                1  => array('title' => 'Abonnement IPTV 1 mois', 'slug' => 'abonnement-iptv-1-mois', 'label' => '1 mois'),
+                3  => array('title' => 'Abonnement IPTV 3 mois', 'slug' => 'abonnement-iptv-3-mois', 'label' => '3 mois'),
+                6  => array('title' => 'Abonnement IPTV 6 mois', 'slug' => 'abonnement-iptv-6-mois', 'label' => '6 mois'),
+                12 => array('title' => 'Abonnement IPTV 12 mois', 'slug' => 'abonnement-iptv-12-mois', 'label' => '12 mois'),
             ),
         );
     }
