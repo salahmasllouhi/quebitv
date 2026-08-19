@@ -710,6 +710,11 @@ require_once get_template_directory() . '/inc/sport-retire.php';
 // inc/channel-strings.php can stay out for the same reason sport's does.
 require_once get_template_directory() . '/inc/channel-retire.php';
 
+// One-shot: makes French the default language and English the second, then
+// points the front page option at the French page. Delete file + line once the
+// iptv_default_lang_fr option is set.
+require_once get_template_directory() . '/inc/default-language.php';
+
 // One-shot scrub of broadcaster / competition names left in post content.
 // Safe to delete along with the file once the option records it has run.
 require_once get_template_directory() . '/inc/trademark-scrub.php';

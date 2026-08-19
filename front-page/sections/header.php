@@ -6,7 +6,7 @@ $site_slug = '';
 // Method 1: Polylang language detection (most reliable on this site)
 if (function_exists('pll_current_language')) {
     $pll_lang = pll_current_language('slug');
-    if (!empty($pll_lang) && $pll_lang !== 'en') {
+    if (!empty($pll_lang) && $pll_lang !== 'fr') {
         $site_slug = $pll_lang;
     }
 }
@@ -24,22 +24,22 @@ if (empty($site_slug)) {
     $request_uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
     $path_parts = explode('/', trim($request_uri, '/'));
     $first_segment = isset($path_parts[0]) ? $path_parts[0] : '';
-    if (in_array($first_segment, array('fr'))) {
+    if (in_array($first_segment, array('en'))) {
         $site_slug = $first_segment;
     }
 }
 
-// Map subsite to its language label (flag + native language name). French is
-// the site's primary language and English its second, both Quebec-facing. The
+// French is the default language and carries no URL prefix, so it is the
+// fallback here and only the prefixed languages need an entry in the map. The
 // flag is Canada's, not France's or Quebec's: the CA-QC subdivision flag is not
 // in Unicode's RGI set and renders as a blank flag on most platforms.
 $site_language_map = array(
-    'fr' => array('flag' => '🇨🇦', 'name' => 'Français'),
+    'en' => array('flag' => '🇺🇸', 'name' => 'English'),
 );
 
-// Get default based on current subsite (main site = English)
-$default_flag = '🇺🇸';
-$default_name = 'English';
+// Default = the unprefixed language, which is French.
+$default_flag = '🇨🇦';
+$default_name = 'Français';
 if (isset($site_language_map[$site_slug])) {
     $default_flag = $site_language_map[$site_slug]['flag'];
     $default_name = $site_language_map[$site_slug]['name'];

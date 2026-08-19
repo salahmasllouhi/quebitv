@@ -14,7 +14,7 @@ $site_slug = '';
 // Method 1: Polylang
 if (function_exists('pll_current_language')) {
     $pll_lang = pll_current_language('slug');
-    if (!empty($pll_lang) && $pll_lang !== 'en') {
+    if (!empty($pll_lang) && $pll_lang !== 'fr') {
         $site_slug = $pll_lang;
     }
 }
@@ -30,17 +30,18 @@ if (empty($site_slug)) {
     $request_uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
     $path_parts = explode('/', trim($request_uri, '/'));
     $first = isset($path_parts[0]) ? $path_parts[0] : '';
-    if (in_array($first, ['fr'])) {
+    if (in_array($first, ['en'])) {
         $site_slug = $first;
     }
 }
 
-// See front-page/sections/header.php for why French carries Canada's flag.
+// French is the default language and unprefixed, so only English needs a map
+// entry. See front-page/sections/header.php for why French carries Canada's flag.
 $site_language_map = [
-    'fr' => ['flag' => '🇨🇦', 'name' => 'Français'],
+    'en' => ['flag' => '🇺🇸', 'name' => 'English'],
 ];
-$default_flag = '🇺🇸';
-$default_name = 'English';
+$default_flag = '🇨🇦';
+$default_name = 'Français';
 if (isset($site_language_map[$site_slug])) {
     $default_flag = $site_language_map[$site_slug]['flag'];
     $default_name = $site_language_map[$site_slug]['name'];

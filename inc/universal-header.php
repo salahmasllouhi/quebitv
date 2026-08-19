@@ -56,8 +56,8 @@ include get_template_directory() . '/front-page/sections/header.php';
     // Redirect to region subsite (syncs with currency.js)
     function redirectToRegion(currency) {
         const countryUrls = {
-            usd: '/',
-            cad: '/fr/'
+            cad: '/',
+            usd: '/en/'
         };
 
         // Remember the choice for next visit. window.nordictvLang is printed

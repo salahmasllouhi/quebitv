@@ -33,8 +33,8 @@ function rememberLanguageChoice(currency) {
 // below were ever consulted.
 function languageTargetUrl(currency) {
     const countryUrls = {
-        usd: '/',
-        cad: '/fr/'
+        cad: '/',
+        usd: '/en/'
     };
 
     const translated = window.nordictvLangUrl && window.nordictvLangUrl(currency);
@@ -93,8 +93,8 @@ const currencyData = {
 
 // URL mappings for each currency/country
 const countryUrls = {
-    usd: '/',
-    cad: '/fr/'
+    cad: '/',
+    usd: '/en/'
 };
 
 // Get default currency from URL path or localStorage
@@ -105,9 +105,11 @@ function getDefaultCurrency() {
 
 // Detect current currency from URL
 function getCurrentCurrencyFromUrl() {
+    // French is the default language and has no prefix, so anything that is
+    // not under /en/ is French.
     const currentPath = window.location.pathname;
-    if (currentPath.startsWith('/fr')) return 'cad';
-    return 'usd';
+    if (currentPath.startsWith('/en')) return 'usd';
+    return 'cad';
 }
 
 // Update UI and prices for selected currency
