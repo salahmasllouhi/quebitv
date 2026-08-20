@@ -713,6 +713,9 @@ require_once get_template_directory() . '/inc/channel-retire.php';
 // Text wordmark used wherever the logo appears, replacing the rendered PNG.
 require_once get_template_directory() . '/inc/brand-lockup.php';
 
+// Favicon, for the same reason: the uploaded site icon was still the old mark.
+require_once get_template_directory() . '/inc/site-icon.php';
+
 // One-shot: makes French the default language and English the second, then
 // points the front page option at the French page. Delete file + line once the
 // iptv_default_lang_fr option is set.
