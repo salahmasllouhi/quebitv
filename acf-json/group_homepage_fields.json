@@ -1633,6 +1633,46 @@
             "allow_in_bindings": 0
         },
         {
+            "key": "field_features_cta_label",
+            "label": "CTA Button Label",
+            "name": "features_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "See plans & pricing",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_features_cta_note",
+            "label": "CTA Reassurance Note",
+            "name": "features_cta_note",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "14-day money-back guarantee · Instant activation · No auto-renew",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "tab_sports",
             "label": "⚽ Sports",
             "name": "",
@@ -4724,6 +4764,66 @@
             ]
         },
         {
+            "key": "field_contact_cta_email",
+            "label": "Card CTA: Email",
+            "name": "contact_cta_email",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Send an email",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_contact_cta_whatsapp",
+            "label": "Card CTA: WhatsApp",
+            "name": "contact_cta_whatsapp",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Send a WhatsApp message",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_contact_cta_telegram",
+            "label": "Card CTA: Telegram",
+            "name": "contact_cta_telegram",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Message on Telegram",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "tab_header",
             "label": "🧭 Header",
             "name": "",
@@ -5027,5 +5127,5 @@
     "show_in_rest": 1,
     "display_title": "",
     "pll_display_field_instructions": 1,
-    "modified": 1785580587
+    "modified": 1787227200
 }
