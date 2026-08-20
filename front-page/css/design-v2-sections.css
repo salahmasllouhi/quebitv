@@ -89,13 +89,46 @@
     scroll-margin-top: calc(var(--dv2-header-h, 71px) + 12px);
 }
 
-/* Same 34px as .site-footer .footer-logo-img, so the mark reads at one size
-   across the page. The light (white) variant of the same lockup, because the
-   dark one is black type and would disappear against this bar. */
-.site-header .logo-img {
-    height: 34px;
-    width: auto;
-    display: block;
+/* Text wordmark, set in the display face rather than shipped as an image, so it
+   follows the palette tokens. "Quebec" takes the inverse text colour and "IPTV"
+   the accent; both bars it sits on are dark. See inc/brand-lockup.php. */
+.brand-lockup {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.24em;
+    font-family: var(--dv2-font-display);
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
+.brand-lockup__name {
+    color: var(--text-inverse);
+}
+
+.brand-lockup__accent {
+    color: var(--dv2-blue);
+}
+
+/* The header lockup replaces a 34px-tall image; 25px of this face lands on the
+   same optical height. */
+.site-header .logo .brand-lockup {
+    font-size: 25px;
+}
+
+.site-footer .brand-lockup--footer {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 768px) {
+
+    .site-header .logo .brand-lockup,
+    .site-footer .brand-lockup--footer {
+        font-size: 21px;
+    }
 }
 
 .site-header .nav-links,

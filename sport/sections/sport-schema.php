@@ -25,7 +25,7 @@ $schema = [
         'url' => home_url('/'),
         'logo' => [
             '@type' => 'ImageObject',
-            'url' => get_template_directory_uri() . '/images/logo.png',
+            'url' => get_template_directory_uri() . '/images/logo/quebec-iptv-logo.svg',
         ],
     ],
 ];

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 72" width="340" height="72" role="img" aria-label="Quebec IPTV">
+  <title>Quebec IPTV</title>
+  <!-- Wordmark for light backgrounds: deep teal + brand orange. -->
+  <text x="0" y="52"
+        font-family="Sora, 'Space Grotesk', 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="48" font-weight="800" letter-spacing="-1">
+    <tspan fill="#07191d">Quebec</tspan><tspan fill="#fc6c34" dx="10">IPTV</tspan>
+  </text>
+</svg>

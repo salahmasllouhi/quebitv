@@ -4,17 +4,7 @@
         <div class="footer-grid">
             <div>
                 <div class="footer-brand">
-                    <?php
-                    // Light (white) logo, matching the header — the footer is dark.
-                    // Same responsive set as the header; see the note there.
-                    $iptv_footer_logo_dir = get_template_directory_uri() . '/images/logo/';
-                    $iptv_footer_logo_2x  = $iptv_footer_logo_dir . 'light-logo-230x69.png';
-                    $iptv_footer_logo_3x  = $iptv_footer_logo_dir . rawurlencode('light logo 500_150.png');
-                    ?>
-                    <img src="<?php echo esc_url($iptv_footer_logo_2x); ?>"
-                        srcset="<?php echo esc_url($iptv_footer_logo_2x); ?> 230w, <?php echo esc_url($iptv_footer_logo_3x); ?> 500w"
-                        sizes="120px" width="500" height="150" loading="lazy" decoding="async"
-                        alt="Quebec IPTV" class="footer-logo-img">
+                    <?php echo iptv_brand_lockup('brand-lockup--footer'); ?>
                 </div>
                 <p class="footer-desc">
                     <?php echo esc_html(iptv_text('footer_desc', 'The leading IPTV service provider — 40,000+ live channels, 200,000+ movies and series, every sport, in 4K and 8K.')); ?>

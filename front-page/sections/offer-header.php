@@ -53,16 +53,7 @@ if (isset($site_language_map[$site_slug])) {
 
         <!-- Logo -->
         <a href="<?php echo home_url('/'); ?>" class="logo">
-            <?php
-            // Same responsive set as front-page/sections/header.php; see the note there.
-            $iptv_offer_logo_dir = get_template_directory_uri() . '/images/logo/';
-            $iptv_offer_logo_2x  = $iptv_offer_logo_dir . 'light-logo-230x69.png';
-            $iptv_offer_logo_3x  = $iptv_offer_logo_dir . rawurlencode('light logo 500_150.png');
-            ?>
-            <img src="<?php echo esc_url($iptv_offer_logo_2x); ?>"
-                srcset="<?php echo esc_url($iptv_offer_logo_2x); ?> 230w, <?php echo esc_url($iptv_offer_logo_3x); ?> 500w"
-                sizes="115px" width="500" height="150" alt="Quebec IPTV"
-                class="logo-img" fetchpriority="high">
+            <?php echo iptv_brand_lockup(); ?>
         </a>
 
         <!-- Right side: currency + CTA -->
