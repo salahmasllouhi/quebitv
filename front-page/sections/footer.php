@@ -114,7 +114,7 @@
                         array('slug' => 'iptv-guide-setup-apps-devices-tips', 'key' => 'footer_link_guide', 'label' => 'Setup Guide'),
                         array('slug' => 'm3u-playlist-convert-your-m3u-url', 'key' => 'footer_link_m3u', 'label' => 'M3U Converter'),
                         array('slug' => 'contact-us', 'key' => 'footer_link_contact', 'label' => 'Contact Us'),
-                        array('url' => 'https://panel.nordictv.io/login', 'key' => 'footer_link_account', 'label' => 'My Account'),
+                        array('url' => 'https://app.quebeciptv.co/login', 'key' => 'footer_link_account', 'label' => 'My Account'),
                     ));
                     ?>
                 <?php endif; ?>

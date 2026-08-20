@@ -4,7 +4,7 @@ $badge         = 'Member Area';
 $title         = 'Your Personal Streaming Dashboard';
 $subtitle      = 'Once you subscribe, manage everything in one place.';
 $cta_label     = 'Access Your Dashboard →';
-$cta_url       = 'https://panel.nordictv.io/login';
+$cta_url       = 'https://app.quebeciptv.co/login';
 $features      = [];
 
 if (function_exists('get_field')) {

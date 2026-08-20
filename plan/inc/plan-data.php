@@ -296,7 +296,7 @@ if (!function_exists('iptv_plan_checkout_url')) {
      */
     function iptv_plan_checkout_url($screens, $months)
     {
-        $base = iptv_config('checkout_base_url', 'https://panel.nordictv.io/checkout');
+        $base = iptv_config('checkout_base_url', 'https://app.quebeciptv.co/checkout');
 
         return add_query_arg(
             array(

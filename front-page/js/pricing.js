@@ -170,10 +170,10 @@
         setInterval(tick, 1000);
     })();
 
-    // panel.nordictv.io/checkout?connections=<1|2|3|4>&duration=<1|3|6|12>
+    // app.quebeciptv.co/checkout?connections=<1|2|3|4>&duration=<1|3|6|12>
     // The panel derives the price from these two params - nothing else is passed.
     function checkoutUrl(devices, months) {
-        const base = window.iptvCheckoutBase || 'https://panel.nordictv.io/checkout';
+        const base = window.iptvCheckoutBase || 'https://app.quebeciptv.co/checkout';
         return base + '?connections=' + devices + '&duration=' + months;
     }
 

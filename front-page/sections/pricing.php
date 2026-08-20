@@ -28,8 +28,8 @@ if (!in_array($default_months, array(1, 3, 6, 12), true)) {
 }
 
 // Panel checkout endpoints. The panel derives the price from the two params.
-$checkout_base = iptv_config('checkout_base_url', 'https://panel.nordictv.io/checkout');
-$trial_url     = iptv_config('trial_url', 'https://panel.nordictv.io/checkout/trial');
+$checkout_base = iptv_config('checkout_base_url', 'https://app.quebeciptv.co/checkout');
+$trial_url     = iptv_config('trial_url', 'https://app.quebeciptv.co/checkout/trial');
 
 /**
  * Savings badge percentages are derived from the real prices rather than

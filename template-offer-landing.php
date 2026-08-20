@@ -12,7 +12,7 @@ $sections_dir = $front_page_dir . '/sections';
 
 // ── Resolve product & checkout URL ───────────────────────────────────────────
 // Redirect all CTA buttons to the user dashboard instead of WooCommerce checkout.
-$offer_checkout_url = 'https://panel.nordictv.io/';
+$offer_checkout_url = 'https://app.quebeciptv.co/';
 
 /*
 $offer_product_id = function_exists('get_field') ? get_field('offer_product', get_the_ID()) : null;

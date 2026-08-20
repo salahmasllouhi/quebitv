@@ -34,7 +34,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "https://panel.nordictv.io/checkout",
+            "default_value": "https://app.quebeciptv.co/checkout",
             "placeholder": ""
         },
         {
@@ -51,7 +51,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "https://panel.nordictv.io/checkout/trial",
+            "default_value": "https://app.quebeciptv.co/checkout/trial",
             "placeholder": ""
         },
         {

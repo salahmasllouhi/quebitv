@@ -78,7 +78,7 @@ $nav_guide = function_exists('iptv_page_url')
                 <!-- Blog lives in the footer only. -->
                 <a href="<?php echo esc_url($nav_guide); ?>"><?php echo esc_html(iptv_text('nav_link_guide', 'User Guide')); ?></a>
                 <a href="<?php echo esc_url($nav_home . '#contact'); ?>"><?php echo esc_html(iptv_text('nav_link_contact', 'Contact')); ?></a>
-                <a href="https://panel.nordictv.io/login"><?php echo esc_html(iptv_text('nav_link_account', 'My Account')); ?></a>
+                <a href="https://app.quebeciptv.co/login"><?php echo esc_html(iptv_text('nav_link_account', 'My Account')); ?></a>
             </nav>
         <?php endif; ?>
         <div class="nav-right">
@@ -125,7 +125,7 @@ $nav_guide = function_exists('iptv_page_url')
         <!-- Blog lives in the footer only. -->
         <a href="<?php echo esc_url($nav_guide); ?>"><?php echo esc_html(iptv_text('nav_link_guide', 'User Guide')); ?></a>
         <a href="<?php echo esc_url($nav_home . '#contact'); ?>"><?php echo esc_html(iptv_text('nav_link_contact', 'Contact')); ?></a>
-        <a href="https://panel.nordictv.io/login"><?php echo esc_html(iptv_text('nav_link_account', 'My Account')); ?></a>
+        <a href="https://app.quebeciptv.co/login"><?php echo esc_html(iptv_text('nav_link_account', 'My Account')); ?></a>
     <?php endif; ?>
 
     <!-- Language Selector in Mobile Menu -->

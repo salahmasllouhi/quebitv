@@ -63,7 +63,7 @@ if (empty($hero_points)) {
 }
 
 $hero_cta   = iptv_plan_field('plan_cta_text', iptv_text('plan_cta_text', plan_str('See prices')));
-$trial_url  = iptv_config('trial_url', 'https://panel.nordictv.io/checkout/trial');
+$trial_url  = iptv_config('trial_url', 'https://app.quebeciptv.co/checkout/trial');
 $trial_text = iptv_text('trial_cta', 'Start a 24-hour trial — no card');
 
 // ── Hero image ───────────────────────────────────────────────────────────────

@@ -229,7 +229,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "https://panel.nordictv.io/login",
+            "default_value": "https://app.quebeciptv.co/login",
             "placeholder": ""
         },
         {
@@ -441,7 +441,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "https://panel.nordictv.io/login",
+            "default_value": "https://app.quebeciptv.co/login",
             "placeholder": ""
         },
         {
