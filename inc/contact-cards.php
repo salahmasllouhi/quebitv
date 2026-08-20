@@ -160,7 +160,12 @@ if (!function_exists('iptv_contact_cards_grid')) {
             'telegram' => array('label' => iptv_text('contact_cta_telegram', 'Message on Telegram'), 'variant' => 'blue'),
         );
 
-        $out = '<div class="dv2-support-grid">';
+        // The grid is drawn for three cards. A site that lists fewer — the
+        // French front page dropped Telegram — would otherwise leave the row
+        // hanging off to the left, so the count travels to CSS as a modifier.
+        $modifier = (count($cards) < 3) ? ' dv2-support-grid--' . count($cards) : '';
+
+        $out = '<div class="dv2-support-grid' . esc_attr($modifier) . '">';
 
         foreach ($cards as $card) {
             $target  = $card['blank'] ? ' target="_blank" rel="noopener noreferrer"' : '';

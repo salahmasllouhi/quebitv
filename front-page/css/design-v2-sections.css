@@ -2058,6 +2058,19 @@
     margin: 36px auto 0;
 }
 
+/* Fewer cards than the three the grid was drawn for. Narrowing the track count
+   and the max-width keeps each card the same size as in the three-up while the
+   auto margins re-centre the row, rather than leaving a hole on the right. */
+.dv2-support-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 594px;
+}
+
+.dv2-support-grid--1 {
+    grid-template-columns: 1fr;
+    max-width: 289px;
+}
+
 .dv2-support-card {
     display: block;
     background: var(--dv2-surface);
