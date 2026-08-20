@@ -29,11 +29,11 @@ $sports_cta_target = (!empty($sports_cta_field['target'])) ? ' target="' . esc_a
 
     <div class="dv2-sport-mosaic dv2-sport-mosaic--image">
         <?php // 528px in the split at full width, full-bleed once it stacks at 1024px. ?>
-        <img src="https://quebeciptv.co/wp-content/uploads/2026/08/nordicsport.webp"
-             srcset="https://quebeciptv.co/wp-content/uploads/2026/08/nordicsport-300x224.webp 300w,
-                     https://quebeciptv.co/wp-content/uploads/2026/08/nordicsport-768x573.webp 768w,
-                     https://quebeciptv.co/wp-content/uploads/2026/08/nordicsport-1024x765.webp 1024w,
-                     https://quebeciptv.co/wp-content/uploads/2026/08/nordicsport.webp 1200w"
+        <img src="https://quebeciptv.co/wp-content/uploads/2026/08/sport.webp"
+             srcset="https://quebeciptv.co/wp-content/uploads/2026/08/sport-300x224.webp 300w,
+                     https://quebeciptv.co/wp-content/uploads/2026/08/sport-768x573.webp 768w,
+                     https://quebeciptv.co/wp-content/uploads/2026/08/sport-1024x765.webp 1024w,
+                     https://quebeciptv.co/wp-content/uploads/2026/08/sport.webp 1200w"
              sizes="(max-width: 1024px) calc(100vw - 152px), (max-width: 1280px) calc((100vw - 224px) / 2), 528px"
              width="1200" height="896"
              alt="<?php echo esc_attr(iptv_text('sports_image_alt', 'Live sport available on Quebec IPTV')); ?>"

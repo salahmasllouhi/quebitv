@@ -9,7 +9,7 @@
 // would have pulled those per-language images in as backgrounds.
 $hero_bg_url = iptv_text(
     'hero_background_url',
-    'https://quebeciptv.co/wp-content/uploads/2026/08/hero-background-scaled.webp'
+    'https://quebeciptv.co/wp-content/uploads/2026/08/hero-image-scaled.webp'
 );
 
 $primary_label   = iptv_text('hero_primary_cta_label', 'Get Access Now');
