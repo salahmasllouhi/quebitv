@@ -87,9 +87,15 @@ document.addEventListener('click', function (e) {
 // Currency data — `name` is the native language label shown in the switcher,
 // `code` stays for price formatting and anything reading the currency code.
 const currencyData = {
-    cad: { symbol: '$', flag: '🇨🇦', code: 'CAD', name: 'Français', position: 'before' },
-    usd: { symbol: '$', flag: '🇺🇸', code: 'USD', name: 'English', position: 'before' }
+    cad: { symbol: '$', flag: '🇨🇦', code: 'CAD', name: 'Français', position: 'before', decimals: true },
+    usd: { symbol: '$', flag: '🇺🇸', code: 'USD', name: 'English', position: 'before', decimals: true }
 };
+
+// Published so pricing.js and offer-landing.js can format against the same
+// table. Both used to carry their own copy, and both still listed the retired
+// Nordic currencies while this one had moved to cad/usd — so on the French page,
+// where window.currentCurrency is 'cad', their lookup returned undefined.
+window.iptvCurrencyData = currencyData;
 
 // URL mappings for each currency/country
 const countryUrls = {

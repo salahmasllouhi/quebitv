@@ -4,13 +4,12 @@
 
     // ── Currency helpers (mirrors pricing.js pattern) ────────────────────────
     function getCurrencyData() {
+        // currency.js publishes the real table; this is only a floor. It listed
+        // the retired Nordic currencies, which is harmless while it is never
+        // reached but is exactly the kind of stale copy that broke pricing.js.
         var data = window.iptvCurrencyData || {
-            usd: { symbol: '$', position: 'before', decimals: true },
-            eur: { symbol: '€', position: 'before', decimals: true },
-            sek: { symbol: 'kr', position: 'after', decimals: false },
-            nok: { symbol: 'kr', position: 'after', decimals: false },
-            dkk: { symbol: 'kr', position: 'after', decimals: false },
-            isk: { symbol: 'kr', position: 'after', decimals: false }
+            cad: { symbol: '$', position: 'before', decimals: true },
+            usd: { symbol: '$', position: 'before', decimals: true }
         };
         var code = window.currentCurrency || 'usd';
         return data[code] || data['usd'];

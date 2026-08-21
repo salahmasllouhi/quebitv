@@ -27,23 +27,26 @@
         return 0;
     }
 
-    // Get currency data for formatting
+    // Currency data for formatting. Sourced from currency.js, which owns the
+    // table; the local object is only a floor for the case where this script
+    // somehow runs without it.
+    const FALLBACK_CURRENCY = { symbol: '$', position: 'before', decimals: true };
+
     function getCurrencyData() {
-        const currencyData = {
-            usd: { symbol: '$', position: 'before' },
-            eur: { symbol: '€', position: 'before' },
-            sek: { symbol: 'kr', position: 'after' },
-            nok: { symbol: 'kr', position: 'after' },
-            dkk: { symbol: 'kr', position: 'after' },
-            isk: { symbol: 'kr', position: 'after' }
-        };
-        return currencyData[window.currentCurrency || 'usd'];
+        const table = window.iptvCurrencyData || {};
+        const code = window.currentCurrency || 'usd';
+        // Always resolves. Returning undefined here used to throw on the first
+        // formatPrice() call, and since front-page.php emits every script into
+        // one <script> block, that killed the configurator's event listeners
+        // before they were ever bound — the picker rendered and did nothing.
+        return table[code] || table.usd || FALLBACK_CURRENCY;
     }
 
     function formatPrice(price) {
         const data = getCurrencyData();
-        const currency = window.currentCurrency || 'usd';
-        let formatted = (currency === 'usd' || currency === 'eur') ? price.toFixed(2) : Math.round(price).toString();
+        const formatted = data.decimals === false
+            ? Math.round(price).toString()
+            : price.toFixed(2);
         return data.position === 'before' ? data.symbol + formatted : formatted + ' ' + data.symbol;
     }
 
