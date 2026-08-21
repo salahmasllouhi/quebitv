@@ -11,7 +11,7 @@
             cad: { symbol: '$', position: 'before', decimals: true },
             usd: { symbol: '$', position: 'before', decimals: true }
         };
-        var code = window.currentCurrency || 'usd';
+        var code = window.iptvPriceCurrency || 'usd';
         return data[code] || data['usd'];
     }
 
@@ -27,7 +27,7 @@
     function updateOfferPricing() {
         if (!window.iptvPrices) return;
 
-        var currency = window.currentCurrency || 'usd';
+        var currency = window.iptvPriceCurrency || 'usd';
         var paidMonths = window.offerPaidMonths || 12;
         var freeMonths = window.offerFreeMonths || 3;
         var totalMonths = paidMonths + freeMonths;

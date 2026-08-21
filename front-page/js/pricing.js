@@ -19,7 +19,7 @@
         const durationMap = { 1: '1_month', 3: '3_months', 6: '6_months', 12: '12_months' };
         const deviceKey = devices === 1 ? '1_device' : devices + '_devices';
         const durationKey = durationMap[months];
-        const currency = window.currentCurrency || 'usd';
+        const currency = window.iptvPriceCurrency || 'usd';
 
         if (window.iptvPrices[durationKey] && window.iptvPrices[durationKey][deviceKey]) {
             return parseFloat(window.iptvPrices[durationKey][deviceKey][currency]) || 0;
@@ -34,7 +34,7 @@
 
     function getCurrencyData() {
         const table = window.iptvCurrencyData || {};
-        const code = window.currentCurrency || 'usd';
+        const code = window.iptvPriceCurrency || 'usd';
         // Always resolves. Returning undefined here used to throw on the first
         // formatPrice() call, and since front-page.php emits every script into
         // one <script> block, that killed the configurator's event listeners

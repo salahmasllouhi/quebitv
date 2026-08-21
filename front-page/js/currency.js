@@ -97,6 +97,16 @@ const currencyData = {
 // where window.currentCurrency is 'cad', their lookup returned undefined.
 window.iptvCurrencyData = currencyData;
 
+// Money is quoted in USD in every language.
+//
+// currentCurrency is really the *language* key — 'cad' is French, 'usd' is
+// English — and the switcher shows each one's name and flag, never its code. It
+// was also being used to index window.iptvPrices, which is a different question
+// and got the wrong answer: the stored price table has no 'cad' column, so the
+// French page looked up an absent currency and rendered $0.00 across the board.
+// Prices are the same figure in both languages, so they read one key.
+window.iptvPriceCurrency = 'usd';
+
 // URL mappings for each currency/country
 const countryUrls = {
     cad: '/',
@@ -173,8 +183,8 @@ function setFooterCurrency(currency) {
 function updateAllPrices() {
     if (!window.iptvPrices) return;
 
-    const currency = window.currentCurrency || 'usd';
-    const data = currencyData[currency];
+    const currency = window.iptvPriceCurrency || 'usd';
+    const data = currencyData[currency] || currencyData.usd;
 
     // pricing.js marks the chosen card with .active; .selected kept for safety.
     const selectedDevice = document.querySelector('.select-card.active[data-devices], .select-card.selected[data-devices]');
