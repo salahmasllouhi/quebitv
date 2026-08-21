@@ -11,10 +11,10 @@
  * it is drawn from, and it deploys with the rest of the design instead of having
  * to be re-uploaded per site in the network.
  *
- * images/favicon/favicon.svg is the real icon — vector, 304 bytes, sharp at any
- * size. The PNGs are there for Safari, which still ignores SVG favicons, and for
- * the home-screen shortcut. All four are the brand accent #fc6c34 with a white
- * play triangle, which is the same fill/ink pairing the CTAs use.
+ * The source is the supplied square mark — the orange Q on a white rounded
+ * tile — rendered to the sizes browsers ask for. PNG rather than SVG: the mark
+ * is artwork, not a shape that can be hand-written as vector, and every browser
+ * that matters takes a PNG favicon.
  *
  * WordPress prints its own <link rel="icon"> set from the `site_icon` option at
  * priority 99 on wp_head, so that has to come off or the tab gets both and the
@@ -40,16 +40,18 @@ add_action('wp_head', function () {
     // removal. Keyed off the file's mtime rather than the theme version, which
     // has sat at 1.0.0 since the theme was created and would never move the
     // query string; a checkout restamps mtime on every deploy.
-    $path = get_template_directory() . '/images/favicon/favicon.svg';
+    $path = get_template_directory() . '/images/favicon/favicon-32.png';
     $mt   = file_exists($path) ? filemtime($path) : 0;
     $q    = $mt ? '?v=' . $mt : '';
 
     printf(
-        '<link rel="icon" href="%s" sizes="any">' . "\n"
-        . '<link rel="icon" type="image/svg+xml" href="%s">' . "\n"
+        '<link rel="icon" type="image/png" sizes="32x32" href="%s">' . "\n"
+        . '<link rel="icon" type="image/png" sizes="192x192" href="%s">' . "\n"
+        . '<link rel="icon" type="image/png" sizes="512x512" href="%s">' . "\n"
         . '<link rel="apple-touch-icon" href="%s">' . "\n",
         esc_url($dir . '/favicon-32.png' . $q),
-        esc_url($dir . '/favicon.svg' . $q),
+        esc_url($dir . '/favicon-192.png' . $q),
+        esc_url($dir . '/favicon-512.png' . $q),
         esc_url($dir . '/apple-touch-icon.png' . $q)
     );
 }, 99);
