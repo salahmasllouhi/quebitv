@@ -55,3 +55,40 @@ add_action('wp_head', function () {
         esc_url($dir . '/apple-touch-icon.png' . $q)
     );
 }, 99);
+
+/**
+ * Everything that is not the front end: wp-admin, the Customizer, oEmbed.
+ *
+ * Those read the `site_icon` option rather than wp_head, so detaching
+ * wp_site_icon() above does nothing for them and the admin bar kept the old
+ * upload. The option itself is out of reach from here — Royal MCP refuses to
+ * write it (site_icon is not in its readable allowlist, and writes require a
+ * plugin-side opt-in first), and hardcoding an attachment id would only be
+ * right for this one site in the network.
+ *
+ * get_site_icon_url() applies this filter whether or not the option is set, and
+ * has_site_icon() is just a boolean cast of its result — so answering here is
+ * enough to make core believe an icon exists and to hand it the theme's file.
+ * No database write, nothing to re-upload per site.
+ */
+add_filter('get_site_icon_url', function ($url, $size) {
+    $dir = get_template_directory() . '/images/favicon';
+
+    // Serve the smallest file that still covers the requested size, so the
+    // admin bar's 32px slot does not pull the 512.
+    $candidates = array(32 => 'favicon-32.png', 180 => 'apple-touch-icon.png', 192 => 'favicon-192.png', 512 => 'favicon-512.png');
+
+    $chosen = 'favicon-512.png';
+    foreach ($candidates as $w => $file) {
+        if ($size <= $w) {
+            $chosen = $file;
+            break;
+        }
+    }
+
+    if (!file_exists($dir . '/' . $chosen)) {
+        return $url;
+    }
+
+    return get_template_directory_uri() . '/images/favicon/' . $chosen;
+}, 10, 2);
