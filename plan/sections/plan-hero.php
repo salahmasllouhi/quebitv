@@ -10,8 +10,24 @@
  * depends on how many screens the visitor wants, and sending them to a checkout
  * for a screen count they never chose is how you get refunds.
  *
- * Expects from template-plan.php:
+ * Expects from the including template:
  *   $plan_months (int)  $plan_label (string)  $plan_from (float)
+ *
+ * Optional, set by templates that are not a priced plan page — template-trial.php
+ * and template-reseller.php both reuse this section:
+ *
+ *   $plan_hero_subline   (string)            overrides the length-derived subline
+ *   $plan_hero_cta_url   (string)            primary CTA target, default '#plan-pricing'
+ *   $plan_hero_cta_text  (string)            primary CTA label
+ *   $plan_hero_secondary (array{url,text}|null)  the second CTA; pass null to
+ *                                            remove it, which the trial page does
+ *                                            because it must not link to itself
+ *
+ * These are isset() guards rather than parameters with defaults because adding a
+ * parameter would mean touching template-plan.php, and a page selling four screen
+ * counts is the only page where '#plan-pricing' is the right target. Left unset,
+ * this renders exactly as it did for the four plan pages — $plan_from = 0 already
+ * removes the price line, which is what a free page passes.
  */
 
 // plan_str() inside iptv_text(): the front page has no plan_eyebrow field, so
@@ -34,7 +50,9 @@ if (!$hero_headline) {
         $plan_label
     );
 }
-$hero_subline = iptv_plan_field('plan_subline', $plan_months === 1
+$hero_subline = isset($plan_hero_subline) && $plan_hero_subline
+    ? $plan_hero_subline
+    : iptv_plan_field('plan_subline', $plan_months === 1
     ? plan_str('The whole service, one month at a time. No contract, no auto-renew — stop whenever you like.')
     : sprintf(
         /* translators: %s = plan length, e.g. "6 Months" */
@@ -62,9 +80,26 @@ if (empty($hero_points)) {
     );
 }
 
-$hero_cta   = iptv_plan_field('plan_cta_text', iptv_text('plan_cta_text', plan_str('See prices')));
-$trial_url  = iptv_config('trial_url', 'https://app.quebeciptv.co/checkout/trial');
-$trial_text = iptv_text('trial_cta', 'Start a 24-hour trial — no card');
+$hero_cta = isset($plan_hero_cta_text) && $plan_hero_cta_text
+    ? $plan_hero_cta_text
+    : iptv_plan_field('plan_cta_text', iptv_text('plan_cta_text', plan_str('See prices')));
+
+$hero_cta_url = isset($plan_hero_cta_url) && $plan_hero_cta_url ? $plan_hero_cta_url : '#plan-pricing';
+
+// The second CTA. A page can pass null to drop it — the trial page does, because
+// its own primary button already is the trial and a page should not offer to
+// send you to itself.
+if (array_key_exists('plan_hero_secondary', get_defined_vars())) {
+    // Normalised to an array because null is the documented way to drop the
+    // button, and reading ['url'] off a null is a warning on PHP 8 rather than
+    // the quiet false it used to be.
+    $secondary = is_array($plan_hero_secondary) ? $plan_hero_secondary : array();
+} else {
+    $secondary = array(
+        'url'  => iptv_config('trial_url', 'https://app.quebeciptv.co/checkout/trial'),
+        'text' => iptv_text('trial_cta', 'Start a 24-hour trial — no card'),
+    );
+}
 
 // ── Hero image ───────────────────────────────────────────────────────────────
 // Set per page from the editor. Accepts either shape the ACF field can be
@@ -123,13 +158,15 @@ if ($hero_image_url && !$hero_image_alt) {
         <?php endif; ?>
 
         <div class="plan-hero-actions">
-            <a href="#plan-pricing" class="dv2-btn dv2-btn-primary dv2-btn-lg">
+            <a href="<?php echo esc_url($hero_cta_url); ?>" class="dv2-btn dv2-btn-primary dv2-btn-lg">
                 <?php echo esc_html($hero_cta); ?>
             </a>
             <?php // Same white-button treatment as the front-page hero's second CTA. ?>
-            <a href="<?php echo esc_url($trial_url); ?>" class="dv2-btn dv2-hero-link">
-                <?php echo esc_html($trial_text); ?>
-            </a>
+            <?php if (!empty($secondary['url']) && !empty($secondary['text'])) : ?>
+                <a href="<?php echo esc_url($secondary['url']); ?>" class="dv2-btn dv2-hero-link">
+                    <?php echo esc_html($secondary['text']); ?>
+                </a>
+            <?php endif; ?>
         </div>
 
         <ul class="plan-hero-points">
