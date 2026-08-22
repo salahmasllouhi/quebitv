@@ -213,6 +213,14 @@ add_action('init', function () {
     $register('reseller_label', 'reseller panel');
     $register('reseller_from_label', 'From');
     $register('reseller_per_credit', '%s per credit');
+    $register('reseller_price_suffix', 'per credit');
+
+    // The three reassurances beside the hero buttons. The plan pages' defaults
+    // ("Watching in 60 seconds", "24/7 support") are written for somebody buying
+    // television, not for somebody deciding whether to run a business on this.
+    $register('reseller_point_1', 'Credits never expire');
+    $register('reseller_point_2', 'No monthly commitment');
+    $register('reseller_point_3', 'Your prices, your customers');
 
     // ── Panel features ───────────────────────────────────────────────────────
     $register('reseller_panel_title', 'What the panel does');

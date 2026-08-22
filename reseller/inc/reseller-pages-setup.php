@@ -71,6 +71,16 @@ if (!function_exists('iptv_reseller_fill_page')) {
             'plan_final_text'         => $tr('Apply today, get your panel the same day, and set your own prices from the first line you create.'),
         );
 
+        $points = array();
+        foreach (array('Credits never expire', 'No monthly commitment', 'Your prices, your customers') as $pt) {
+            if ($tr($pt)) {
+                $points[] = array('text' => $tr($pt));
+            }
+        }
+        if ($points) {
+            $values['plan_hero_points'] = $points;
+        }
+
         $features = array();
         foreach (iptv_reseller_panel_defaults() as $card) {
             if ($tr($card['title'])) {

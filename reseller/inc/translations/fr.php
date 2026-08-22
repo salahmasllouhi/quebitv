@@ -18,6 +18,10 @@ return array(
     'reseller panel' => 'panneau revendeur',
     'From' => 'À partir de',
     '%s per credit' => '%s par crédit',
+    'per credit' => 'par crédit',
+    'Credits never expire' => 'Les crédits n’expirent jamais',
+    'No monthly commitment' => 'Aucun engagement mensuel',
+    'Your prices, your customers' => 'Vos prix, vos clients',
 
     // ── Panel features ───────────────────────────────────────────────────────
     'What the panel does' => 'Ce que fait le panneau',

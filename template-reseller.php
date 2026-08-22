@@ -93,6 +93,10 @@ while (have_posts()) :
 
     $reseller_url = iptv_config('reseller_url', 'https://app.quebeciptv.co/reseller');
 
+    // "From $6.00 per credit", not the length-derived "for reseller panel" the
+    // default would build — this page sells credits, not months.
+    $plan_hero_price_suffix = reseller_str('per credit');
+
     $plan_hero_subline  = iptv_plan_field('reseller_subline', reseller_str('Sell IPTV under your own name, at your own prices, from a panel that creates lines in seconds. Credits never expire and there is no monthly commitment.'));
     $plan_hero_cta_url  = $reseller_url;
     $plan_hero_cta_text = iptv_plan_field('reseller_cta_text', reseller_str('Apply for a panel'));

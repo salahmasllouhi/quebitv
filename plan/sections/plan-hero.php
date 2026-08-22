@@ -22,6 +22,11 @@
  *   $plan_hero_secondary (array{url,text}|null)  the second CTA; pass null to
  *                                            remove it, which the trial page does
  *                                            because it must not link to itself
+ *   $plan_hero_price_suffix (string)         what follows the "From" price. The
+ *                                            reseller page sells credits, not
+ *                                            months, so "for reseller panel" —
+ *                                            what the length-derived default
+ *                                            produced — was nonsense.
  *
  * These are isset() guards rather than parameters with defaults because adding a
  * parameter would mean touching template-plan.php, and a page selling four screen
@@ -146,13 +151,19 @@ if ($hero_image_url && !$hero_image_alt) {
                 <span class="plan-hero-price-label"><?php echo esc_html(iptv_text('plan_from_label', plan_str('From'))); ?></span>
                 <span class="plan-hero-price-value"><?php echo esc_html(iptv_plan_format_price($plan_from)); ?></span>
                 <span class="plan-hero-price-per">
-                    <?php echo esc_html($plan_months === 1
-                        ? iptv_text('per_month', 'per month')
-                        : sprintf(
-                            /* translators: %s = plan length, e.g. "6 Months" */
-                            plan_str('for %s'),
-                            $plan_label
-                        )); ?>
+                    <?php
+                    if (isset($plan_hero_price_suffix) && $plan_hero_price_suffix) {
+                        echo esc_html($plan_hero_price_suffix);
+                    } else {
+                        echo esc_html($plan_months === 1
+                            ? iptv_text('per_month', 'per month')
+                            : sprintf(
+                                /* translators: %s = plan length, e.g. "6 Months" */
+                                plan_str('for %s'),
+                                $plan_label
+                            ));
+                    }
+                    ?>
                 </span>
             </p>
         <?php endif; ?>
