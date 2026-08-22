@@ -97,6 +97,12 @@ while (have_posts()) :
     // default would build — this page sells credits, not months.
     $plan_hero_price_suffix = reseller_str('per credit');
 
+    $plan_hero_points_default = array(
+        reseller_str('Credits never expire'),
+        reseller_str('No monthly commitment'),
+        reseller_str('Your prices, your customers'),
+    );
+
     $plan_hero_subline  = iptv_plan_field('reseller_subline', reseller_str('Sell IPTV under your own name, at your own prices, from a panel that creates lines in seconds. Credits never expire and there is no monthly commitment.'));
     $plan_hero_cta_url  = $reseller_url;
     $plan_hero_cta_text = iptv_plan_field('reseller_cta_text', reseller_str('Apply for a panel'));

@@ -22,6 +22,10 @@
  *   $plan_hero_secondary (array{url,text}|null)  the second CTA; pass null to
  *                                            remove it, which the trial page does
  *                                            because it must not link to itself
+ *   $plan_hero_points_default (string[])     the three reassurances to fall back
+ *                                            on when no repeater rows are set.
+ *                                            The plan defaults are written for
+ *                                            somebody buying television.
  *   $plan_hero_price_suffix (string)         what follows the "From" price. The
  *                                            reseller page sells credits, not
  *                                            months, so "for reseller panel" —
@@ -78,11 +82,21 @@ if (is_array($rows)) {
 }
 
 if (empty($hero_points)) {
-    $hero_points = array(
-        plan_str('Watching in 60 seconds'),
-        plan_str('No contract, no auto-renew'),
-        plan_str('24/7 support'),
-    );
+    // A page can supply its own fallback rather than inheriting the plan one.
+    // This is not only cosmetic: these defaults render whenever the ACF group
+    // has not been synced into the database yet, which is the normal state for
+    // a page the moment it is provisioned — so a page that only sets its points
+    // in ACF would show television copy on a B2B page until somebody remembered
+    // to visit Custom Fields → Sync.
+    if (isset($plan_hero_points_default) && is_array($plan_hero_points_default) && $plan_hero_points_default) {
+        $hero_points = $plan_hero_points_default;
+    } else {
+        $hero_points = array(
+            plan_str('Watching in 60 seconds'),
+            plan_str('No contract, no auto-renew'),
+            plan_str('24/7 support'),
+        );
+    }
 }
 
 $hero_cta = isset($plan_hero_cta_text) && $plan_hero_cta_text

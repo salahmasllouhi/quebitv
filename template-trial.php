@@ -105,6 +105,12 @@ while (have_posts()) :
     // not offer to send you to itself.
     $plan_hero_secondary = null;
 
+    $plan_hero_points_default = array(
+        trial_str('No card required'),
+        trial_str('Watching in about a minute'),
+        trial_str('The full channel list'),
+    );
+
     $plan_cta_url = $trial_url;
 
     $show_steps   = iptv_plan_flag('plan_show_steps', true);
