@@ -658,6 +658,12 @@ add_action('after_setup_theme', 'my_iptv_theme_setup');
 // inc/geo-redirect.php, which picked a language from the visitor's IP.
 require_once get_template_directory() . '/inc/language-preference.php';
 
+// Asks a first-time visitor which language they want, once, and writes the
+// answer to the same cookie the switcher and the front-page redirect read.
+// Loads after language-preference.php, whose nordictv_lang_slugs() it calls and
+// whose window.nordictvLang blob it is a second consumer of.
+require_once get_template_directory() . '/inc/language-picker.php';
+
 // Dequeues unused plugin assets, self-hosts the webfonts, and defers the
 // analytics tags. No markup, copy or layout changes.
 require_once get_template_directory() . '/inc/performance.php';
