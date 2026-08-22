@@ -1,4 +1,4 @@
-/* Dark CTA Section - Nordic Comparison Cards */
+/* Dark CTA Section - comparison cards */
 .nordic-dark-section {
     background-color: #0f172a;
     padding: 80px 20px;
@@ -91,7 +91,7 @@
     margin-top: 4px;
 }
 
-/* RIGHT CARD: Nordic Solution (Positive) */
+/* RIGHT CARD: our solution (positive) */
 .card-positive {
     background-color: #111827;
     border: 2px solid #4ade80;

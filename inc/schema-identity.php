@@ -188,6 +188,24 @@ add_filter('rank_math/json_ld', function ($data, $jsonld = null) {
 }, 20, 2);
 
 /**
+ * og:site_name.
+ *
+ * The JSON-LD fix above does not reach this: Rank Math's Open Graph output is a
+ * separate code path reading the same stale settings, so every page was also
+ * shipping <meta property="og:site_name" content="nordictv.io" /> — the name
+ * that appears on a Facebook, LinkedIn, Slack or WhatsApp link preview.
+ *
+ * Rank Math builds its OG filter name from the network and the property, and
+ * the exact spelling has moved between versions, so both forms are hooked. An
+ * unused filter name costs nothing.
+ */
+foreach (array('rank_math/opengraph/facebook/og:site_name', 'rank_math/opengraph/facebook/site_name') as $og_filter) {
+    add_filter($og_filter, function () {
+        return get_bloginfo('name');
+    }, 20);
+}
+
+/**
  * FAQPage for the front page.
  *
  * The home page renders nine questions from the faq_list ACF repeater, and
