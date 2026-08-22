@@ -121,31 +121,19 @@ add_action('template_redirect', function () {
 }, 1);
 
 /**
- * Keep them out of the sitemap too.
+ * Note on the sitemap.
  *
- * A 301 stops the 500 reaching anyone, but Rank Math would go on listing the URL
- * as a page worth crawling. Excluding it is the difference between a redirect
- * Google follows once and a redirect it keeps rechecking.
+ * The redirect above stops the 500 reaching anyone, but Rank Math went on
+ * listing /en/checkout as a URL worth crawling. A rank_math/sitemap/entry filter
+ * was tried here and could not be shown to fire — Rank Math caches its sitemaps
+ * internally, so the answer was never recomputed — and confident dead code is
+ * worse than none, so it is not kept.
+ *
+ * What actually worked, and is the documented route: the page is marked noindex
+ * in Rank Math, and the sitemap cache is rebuilt when the post is saved. Both are
+ * stored in the database rather than here, so if the entry ever comes back, the
+ * thing to check is the noindex flag on the Checkout page and not this file.
  */
-add_filter('rank_math/sitemap/entry', function ($url, $type, $object) {
-    if (class_exists('WooCommerce') || empty($url['loc'])) {
-        return $url;
-    }
-
-    if ($type !== 'post' || empty($object->ID)) {
-        return $url;
-    }
-
-    $template = get_post_meta($object->ID, '_wp_page_template', true);
-
-    $store = array(
-        'template-store-checkout.php',
-        'template-store-cart.php',
-        'template-store-shop.php',
-    );
-
-    return in_array($template, $store, true) ? false : $url;
-}, 10, 3);
 
 /**
  * Send a request for a retired slug to its replacement.
