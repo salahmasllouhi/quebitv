@@ -768,6 +768,30 @@ require_once get_template_directory() . '/plan/inc/plan-pages-setup.php';
 // content tests score against an all-but-empty post_content.
 require_once get_template_directory() . '/plan/inc/plan-seo.php';
 
+// Shared page provisioner. Creating a page, assigning its Polylang language and
+// linking its translation group are the three steps that cannot be done safely
+// from outside WordPress — a translation group is a serialized taxonomy
+// description, and anything that sanitises it on the way past corrupts the
+// group silently. Loaded before the *-pages-setup.php files that call into it.
+require_once get_template_directory() . '/inc/page-provisioner.php';
+
+// M3U converter (template-m3u.php). Strings first, for the same reason the plan
+// template loads them first: the FAQ and HowTo defaults live there and both
+// m3u-data.php and m3u-schema.php read them.
+require_once get_template_directory() . '/m3u/inc/m3u-strings.php';
+require_once get_template_directory() . '/m3u/inc/m3u-data.php';
+
+// Hands Rank Math the hero, converter and FAQ copy, which render from the
+// template rather than from post_content. Also whitelists the two domains the
+// article cites so Rank Math's nofollow-everything setting stops rewriting
+// them — it extends plan-seo.php's filter rather than reimplementing it, so it
+// has to load after it.
+require_once get_template_directory() . '/m3u/inc/m3u-seo.php';
+
+// Converts the existing English page onto the new template and creates its
+// French translation. Guarded by a build number; see the file header.
+require_once get_template_directory() . '/m3u/inc/m3u-pages-setup.php';
+
 /**
  * WooCommerce: Redirect all cart operations to checkout page
  * Since the cart page is disabled, we redirect to checkout instead

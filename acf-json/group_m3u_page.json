@@ -1,0 +1,191 @@
+{
+    "key": "group_m3u_page",
+    "title": "M3U Converter Page",
+    "fields": [
+        {
+            "key": "field_m3u_tab_hero",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_m3u_eyebrow",
+            "label": "Eyebrow",
+            "name": "m3u_eyebrow",
+            "type": "text",
+            "instructions": "Small pill above the headline. Leave empty for \"Free tool\".",
+            "required": 0,
+            "placeholder": "Free tool",
+            "maxlength": 40
+        },
+        {
+            "key": "field_m3u_headline",
+            "label": "Headline (H1)",
+            "name": "m3u_headline",
+            "type": "text",
+            "instructions": "Leave empty to use the page title. This is the H1 — write it for the search term you want the page to win.",
+            "required": 0,
+            "placeholder": "M3U editor and playlist converter",
+            "maxlength": 90
+        },
+        {
+            "key": "field_m3u_intro",
+            "label": "Intro",
+            "name": "m3u_intro",
+            "type": "textarea",
+            "instructions": "One or two sentences under the headline.",
+            "required": 0,
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_m3u_hero_cta",
+            "label": "Hero button",
+            "name": "m3u_hero_cta",
+            "type": "text",
+            "instructions": "Jumps down to the converter. Leave empty for \"Open the converter\".",
+            "required": 0,
+            "placeholder": "Open the converter",
+            "maxlength": 40
+        },
+        {
+            "key": "field_m3u_tab_tool",
+            "label": "Converter",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_m3u_tool_title",
+            "label": "Converter heading",
+            "name": "m3u_tool_title",
+            "type": "text",
+            "instructions": "Heading on the dark panel holding the tool.",
+            "required": 0,
+            "placeholder": "M3U to Xtream Codes converter",
+            "maxlength": 80
+        },
+        {
+            "key": "field_m3u_tool_subtitle",
+            "label": "Converter subheading",
+            "name": "m3u_tool_subtitle",
+            "type": "text",
+            "instructions": "One line under the heading.",
+            "required": 0,
+            "placeholder": "Works with both URL shapes: query parameters and path-based playlists.",
+            "maxlength": 140
+        },
+        {
+            "key": "field_m3u_tab_article",
+            "label": "Article",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_m3u_show_toc",
+            "label": "Show table of contents",
+            "name": "m3u_show_toc",
+            "type": "true_false",
+            "instructions": "Built automatically from the H2 headings in the page body, so it never falls out of step with them. Headings need an anchor (the \"HTML anchor\" box in the block sidebar) to appear.",
+            "required": 0,
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_m3u_tab_faq",
+            "label": "FAQ",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_m3u_faq_title",
+            "label": "FAQ heading",
+            "name": "m3u_faq_title",
+            "type": "text",
+            "instructions": "Leave empty for \"Questions about M3U playlists\".",
+            "required": 0,
+            "placeholder": "Questions about M3U playlists",
+            "maxlength": 80
+        },
+        {
+            "key": "field_m3u_faq",
+            "label": "FAQ rows",
+            "name": "m3u_faq",
+            "type": "repeater",
+            "instructions": "Leave empty to use the five bundled questions. These rows also become the FAQPage structured data, so the accordion and the search result can never disagree.",
+            "required": 0,
+            "layout": "block",
+            "button_label": "Add question",
+            "sub_fields": [
+                {
+                    "key": "field_m3u_faq_question",
+                    "label": "Question",
+                    "name": "question",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_m3u_faq_answer",
+                    "label": "Answer",
+                    "name": "answer",
+                    "type": "textarea",
+                    "required": 1,
+                    "rows": 4,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_m3u_tab_final",
+            "label": "Closing band",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_m3u_final_title",
+            "label": "Closing heading",
+            "name": "m3u_final_title",
+            "type": "text",
+            "required": 0,
+            "placeholder": "A playlist is only as good as the service behind it",
+            "maxlength": 90
+        },
+        {
+            "key": "field_m3u_final_text",
+            "label": "Closing text",
+            "name": "m3u_final_text",
+            "type": "textarea",
+            "required": 0,
+            "rows": 3,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-m3u.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Fields for the M3U Converter template. Every field is an optional override — left empty, the page renders the copy bundled in m3u/inc/m3u-strings.php, translated per language.",
+    "show_in_rest": 1,
+    "modified": 1787616000
+}
