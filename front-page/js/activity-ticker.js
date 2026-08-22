@@ -9,7 +9,7 @@
     // Canada, then the US.
     const names = {
         "Montréal": ["Marc-André", "Émilie", "Olivier", "Camille", "Gabriel", "Léa", "Antoine", "Chloé", "Samuel", "Rosalie", "Félix", "Maude", "Xavier", "Juliette", "Alexis", "Charlotte"],
-        "Québec": ["Simon", "Ariane", "Vincent", "Noémie", "Étienne", "Sarah-Maude", "Guillaume", "Élodie", "Mathieu", "Catherine", "Nicolas", "Marilou"],
+        "Quebec": ["Simon", "Ariane", "Vincent", "Noémie", "Étienne", "Sarah-Maude", "Guillaume", "Élodie", "Mathieu", "Catherine", "Nicolas", "Marilou"],
         "Laval": ["Jean-François", "Sophie", "Philippe", "Andréanne", "Maxime", "Valérie", "Benoît", "Josée"],
         "Gatineau": ["Patrick", "Geneviève", "Sébastien", "Mélanie", "Dominic", "Karine"],
         "Toronto": ["Ashley", "Ryan", "Megan", "Brandon", "Lauren", "Kevin", "Nicole", "Justin", "Rachel", "Eric"],
@@ -43,7 +43,7 @@
     // primary market, then the rest of Canada, then the US.
     const countryWeights = {
         "Montréal": 26,
-        "Québec": 16,
+        "Quebec": 16,
         "Laval": 10,
         "Gatineau": 7,
         "Toronto": 13,

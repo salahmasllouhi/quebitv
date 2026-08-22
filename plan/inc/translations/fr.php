@@ -1,6 +1,6 @@
 <?php
 /**
- * French copy for the plan template. english => français (Québec).
+ * French copy for the plan template. english => francais (Quebec).
  *
  * Keys are the exact English defaults passed to plan_str(); a key that does not
  * match one character for character silently falls back to English, so copy

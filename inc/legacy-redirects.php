@@ -46,6 +46,21 @@ if (!function_exists('iptv_legacy_slug_map')) {
             // M3U converter: the old slug named the page but not the term it is
             // written for.
             'm3u-playlist-convert-your-m3u-url' => 'm3u-editor-playlist-to-xtream-converter',
+
+            // English plan pages. The old slugs carried keywords chosen for the
+            // Nordic market and, in one case, for Reddit — which is a poor
+            // commercial term to build a product URL on.
+            '1-month-iptv-service-provider'        => '1-month-iptv-encoder-subscription',
+            '3-months-ip-tv-subscription'          => '3-months-best-iptv-subscription',
+            '6-months-iptv-service-usa'            => '6-months-iptv-subscription',
+            '12-months-best-iptv-providers-reddit' => '12-months-iptv-providers-subscription',
+
+            // French plan pages. Only the two whose keyword was not already in
+            // the slug, plus the 3-month page, where the keyword is the same two
+            // words in the other order and Rank Math matches the exact phrase.
+            'abonnement-iptv-3-mois'  => 'iptv-abonnement-3-mois',
+            'abonnement-iptv-6-mois'  => 'abonnement-pour-iptv-6-mois',
+            'abonnement-iptv-12-mois' => 'abonnement-iptv-quebec-12-mois',
         );
     }
 }
