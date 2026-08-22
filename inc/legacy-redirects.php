@@ -61,6 +61,11 @@ if (!function_exists('iptv_legacy_slug_map')) {
             'abonnement-iptv-3-mois'  => 'iptv-abonnement-3-mois',
             'abonnement-iptv-6-mois'  => 'abonnement-pour-iptv-6-mois',
             'abonnement-iptv-12-mois' => 'abonnement-iptv-quebec-12-mois',
+
+            // The French converter, renamed the same day it was published so it
+            // leads with the keyword. Almost certainly never crawled at the old
+            // slug, but the entry costs nothing and the alternative is guessing.
+            'convertisseur-m3u-playlist-iptv' => 'iptv-m3u-playlist-convertisseur-xtream',
         );
     }
 }
