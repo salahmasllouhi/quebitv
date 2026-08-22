@@ -116,11 +116,19 @@ include $front_dir . '/sections/footer.php';
     <?php
     // Only what this page uses. No pricing.js — there is no configurator to
     // drive — and no carousels.js, which targets #sportsCarousel and
-    // #brands-carousel; the review marquee here is pure CSS. currency.js stays
+    // #brands-carousel, neither of which this page renders. currency.js stays
     // because the header and footer language switcher runs on it.
+    //
+    // reviews.js is here because the reviews section stopped being a pure-CSS
+    // marquee: front-page/sections/reviews.php now renders a real carousel with
+    // [data-review-carousel] and ‹ / › buttons that reviews.js binds. The
+    // comment that used to sit here still claimed the marquee was CSS-only, so
+    // the file was never added and the arrows were dead on all eight plan pages
+    // — they rendered, they were focusable, and clicking them did nothing.
     $js_files = array(
         $front_dir . '/js/header.js',
         $front_dir . '/js/currency.js',
+        $front_dir . '/js/reviews.js',
     );
 
     foreach ($js_files as $path) {

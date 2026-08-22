@@ -246,10 +246,19 @@ body.single-faq .faq-single {
 
     <!-- 4. CTA Section -->
     <?php
-    $lang    = function_exists('pll_current_language') ? pll_current_language() : 'en';
-    $cta_url = ($lang === 'en')
-        ? 'https://quebeciptv.co/#pricing'
-        : 'https://quebeciptv.co/' . $lang . '/home/#pricing';
+    // The home page of whatever language this FAQ entry is being served in,
+    // anchored at the pricing grid.
+    //
+    // This used to branch on the language slug and build the URL by hand:
+    // English got '/' and everything else got '/{lang}/home/'. That was right
+    // when English was the unprefixed default and the Nordic languages sat
+    // under prefixes. French is the default now, so the branch is inverted —
+    // French entries were pointing at '/fr/home/#pricing', which is a 404
+    // because Polylang's hide_default strips the prefix off the default
+    // language entirely, and English entries were pointing at '/', the French
+    // home. pll_home_url() answers the same question without guessing, and
+    // without hardcoding the domain.
+    $cta_url = (function_exists('pll_home_url') ? pll_home_url() : home_url('/')) . '#pricing';
     ?>
     <section class="cta">
         <div class="cta-box">

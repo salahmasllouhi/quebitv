@@ -12,7 +12,12 @@ http_response_code(404);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | Quebec IPTV</title>
+    <?php
+    // No <title> here on purpose — see the longer note in header.php. Printing one
+    // here alongside add_theme_support('title-tag') produced two <title> tags and
+    // search engines read the hardcoded one. wp_head() prints the right title, and
+    // on a 404 it is the only one that carries the noindex that belongs with it.
+    ?>
     <?php wp_head(); ?>
 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/front-page/css/variables.css">

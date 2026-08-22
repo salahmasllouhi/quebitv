@@ -134,7 +134,11 @@ if (empty($offer_urgency_line))
 ?>
 <script>
     window.offerCheckoutUrl = '<?php echo esc_js($offer_checkout_url); ?>';
-    window.offerProductId = <?php echo (int) $offer_product_id; ?>;
+    // window.offerProductId used to be printed here. It read $offer_product_id,
+    // which has been inside the commented-out WooCommerce block above since
+    // checkout moved to app.quebeciptv.co — so on PHP 8 this was an "undefined
+    // variable" warning on every render, and it always printed 0. No JS in the
+    // theme ever read it, so it is removed rather than given a value.
     window.iptvPrices = <?php echo wp_json_encode($offer_all_prices); ?>;
     window.currentCurrency = '<?php echo esc_js($offer_currency); ?>';
     window.iptvCurrencyData = <?php echo wp_json_encode($offer_currency_data); ?>;

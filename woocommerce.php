@@ -14,7 +14,14 @@ defined('ABSPATH') || exit;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php wp_title('|', true, 'right'); ?></title>
+    <?php
+    // No <title> here on purpose — see the longer note in header.php. This file
+    // hand-rolls its own <head> instead of calling get_header(), and it used to
+    // print wp_title() here. Because functions.php declares
+    // add_theme_support('title-tag'), that put two <title> tags on the page with
+    // the hardcoded one first, so search engines read it and ignored Rank Math's.
+    // wp_title() is deprecated on top of that. wp_head() prints the right one.
+    ?>
     <?php wp_head(); ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/front-page/css/variables.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/front-page/css/base.css">

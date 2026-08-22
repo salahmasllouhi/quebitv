@@ -10,7 +10,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php the_title(); ?> - Quebec IPTV</title>
+    <?php
+    // No <title> here on purpose — see the longer note in header.php. This file
+    // hand-rolls its own <head> instead of calling get_header(), and it used to
+    // print a title of its own. Because functions.php declares
+    // add_theme_support('title-tag'), that put two <title> tags on the page with
+    // the hardcoded one first, so search engines read it and ignored Rank Math's.
+    // wp_head() below prints the correct, filterable one.
+    ?>
     <?php wp_head(); ?>
 
     <!-- Include Front Page CSS Files -->
