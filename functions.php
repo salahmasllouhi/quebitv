@@ -775,6 +775,11 @@ require_once get_template_directory() . '/plan/inc/plan-seo.php';
 // group silently. Loaded before the *-pages-setup.php files that call into it.
 require_once get_template_directory() . '/inc/page-provisioner.php';
 
+// 301s for the page slugs the SEO pass renamed. Loads after page-provisioner.php,
+// whose slug lookup it falls back on. See the file header for why this is not
+// left to core's wp_old_slug_redirect() or to Rank Math's Redirections module.
+require_once get_template_directory() . '/inc/legacy-redirects.php';
+
 // M3U converter (template-m3u.php). Strings first, for the same reason the plan
 // template loads them first: the FAQ and HowTo defaults live there and both
 // m3u-data.php and m3u-schema.php read them.
