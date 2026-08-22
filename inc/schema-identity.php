@@ -188,22 +188,42 @@ add_filter('rank_math/json_ld', function ($data, $jsonld = null) {
 }, 20, 2);
 
 /**
- * og:site_name.
+ * The settings themselves.
  *
- * The JSON-LD fix above does not reach this: Rank Math's Open Graph output is a
- * separate code path reading the same stale settings, so every page was also
- * shipping <meta property="og:site_name" content="nordictv.io" /> — the name
- * that appears on a Facebook, LinkedIn, Slack or WhatsApp link preview.
+ * Everything above corrects the output. This corrects the input, which is
+ * better: rank_math_options_titles is where "nordictv.io" and the dead staging
+ * hostname actually live, and Rank Math reads it from more places than the
+ * JSON-LD graph. og:site_name is the one that matters most after the graph —
+ * it is the name shown on a Facebook, LinkedIn, Slack or WhatsApp preview of
+ * any link to this site, and it comes from a separate code path that the
+ * rank_math/json_ld filter never touches.
  *
- * Rank Math builds its OG filter name from the network and the property, and
- * the exact spelling has moved between versions, so both forms are hooked. An
- * unused filter name costs nothing.
+ * Hooked on core's option_{$option} filter rather than one of Rank Math's own,
+ * because that one is documented WordPress and fires for every get_option()
+ * call no matter which plugin version is installed or what it has renamed its
+ * internal filters to. Two of those were tried first and neither fired.
+ *
+ * This does not write to the database. The stored option keeps its old values,
+ * so nothing is lost and the fix disappears cleanly with the theme; it is only
+ * ever read through this filter.
  */
-foreach (array('rank_math/opengraph/facebook/og:site_name', 'rank_math/opengraph/facebook/site_name') as $og_filter) {
-    add_filter($og_filter, function () {
-        return get_bloginfo('name');
-    }, 20);
-}
+add_filter('option_rank_math_options_titles', function ($titles) {
+    if (!is_array($titles)) {
+        return $titles;
+    }
+
+    $titles['knowledgegraph_name'] = get_bloginfo('name');
+    $titles['knowledgegraph_type'] = 'company';
+    $titles['url']                 = home_url('/');
+
+    // Only set the logo if one is not configured, so an editor who uploads a
+    // proper one in wp-admin is not overridden on every page load.
+    if (empty($titles['knowledgegraph_logo'])) {
+        $titles['knowledgegraph_logo'] = get_template_directory_uri() . '/images/logo/quebec-iptv-mark.png';
+    }
+
+    return $titles;
+}, 20);
 
 /**
  * FAQPage for the front page.
