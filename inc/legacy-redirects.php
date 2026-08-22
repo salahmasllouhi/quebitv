@@ -71,6 +71,83 @@ if (!function_exists('iptv_legacy_slug_map')) {
 }
 
 /**
+ * The orphaned WooCommerce store pages.
+ *
+ * Checkout moved to app.quebeciptv.co and WooCommerce was uninstalled, but the
+ * three store templates and the pages assigned to them stayed behind. They are
+ * not merely unused — they are fatal: template-store-checkout.php calls
+ * is_wc_endpoint_url() on its twelfth line, before the class_exists('WooCommerce')
+ * guard further down, so with the plugin gone the page dies with a 500 before it
+ * renders anything.
+ *
+ * That would be tolerable if nothing pointed at them. But /en/checkout is listed
+ * in the sitemap, so the one page on this site that Google is explicitly invited
+ * to crawl and cannot render is a critical error page.
+ *
+ * Redirecting rather than repairing the templates: there is no WooCommerce to
+ * repair them against, every buy button on the site already goes to the panel,
+ * and a checkout that cannot take a payment is not worth keeping alive. A 301
+ * also gets the URL dropped from the index, which the 500 never would.
+ *
+ * Guarded on WooCommerce being absent, so reinstalling the plugin restores the
+ * old behaviour rather than leaving a mystery redirect behind.
+ */
+add_action('template_redirect', function () {
+    if (class_exists('WooCommerce')) {
+        return;
+    }
+
+    if (is_admin() || wp_doing_ajax() || is_feed()) {
+        return;
+    }
+
+    if (!is_page_template(array(
+        'template-store-checkout.php',
+        'template-store-cart.php',
+        'template-store-shop.php',
+    ))) {
+        return;
+    }
+
+    $target = function_exists('iptv_config')
+        ? iptv_config('checkout_base_url', 'https://app.quebeciptv.co/checkout')
+        : 'https://app.quebeciptv.co/checkout';
+
+    // wp_redirect, not wp_safe_redirect: the destination is deliberately a
+    // different host, which the safe variant would refuse and silently turn into
+    // a redirect to the home page.
+    wp_redirect($target, 301);
+    exit;
+}, 1);
+
+/**
+ * Keep them out of the sitemap too.
+ *
+ * A 301 stops the 500 reaching anyone, but Rank Math would go on listing the URL
+ * as a page worth crawling. Excluding it is the difference between a redirect
+ * Google follows once and a redirect it keeps rechecking.
+ */
+add_filter('rank_math/sitemap/entry', function ($url, $type, $object) {
+    if (class_exists('WooCommerce') || empty($url['loc'])) {
+        return $url;
+    }
+
+    if ($type !== 'post' || empty($object->ID)) {
+        return $url;
+    }
+
+    $template = get_post_meta($object->ID, '_wp_page_template', true);
+
+    $store = array(
+        'template-store-checkout.php',
+        'template-store-cart.php',
+        'template-store-shop.php',
+    );
+
+    return in_array($template, $store, true) ? false : $url;
+}, 10, 3);
+
+/**
  * Send a request for a retired slug to its replacement.
  *
  * Only ever acts on a 404 — a live page that happens to share a slug with a map
