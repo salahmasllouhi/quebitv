@@ -61,22 +61,26 @@ if (!function_exists('iptv_language_picker_options')) {
      */
     function iptv_language_picker_options()
     {
+        // Order is this array's, not Polylang's. Polylang returns its own
+        // ordering, which put English first — and French is the site's default
+        // language and its primary market, so it leads.
         $known = array(
             'fr' => array('label' => 'Français', 'flag' => '🇨🇦'),
             'en' => array('label' => 'English',  'flag' => '🇺🇸'),
         );
 
+        $active  = nordictv_lang_slugs();
         $options = array();
 
-        foreach (nordictv_lang_slugs() as $slug) {
-            if (!isset($known[$slug])) {
+        foreach ($known as $slug => $meta) {
+            if (!empty($active) && !in_array($slug, $active, true)) {
                 continue;
             }
 
             $options[] = array(
                 'slug'  => $slug,
-                'label' => $known[$slug]['label'],
-                'flag'  => $known[$slug]['flag'],
+                'label' => $meta['label'],
+                'flag'  => $meta['flag'],
             );
         }
 
@@ -105,7 +109,12 @@ add_action('wp_footer', function () {
 <div class="iptv-langpick" data-lang-pick data-nosnippet hidden>
     <div class="iptv-langpick-backdrop" data-lang-dismiss></div>
 
-    <div class="iptv-langpick-card" role="dialog" aria-modal="true"
+    <?php
+    // tabindex="-1" so the dialog itself can take focus when it opens. Focusing
+    // the first option instead would render one language pre-selected and nudge
+    // the answer, which is the one thing this dialog must not do.
+    ?>
+    <div class="iptv-langpick-card" role="dialog" aria-modal="true" tabindex="-1"
         aria-labelledby="iptv-langpick-title" aria-describedby="iptv-langpick-note">
 
         <?php
@@ -207,6 +216,8 @@ add_action('wp_footer', function () {
         from { transform: translateY(100%); }
         to   { transform: translateY(0); }
     }
+
+    .iptv-langpick-card:focus { outline: none; }
 
     .iptv-langpick-title {
         margin: 0 0 14px;
@@ -440,10 +451,9 @@ add_action('wp_footer', function () {
 
         document.addEventListener('keydown', onKeydown, true);
 
-        var items = focusable();
-        if (items.length) {
-            items[0].focus();
-        }
+        // The dialog, not the first button: a focus ring on one language reads
+        // as a recommendation. Tab moves into the options from here.
+        card.focus();
     }
 
     function close() {
