@@ -72,7 +72,7 @@ if (!function_exists('iptv_trial_fill_page')) {
         };
 
         $values = array(
-            'trial_eyebrow'        => $tr('Free trial'),
+            'plan_eyebrow'         => $tr('Free trial'),
             'trial_subline'        => $tr('The complete service for a full day — every channel, every film, every match. No card, nothing to cancel, and about a minute to set up.'),
             'trial_cta_text'       => $tr('Start my free trial'),
             'trial_terms_title'    => $tr('What the trial actually includes'),

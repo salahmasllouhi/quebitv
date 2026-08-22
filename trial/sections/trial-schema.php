@@ -21,7 +21,7 @@ $code = isset($currency_codes[$currency]) ? $currency_codes[$currency] : 'USD';
 
 $description = iptv_plan_field(
     'trial_schema_description',
-    trial_str('A free 24-hour trial of the complete Quebec IPTV service: 40,000+ live channels and 200,000+ films and series in 4K, on one screen, with no card required.')
+    trial_str('A free 24-hour trial of the complete Quebec IPTV service: 40,000+ live channels and 200,000+ films and series in 4K, with no card required.')
 );
 
 $graph = array(

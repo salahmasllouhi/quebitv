@@ -11,9 +11,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_res_eyebrow",
+            "key": "field_res_plan_eyebrow",
             "label": "Eyebrow",
-            "name": "reseller_eyebrow",
+            "name": "plan_eyebrow",
             "type": "text",
             "required": 0,
             "maxlength": 40,

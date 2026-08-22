@@ -93,8 +93,8 @@ if (!function_exists('iptv_trial_terms_defaults')) {
                 'text'  => 'Not a sample. All 40,000+ live channels, all 200,000+ films and series, the full guide and the same 4K servers a paying subscriber gets.',
             ),
             array(
-                'title' => 'One screen at a time',
-                'text'  => 'The only limit. Trials run on a single device — enough to judge the picture and the stability, which is what you are here to do.',
+                'title' => 'Nothing happens at the end',
+                'text'  => 'When the 24 hours are up the login stops working and that is the whole of it. No charge, no reminder emails, nothing sitting in an account waiting to be cancelled.',
             ),
         );
     }
@@ -117,7 +117,7 @@ if (!function_exists('iptv_trial_faq_defaults')) {
             ),
             array(
                 'q' => 'Do I get the whole channel list?',
-                'a' => 'Yes. The trial is the full service, not a reduced version of it: every live channel, every film and series, the complete guide and the same servers. The only difference is that it runs on one screen and lasts a day.',
+                'a' => 'Yes. The trial is the full service, not a reduced version of it: every live channel, every film and series, the complete guide and the same servers. The only difference is how long it lasts.',
             ),
             array(
                 'q' => 'Which devices can I use for the trial?',
@@ -226,5 +226,5 @@ add_action('init', function () {
     $register('trial_final_text', 'One email address, no card, and the full service for 24 hours. If it is not for you, do nothing and it ends by itself.', true);
 
     // ── Schema ───────────────────────────────────────────────────────────────
-    $register('trial_schema_description', 'A free 24-hour trial of the complete Quebec IPTV service: 40,000+ live channels and 200,000+ films and series in 4K, on one screen, with no card required.', true);
+    $register('trial_schema_description', 'A free 24-hour trial of the complete Quebec IPTV service: 40,000+ live channels and 200,000+ films and series in 4K, with no card required.', true);
 });

@@ -38,9 +38,9 @@ return array(
     'Not a sample. All 40,000+ live channels, all 200,000+ films and series, the full guide and the same 4K servers a paying subscriber gets.'
         => 'Pas un échantillon. Les plus de 40 000 chaînes en direct, les plus de 200 000 films et séries, le guide complet et les mêmes serveurs 4K qu’un abonné payant.',
 
-    'One screen at a time' => 'Un écran à la fois',
-    'The only limit. Trials run on a single device — enough to judge the picture and the stability, which is what you are here to do.'
-        => 'La seule limite. L’essai fonctionne sur un seul appareil — assez pour juger l’image et la stabilité, ce que vous êtes venu vérifier.',
+    'Nothing happens at the end' => 'Rien ne se passe à la fin',
+    'When the 24 hours are up the login stops working and that is the whole of it. No charge, no reminder emails, nothing sitting in an account waiting to be cancelled.'
+        => 'Au bout de 24 heures, les identifiants cessent de fonctionner, et c’est tout. Aucun montant prélevé, aucun courriel de relance, rien qui traîne dans un compte en attendant d’être annulé.',
 
     // ── FAQ ──────────────────────────────────────────────────────────────────
     'Questions about the free trial' => 'Questions sur l’essai gratuit',
@@ -54,8 +54,8 @@ return array(
         => 'Généralement en une ou deux minutes. Vos identifiants arrivent par courriel, et les 24 heures se comptent à partir de ce message plutôt que du formulaire — un envoi lent ne vous vole donc pas votre essai.',
 
     'Do I get the whole channel list?' => 'Ai-je accès à toute la liste des chaînes ?',
-    'Yes. The trial is the full service, not a reduced version of it: every live channel, every film and series, the complete guide and the same servers. The only difference is that it runs on one screen and lasts a day.'
-        => 'Oui. L’essai est le service intégral, pas une version réduite : toutes les chaînes en direct, tous les films et séries, le guide complet et les mêmes serveurs. La seule différence est qu’il fonctionne sur un écran et dure une journée.',
+    'Yes. The trial is the full service, not a reduced version of it: every live channel, every film and series, the complete guide and the same servers. The only difference is how long it lasts.'
+        => 'Oui. L’essai est le service intégral, pas une version réduite : toutes les chaînes en direct, tous les films et séries, le guide complet et les mêmes serveurs. La seule différence est sa durée.',
 
     'Which devices can I use for the trial?' => 'Quels appareils puis-je utiliser pour l’essai ?',
     'Any of them — smart TVs, Android TV, Apple TV, Fire Stick, iPhone, iPad, Android, Windows, Mac, set-top boxes, Chromecast, Roku and Kodi. Use whatever you would actually watch on, since that is what you are testing.'
@@ -75,6 +75,6 @@ return array(
         => 'Une adresse courriel, aucune carte, et le service complet pendant 24 heures. Si cela ne vous convient pas, ne faites rien : l’essai se termine tout seul.',
 
     // ── Schema ───────────────────────────────────────────────────────────────
-    'A free 24-hour trial of the complete Quebec IPTV service: 40,000+ live channels and 200,000+ films and series in 4K, on one screen, with no card required.'
-        => 'Un essai gratuit de 24 heures du service Quebec IPTV au complet : plus de 40 000 chaînes en direct et 200 000 films et séries en 4K, sur un écran, sans carte.',
+    'A free 24-hour trial of the complete Quebec IPTV service: 40,000+ live channels and 200,000+ films and series in 4K, with no card required.'
+        => 'Un essai gratuit de 24 heures du service Quebec IPTV au complet : plus de 40 000 chaînes en direct et 200 000 films et séries en 4K, sans carte.',
 );

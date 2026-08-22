@@ -58,7 +58,7 @@ if (!function_exists('iptv_reseller_fill_page')) {
         };
 
         $values = array(
-            'reseller_eyebrow'        => $tr('Reseller panel'),
+            'plan_eyebrow'            => $tr('Reseller panel'),
             'reseller_subline'        => $tr('Sell IPTV under your own name, at your own prices, from a panel that creates lines in seconds. Credits never expire and there is no monthly commitment.'),
             'reseller_cta_text'       => $tr('Apply for a panel'),
             'reseller_panel_title'    => $tr('What the panel does'),

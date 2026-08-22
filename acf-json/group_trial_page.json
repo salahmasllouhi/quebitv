@@ -11,9 +11,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_trial_eyebrow",
+            "key": "field_trial_plan_eyebrow",
             "label": "Eyebrow",
-            "name": "trial_eyebrow",
+            "name": "plan_eyebrow",
             "type": "text",
             "instructions": "Small pill above the headline. Leave empty for \"Free trial\".",
             "required": 0,
@@ -109,7 +109,7 @@
             "label": "Terms cards",
             "name": "trial_terms",
             "type": "repeater",
-            "instructions": "Four is the shape the grid is tuned for. Leave empty for the bundled set: no card, a full 24 hours, the complete service, one screen.",
+            "instructions": "Four is the shape the grid is tuned for. Leave empty for the bundled set: no card, a full 24 hours, the complete service, nothing happens at the end.",
             "required": 0,
             "layout": "block",
             "button_label": "Add card",
