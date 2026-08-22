@@ -780,6 +780,13 @@ require_once get_template_directory() . '/inc/page-provisioner.php';
 // left to core's wp_old_slug_redirect() or to Rank Math's Redirections module.
 require_once get_template_directory() . '/inc/legacy-redirects.php';
 
+// Corrects the site-wide JSON-LD identity. Rank Math builds the Organization and
+// WebSite nodes from its own settings, which still named the site this one was
+// cloned from and pointed at a dead staging host — on every page. Those settings
+// are unreachable outside wp-admin, so the fix lives here. Also adds the
+// FAQPage the front page has always been shaped like but never emitted.
+require_once get_template_directory() . '/inc/schema-identity.php';
+
 // M3U converter (template-m3u.php). Strings first, for the same reason the plan
 // template loads them first: the FAQ and HowTo defaults live there and both
 // m3u-data.php and m3u-schema.php read them.
