@@ -55,6 +55,16 @@
             "placeholder": ""
         },
         {
+            "key": "field_reseller_url",
+            "label": "Reseller URL",
+            "name": "reseller_url",
+            "type": "url",
+            "instructions": "Where the reseller page's Apply button goes, and the base the credit-pack buttons append ?credits=N to. Per language, like the other two.",
+            "required": 0,
+            "default_value": "https://app.quebeciptv.co/reseller",
+            "placeholder": "https://app.quebeciptv.co/reseller"
+        },
+        {
             "key": "tab_config_pricing",
             "label": "💳 Pricing Defaults",
             "name": "",
@@ -242,5 +252,5 @@
     "active": true,
     "description": "Configuration values for the pricing configurator and checkout links.",
     "show_in_rest": 0,
-    "modified": 1785577744
+    "modified": 1787616000
 }

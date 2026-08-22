@@ -804,6 +804,19 @@ require_once get_template_directory() . '/m3u/inc/m3u-seo.php';
 // French translation. Guarded by a build number; see the file header.
 require_once get_template_directory() . '/m3u/inc/m3u-pages-setup.php';
 
+// 24-hour trial (template-trial.php). Loads after plan-data.php: the template
+// reuses plan-hero.php, plan-includes.php, plan-faq.php and plan-cta.php, all of
+// which read iptv_plan_field().
+require_once get_template_directory() . '/trial/inc/trial-strings.php';
+require_once get_template_directory() . '/trial/inc/trial-pages-setup.php';
+
+// Reseller panel (template-reseller.php). Same dependency on plan-data.php, plus
+// iptv_plan_format_price() and iptv_plan_currency() for the credit packs — so a
+// credit price and a subscription price can never render in different shapes.
+require_once get_template_directory() . '/reseller/inc/reseller-strings.php';
+require_once get_template_directory() . '/reseller/inc/reseller-data.php';
+require_once get_template_directory() . '/reseller/inc/reseller-pages-setup.php';
+
 /**
  * WooCommerce: Redirect all cart operations to checkout page
  * Since the cart page is disabled, we redirect to checkout instead

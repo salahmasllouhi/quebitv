@@ -1,0 +1,358 @@
+{
+    "key": "group_reseller_page",
+    "title": "Reseller Page",
+    "fields": [
+        {
+            "key": "field_res_tab_hero",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_res_eyebrow",
+            "label": "Eyebrow",
+            "name": "reseller_eyebrow",
+            "type": "text",
+            "required": 0,
+            "maxlength": 40,
+            "placeholder": "Reseller panel"
+        },
+        {
+            "key": "field_res_plan_headline",
+            "label": "Headline (H1)",
+            "name": "plan_headline",
+            "type": "text",
+            "required": 0,
+            "maxlength": 90,
+            "placeholder": "IPTV reseller panel",
+            "instructions": "Leave empty to use the page title. Named plan_headline because this page reuses the plan hero section — see the note at the bottom of this group."
+        },
+        {
+            "key": "field_res_subline",
+            "label": "Subline",
+            "name": "reseller_subline",
+            "type": "textarea",
+            "required": 0,
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_res_cta_text",
+            "label": "Hero button",
+            "name": "reseller_cta_text",
+            "type": "text",
+            "required": 0,
+            "maxlength": 40,
+            "placeholder": "Apply for a panel",
+            "instructions": "Goes to the reseller URL set in Site Config."
+        },
+        {
+            "key": "field_res_hero_image",
+            "label": "Hero image",
+            "name": "plan_hero_image",
+            "type": "image",
+            "instructions": "Right-hand column of the hero. Reuses the plan field name.",
+            "required": 0,
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_res_hero_points",
+            "label": "Hero points",
+            "name": "plan_hero_points",
+            "type": "repeater",
+            "required": 0,
+            "layout": "table",
+            "button_label": "Add point",
+            "instructions": "Three short reassurances under the buttons.",
+            "sub_fields": [
+                {
+                    "key": "field_res_hero_point_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text",
+                    "required": 1
+                }
+            ]
+        },
+        {
+            "key": "field_res_tab_panel",
+            "label": "Panel features",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_res_panel_title",
+            "label": "Section heading",
+            "name": "reseller_panel_title",
+            "type": "text",
+            "required": 0,
+            "maxlength": 80,
+            "placeholder": "What the panel does"
+        },
+        {
+            "key": "field_res_panel_subtitle",
+            "label": "Section subheading",
+            "name": "reseller_panel_subtitle",
+            "type": "text",
+            "required": 0,
+            "maxlength": 140
+        },
+        {
+            "key": "field_res_panel_features",
+            "label": "Feature cards",
+            "name": "reseller_panel_features",
+            "type": "repeater",
+            "required": 0,
+            "layout": "block",
+            "button_label": "Add card",
+            "instructions": "Six is the shape the grid is tuned for. Leave empty for the bundled set.",
+            "sub_fields": [
+                {
+                    "key": "field_res_panel_f_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_res_panel_f_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "required": 1,
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_res_tab_packs",
+            "label": "Credit packs",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_res_packs_title",
+            "label": "Section heading",
+            "name": "reseller_packs_title",
+            "type": "text",
+            "required": 0,
+            "maxlength": 80,
+            "placeholder": "Credit packs"
+        },
+        {
+            "key": "field_res_packs_subtitle",
+            "label": "Section subheading",
+            "name": "reseller_packs_subtitle",
+            "type": "text",
+            "required": 0,
+            "maxlength": 160
+        },
+        {
+            "key": "field_res_packs",
+            "label": "Packs",
+            "name": "reseller_packs",
+            "type": "repeater",
+            "required": 0,
+            "layout": "block",
+            "button_label": "Add pack",
+            "instructions": "One credit is one month of one subscription. Four packs is what the grid expects. Price is in the currency the rest of the site is showing — do not type a symbol. A row missing either number is skipped rather than rendered as $0.00. Leave empty for the bundled 10 / 25 / 50 / 100 set.",
+            "sub_fields": [
+                {
+                    "key": "field_res_pack_credits",
+                    "label": "Credits",
+                    "name": "credits",
+                    "type": "number",
+                    "required": 1
+                },
+                {
+                    "key": "field_res_pack_price",
+                    "label": "Price",
+                    "name": "price",
+                    "type": "number",
+                    "required": 1
+                },
+                {
+                    "key": "field_res_pack_popular",
+                    "label": "Most popular",
+                    "name": "popular",
+                    "type": "true_false",
+                    "required": 0,
+                    "ui": 1,
+                    "default_value": 0
+                }
+            ]
+        },
+        {
+            "key": "field_res_tab_steps",
+            "label": "How it works",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_res_steps_title",
+            "label": "Section heading",
+            "name": "reseller_steps_title",
+            "type": "text",
+            "required": 0,
+            "maxlength": 80,
+            "placeholder": "How it works"
+        },
+        {
+            "key": "field_res_steps",
+            "label": "Steps",
+            "name": "reseller_steps",
+            "type": "repeater",
+            "required": 0,
+            "layout": "block",
+            "button_label": "Add step",
+            "instructions": "Four steps. Leave empty for: apply, get your panel, load credits, start selling.",
+            "sub_fields": [
+                {
+                    "key": "field_res_step_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_res_step_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "required": 1,
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_res_tab_faq",
+            "label": "FAQ",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_res_faq_title",
+            "label": "FAQ heading",
+            "name": "plan_faq_title",
+            "type": "text",
+            "required": 0,
+            "maxlength": 80,
+            "placeholder": "Reseller questions"
+        },
+        {
+            "key": "field_res_faq",
+            "label": "FAQ rows",
+            "name": "plan_faq",
+            "type": "repeater",
+            "required": 0,
+            "layout": "block",
+            "button_label": "Add question",
+            "instructions": "Leave empty for the six bundled questions. These also become the FAQPage structured data.",
+            "sub_fields": [
+                {
+                    "key": "field_res_faq_q",
+                    "label": "Question",
+                    "name": "question",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_res_faq_a",
+                    "label": "Answer",
+                    "name": "answer",
+                    "type": "textarea",
+                    "required": 1,
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_res_tab_final",
+            "label": "Closing band",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_res_final_title",
+            "label": "Closing heading",
+            "name": "plan_final_title",
+            "type": "text",
+            "required": 0,
+            "maxlength": 90,
+            "placeholder": "Start selling this week"
+        },
+        {
+            "key": "field_res_final_text",
+            "label": "Closing text",
+            "name": "plan_final_text",
+            "type": "textarea",
+            "required": 0,
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_res_tab_sections",
+            "label": "Sections",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_res_show_devices",
+            "label": "Show supported devices",
+            "name": "plan_show_devices",
+            "type": "true_false",
+            "required": 0,
+            "default_value": 1,
+            "ui": 1,
+            "instructions": "The shared device chips — what your customers will be able to watch on."
+        },
+        {
+            "key": "field_res_show_reviews",
+            "label": "Show reviews",
+            "name": "plan_show_reviews",
+            "type": "true_false",
+            "required": 0,
+            "default_value": 0,
+            "ui": 1,
+            "instructions": "Off by default. The front-page reviews are end-customer reviews about picture quality, which read wrong on a page selling a wholesale panel to a business."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-reseller.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Fields for the Reseller Page template. Several fields are deliberately named plan_* rather than reseller_* — this page reuses the plan hero, FAQ and closing band, and those sections read the plan field names.",
+    "show_in_rest": 1,
+    "modified": 1787616000
+}

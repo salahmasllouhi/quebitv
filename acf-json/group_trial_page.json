@@ -1,0 +1,261 @@
+{
+    "key": "group_trial_page",
+    "title": "Trial Page",
+    "fields": [
+        {
+            "key": "field_trial_tab_hero",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_trial_eyebrow",
+            "label": "Eyebrow",
+            "name": "trial_eyebrow",
+            "type": "text",
+            "instructions": "Small pill above the headline. Leave empty for \"Free trial\".",
+            "required": 0,
+            "placeholder": "Free trial",
+            "maxlength": 40
+        },
+        {
+            "key": "field_trial_plan_headline",
+            "label": "Headline (H1)",
+            "name": "plan_headline",
+            "type": "text",
+            "instructions": "Leave empty to use the page title. Named plan_headline, not trial_headline, because this page reuses the plan hero section and that is the field it reads — see the note at the bottom of this group.",
+            "required": 0,
+            "placeholder": "24-hour IPTV free trial",
+            "maxlength": 90
+        },
+        {
+            "key": "field_trial_subline",
+            "label": "Subline",
+            "name": "trial_subline",
+            "type": "textarea",
+            "required": 0,
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_trial_cta_text",
+            "label": "Hero button",
+            "name": "trial_cta_text",
+            "type": "text",
+            "instructions": "Goes to the trial checkout set in Site Config.",
+            "required": 0,
+            "placeholder": "Start my free trial",
+            "maxlength": 40
+        },
+        {
+            "key": "field_trial_plan_hero_image",
+            "label": "Hero image",
+            "name": "plan_hero_image",
+            "type": "image",
+            "instructions": "Right-hand column of the hero. Reuses the plan field name.",
+            "required": 0,
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_trial_plan_hero_points",
+            "label": "Hero points",
+            "name": "plan_hero_points",
+            "type": "repeater",
+            "instructions": "Three short reassurances under the buttons. Leave empty for the bundled set.",
+            "required": 0,
+            "layout": "table",
+            "button_label": "Add point",
+            "sub_fields": [
+                {
+                    "key": "field_trial_hero_point_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text",
+                    "required": 1
+                }
+            ]
+        },
+        {
+            "key": "field_trial_tab_terms",
+            "label": "Trial terms",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_trial_terms_title",
+            "label": "Section heading",
+            "name": "trial_terms_title",
+            "type": "text",
+            "required": 0,
+            "placeholder": "What the trial actually includes",
+            "maxlength": 80
+        },
+        {
+            "key": "field_trial_terms_subtitle",
+            "label": "Section subheading",
+            "name": "trial_terms_subtitle",
+            "type": "text",
+            "required": 0,
+            "maxlength": 140
+        },
+        {
+            "key": "field_trial_terms",
+            "label": "Terms cards",
+            "name": "trial_terms",
+            "type": "repeater",
+            "instructions": "Four is the shape the grid is tuned for. Leave empty for the bundled set: no card, a full 24 hours, the complete service, one screen.",
+            "required": 0,
+            "layout": "block",
+            "button_label": "Add card",
+            "sub_fields": [
+                {
+                    "key": "field_trial_term_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_trial_term_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "required": 1,
+                    "rows": 3,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_trial_tab_faq",
+            "label": "FAQ",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_trial_plan_faq_title",
+            "label": "FAQ heading",
+            "name": "plan_faq_title",
+            "type": "text",
+            "required": 0,
+            "placeholder": "Questions about the free trial",
+            "maxlength": 80
+        },
+        {
+            "key": "field_trial_plan_faq",
+            "label": "FAQ rows",
+            "name": "plan_faq",
+            "type": "repeater",
+            "instructions": "Leave empty for the six bundled questions. These also become the FAQPage structured data.",
+            "required": 0,
+            "layout": "block",
+            "button_label": "Add question",
+            "sub_fields": [
+                {
+                    "key": "field_trial_faq_question",
+                    "label": "Question",
+                    "name": "question",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_trial_faq_answer",
+                    "label": "Answer",
+                    "name": "answer",
+                    "type": "textarea",
+                    "required": 1,
+                    "rows": 4,
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_trial_tab_final",
+            "label": "Closing band",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_trial_plan_final_title",
+            "label": "Closing heading",
+            "name": "plan_final_title",
+            "type": "text",
+            "required": 0,
+            "placeholder": "Try it tonight",
+            "maxlength": 90
+        },
+        {
+            "key": "field_trial_plan_final_text",
+            "label": "Closing text",
+            "name": "plan_final_text",
+            "type": "textarea",
+            "required": 0,
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_trial_tab_sections",
+            "label": "Sections",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_trial_plan_show_steps",
+            "label": "Show setup steps",
+            "name": "plan_show_steps",
+            "type": "true_false",
+            "required": 0,
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_trial_plan_show_devices",
+            "label": "Show supported devices",
+            "name": "plan_show_devices",
+            "type": "true_false",
+            "required": 0,
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_trial_plan_show_reviews",
+            "label": "Show reviews",
+            "name": "plan_show_reviews",
+            "type": "true_false",
+            "required": 0,
+            "default_value": 1,
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-trial.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Fields for the Trial Page template. Several fields are deliberately named plan_* rather than trial_* — this page reuses the plan hero, FAQ and closing band, and those sections read the plan field names. Renaming them here would mean forking three working sections for cosmetics.",
+    "show_in_rest": 1,
+    "modified": 1787616000
+}

@@ -1,0 +1,54 @@
+/* ============================================
+   RESELLER PAGE
+   Small on purpose. The credit-pack grid is
+   plan.css's .plan-price-* component and the
+   steps are the front page's .dv2-journey-*,
+   both loaded alongside this. Only the few
+   places a reseller page differs live here.
+   ============================================ */
+
+/* The pack cards carry no "per month" line and no savings flag, so they come out
+   noticeably shorter than a plan card. Without this the button floats away from
+   the price it belongs to. */
+.reseller-packs .plan-price-card {
+    justify-content: flex-start;
+}
+
+.reseller-packs .plan-price-per {
+    margin-bottom: 20px;
+}
+
+/* Six cards rather than the front page's eight features. Three across at the
+   shell width divides evenly; the default grid would leave two on the last row. */
+.reseller-panel .dv2-feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 980px) {
+    .reseller-panel .dv2-feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .reseller-panel .dv2-feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Four steps rather than the three the journey component was built for. */
+.reseller-steps .dv2-journey-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+    .reseller-steps .dv2-journey-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .reseller-steps .dv2-journey-cards {
+        grid-template-columns: 1fr;
+    }
+}

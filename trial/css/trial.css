@@ -1,0 +1,36 @@
+/* ============================================
+   TRIAL PAGE
+   Small on purpose. Everything on this page is
+   a plan-page or front-page component reused as
+   is — plan.css is loaded alongside this, which
+   is why the hero and closing band already have
+   their styling. Only the two things that
+   differ live here.
+   ============================================ */
+
+/* The hero has no price line, so the actions sit closer to the subline than on
+   a plan page and the column looks short without a little more air. */
+.trial-hero .plan-hero-sub {
+    margin-bottom: 26px;
+}
+
+/* Four cards rather than the three the front page's feature grid was tuned for.
+   At the shell width three columns leaves an orphan on the second row, so this
+   grid goes to two-up early and stays there. */
+.trial-terms .dv2-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+@media (max-width: 720px) {
+    .trial-terms .dv2-feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* No number badge on these cards — they are not steps, and the front page's
+   feature icons would imply an ordering the four terms do not have. */
+.trial-terms .dv2-feature-card-head {
+    margin-bottom: 8px;
+}
