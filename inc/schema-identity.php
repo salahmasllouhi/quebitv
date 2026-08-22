@@ -226,6 +226,38 @@ add_filter('option_rank_math_options_titles', function ($titles) {
 }, 20);
 
 /**
+ * The site title, per language.
+ *
+ * This is where "nordictv.io" was actually surviving, and it took three
+ * attempts to find. The raw blogname option is correct — wp_get_option returns
+ * "Quebec IPTV" — but Polylang registers the site title as a translatable
+ * string and filters option_blogname to swap in the current language's
+ * translation. Both of those translations still held the old brand, so
+ * get_bloginfo('name') returned nordictv.io on every request, and everything
+ * downstream of it inherited that: og:site_name on every page, which is the
+ * name shown on a Facebook, LinkedIn, Slack or WhatsApp link preview.
+ *
+ * The right long-term fix is to correct the two entries under
+ * Languages → String translations, and doing that makes this filter a no-op
+ * rather than a conflict. It stays regardless, because a stale site title is
+ * not something that should be one forgotten admin screen away from coming
+ * back on every page of the site.
+ *
+ * Priority 999 so it runs after Polylang's own option_blogname filter rather
+ * than being overwritten by it.
+ */
+add_filter('option_blogname', function ($name) {
+    // Only override a value that is clearly the old brand. A deliberate
+    // per-language site title should still work — this is here to correct a
+    // stale translation, not to forbid translating the name at all.
+    if (is_string($name) && stripos($name, 'nordictv') !== false) {
+        return 'Quebec IPTV';
+    }
+
+    return $name;
+}, 999);
+
+/**
  * FAQPage for the front page.
  *
  * The home page renders nine questions from the faq_list ACF repeater, and
