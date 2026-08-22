@@ -258,6 +258,64 @@ add_filter('option_blogname', function ($name) {
 }, 999);
 
 /**
+ * og:site_name, at Rank Math's own output filter.
+ *
+ * The option filters above are not enough on their own: Rank Math builds its
+ * settings object once, early, and the theme loads after that — so a filter on
+ * option_rank_math_options_titles never sees the read that produced this tag.
+ *
+ * Rank Math derives the filter name from the network and the property, and the
+ * exact spelling has moved across versions, so every plausible form is hooked.
+ * An unused filter name costs nothing, and this tag is worth the belt and
+ * braces: it is the name shown on a Facebook, LinkedIn, Slack or WhatsApp
+ * preview of any link to this site, and it was still naming the wrong company.
+ */
+foreach (array(
+    'rank_math/opengraph/facebook/og:site_name',
+    'rank_math/opengraph/og:site_name',
+    'rank_math/opengraph/facebook/site_name',
+    'rank_math/opengraph/site_name',
+    'rank_math/frontend/og:site_name',
+) as $iptv_og_filter) {
+    add_filter($iptv_og_filter, function ($value) {
+        if (is_string($value) && stripos($value, 'nordictv') !== false) {
+            return 'Quebec IPTV';
+        }
+
+        return $value;
+    }, 999);
+}
+
+/**
+ * Last resort for the same tag.
+ *
+ * If none of the filter names above match the installed version, the tag is
+ * rewritten in the buffered head output instead. Narrow on purpose: it matches
+ * one specific meta property carrying one specific stale value, so it cannot
+ * touch anything else, and it stops doing any work the moment the underlying
+ * translation is corrected.
+ *
+ * Buffering the head is not free, so this only arms itself on the front end.
+ */
+add_action('template_redirect', function () {
+    if (is_admin() || is_feed() || wp_doing_ajax()) {
+        return;
+    }
+
+    ob_start(function ($html) {
+        if (stripos($html, 'nordictv') === false) {
+            return $html;
+        }
+
+        return preg_replace(
+            '/(<meta[^>]*property=["\']og:site_name["\'][^>]*content=["\'])[^"\']*nordictv[^"\']*(["\'])/i',
+            '${1}Quebec IPTV${2}',
+            $html
+        );
+    });
+}, 0);
+
+/**
  * FAQPage for the front page.
  *
  * The home page renders nine questions from the faq_list ACF repeater, and
