@@ -215,9 +215,11 @@ if (!function_exists('iptv_front_page_analysis_elements')) {
         $out[] = array('structure', '<h2>' . $f('contact_title', 'We\'re here to help') . '</h2>');
         $out[] = array('copy', '<p>' . $f('contact_subtitle', '') . '</p>');
 
-        // Support cards. Their labels are H3s on the page and the WhatsApp and
-        // Telegram cards are the page's only outbound links, which is a test of
-        // its own ("link out to external resources").
+        // Support cards. Their labels are H3s on the page, and the WhatsApp card
+        // is now the page's only outbound link — Telegram, which used to be the
+        // other, has been dropped from both languages. That matters beyond the
+        // contact section: Rank Math scores "link out to external resources",
+        // and the front page is one card away from having nothing to point at.
         foreach (iptv_front_page_support_cards($post_id) as $card) {
             $out[] = array('structure', '<h3>' . $card['label'] . '</h3>');
             $out[] = array('structure', '<p><a href="' . esc_url($card['link']) . '">'
@@ -251,7 +253,9 @@ if (!function_exists('iptv_front_page_support_cards')) {
      * iptv_contact_cards() reads the repeater off get_option('page_on_front'),
      * which in the admin is the current language's front page rather than the
      * one being edited — same reason iptv_front_page_field() exists. Falls back
-     * to the same three defaults inc/contact-cards.php uses.
+     * to the same defaults inc/contact-cards.php uses, and has to keep matching
+     * them: a card here that the page does not render would tell Rank Math about
+     * a heading and an outbound link that no visitor can see.
      *
      * @param int $post_id
      * @return array<int,array{label:string,value:string,link:string}>
@@ -288,11 +292,6 @@ if (!function_exists('iptv_front_page_support_cards')) {
                 'label' => iptv_front_page_field($post_id, 'contact_card_whatsapp_label', 'WhatsApp'),
                 'value' => iptv_front_page_field($post_id, 'contact_card_whatsapp_value', 'Chat with us live'),
                 'link'  => 'https://wa.me/33745476690',
-            ),
-            array(
-                'label' => iptv_front_page_field($post_id, 'contact_card_telegram_label', 'Telegram'),
-                'value' => iptv_front_page_field($post_id, 'contact_card_telegram_value', '@QuebecIPTV'),
-                'link'  => 'https://t.me/QuebecIPTV',
             ),
         );
     }

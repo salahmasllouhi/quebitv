@@ -2,7 +2,7 @@
 /**
  * Contact cards
  *
- * The support cards on the front page — email, WhatsApp, Telegram — extracted so
+ * The support cards on the front page — email and WhatsApp — extracted so
  * the Contact page can show the same thing instead of a form.
  *
  * The cards come from the `contact_cards` ACF repeater on the front page, which
@@ -62,12 +62,6 @@ if (!function_exists('iptv_contact_cards')) {
                     'label' => iptv_text('contact_card_whatsapp_label', 'WhatsApp'),
                     'value' => iptv_text('contact_card_whatsapp_value', 'Chat with us live'),
                     'link'  => 'https://wa.me/33745476690',
-                    'blank' => true,
-                ),
-                array(
-                    'label' => iptv_text('contact_card_telegram_label', 'Telegram'),
-                    'value' => iptv_text('contact_card_telegram_value', '@QuebecIPTV'),
-                    'link'  => 'https://t.me/QuebecIPTV',
                     'blank' => true,
                 ),
             );
@@ -160,9 +154,12 @@ if (!function_exists('iptv_contact_cards_grid')) {
             'telegram' => array('label' => iptv_text('contact_cta_telegram', 'Message on Telegram'), 'variant' => 'blue'),
         );
 
-        // The grid is drawn for three cards. A site that lists fewer — the
-        // French front page dropped Telegram — would otherwise leave the row
-        // hanging off to the left, so the count travels to CSS as a modifier.
+        // The grid is drawn for three cards, which is one more than either
+        // language now lists: Telegram was dropped from both. Fewer than three
+        // would otherwise leave the row hanging off to the left, so the count
+        // travels to CSS as a modifier. Three is still supported — the CSS and
+        // the channel detection below both handle it — so adding a card back in
+        // the editor needs no code change.
         $modifier = (count($cards) < 3) ? ' dv2-support-grid--' . count($cards) : '';
 
         $out = '<div class="dv2-support-grid' . esc_attr($modifier) . '">';
@@ -223,7 +220,7 @@ add_shortcode('nordictv_contact', function ($atts) {
     if ($atts['intro'] !== '0') {
         $out .= '<p class="dv2-contact-page-intro">' . esc_html(iptv_text(
             'contact_subtitle',
-            'Reach out anytime via email, WhatsApp, or Telegram. Our support team typically responds within minutes.'
+            'Reach out anytime by email or WhatsApp. Our support team typically responds within minutes.'
         )) . '</p>';
     }
 

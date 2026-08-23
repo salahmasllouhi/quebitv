@@ -7,7 +7,7 @@
  * [nordictv_contact] shortcode — one definition, so the two cannot drift apart.
  */
 $title    = iptv_text('contact_title', 'We\'re here to help');
-$subtitle = iptv_text('contact_subtitle', 'Reach out anytime via email, WhatsApp, or Telegram. Our support team typically responds within minutes.');
+$subtitle = iptv_text('contact_subtitle', 'Reach out anytime by email or WhatsApp. Our support team typically responds within minutes.');
 ?>
 <section id="contact" class="contact dv2-section">
     <div class="container">
