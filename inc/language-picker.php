@@ -25,18 +25,23 @@
  * whether to reveal it by reading the cookie in the browser. Nothing about this
  * page varies by visitor, which is exactly what a page cache wants.
  *
- * ── Why it is a bottom sheet on mobile ───────────────────────────────────────
+ * ── It blocks the page, on every screen size ─────────────────────────────────
  *
- * Google treats a popup that covers the content on a mobile page arrived at
- * from search as an intrusive interstitial, and discounts the page for it. The
- * carve-out is for banners "that use a reasonable amount of screen space and are
- * easily dismissible". So on phones this is a compact sheet at the bottom of the
- * viewport that leaves the page visible and scrollable behind it, and only on
- * wider screens — where the policy does not apply — does it become a centred
- * dialog with a backdrop.
+ * This first shipped as a bottom sheet on phones — a banner that left the page
+ * readable and scrollable behind it — because Google treats a popup covering
+ * the content of a mobile page arrived at from search as an intrusive
+ * interstitial and discounts the page for it. The carve-out is for banners
+ * using "a reasonable amount of screen space" that are "easily dismissible".
  *
- * It also carries data-nosnippet so the two words of chrome cannot end up in a
- * search result snippet.
+ * That is a real trade-off and it was made the other way on purpose: the site
+ * owner wants the language settled before anything else is touched, which a
+ * banner you can tap past does not achieve. So it is now a centred dialog with a
+ * backdrop at every width, and the page behind it is inert until a language is
+ * chosen. If mobile rankings dip on pages people land on from search, this is
+ * the first thing to reconsider.
+ *
+ * It carries data-nosnippet either way, so the chrome cannot end up in a search
+ * result snippet.
  *
  * @package Quebec_IPTV
  */
@@ -107,7 +112,13 @@ add_action('wp_footer', function () {
     }
     ?>
 <div class="iptv-langpick" data-lang-pick data-nosnippet hidden>
-    <div class="iptv-langpick-backdrop" data-lang-dismiss></div>
+    <?php
+    // Deliberately not data-lang-dismiss. A tap on the dark area beside the card
+    // is far more likely to be a mis-tap than an answer, and this dialog is
+    // asking a question worth one deliberate press. The close button and Escape
+    // are the way out.
+    ?>
+    <div class="iptv-langpick-backdrop"></div>
 
     <?php
     // tabindex="-1" so the dialog itself can take focus when it opens. Focusing
@@ -184,37 +195,38 @@ add_action('wp_footer', function () {
         inset: 0;
         z-index: 2147483000;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
-        /* No backdrop on phones: the sheet is a banner over a page that stays
-           readable and scrollable, which is what keeps it out of Google's
-           intrusive-interstitial rule. */
-        pointer-events: none;
+        padding: 20px;
+        box-sizing: border-box;
+        /* Blocking at every width, phones included. Nothing behind this can be
+           tapped until a language is picked. touch-action and overscroll stop
+           iOS Safari scrolling the page under the overlay, which it will happily
+           do on a drag even when the document has overflow:hidden. */
+        touch-action: none;
+        overscroll-behavior: contain;
     }
 
     .iptv-langpick-backdrop {
-        display: none;
+        position: absolute;
+        inset: 0;
+        background: rgba(7, 25, 29, .62);
+        animation: iptvLangFade .28s ease;
     }
 
     .iptv-langpick-card {
-        pointer-events: auto;
         position: relative;
         width: 100%;
         max-width: 560px;
         box-sizing: border-box;
         background: var(--dv2-surface, #ffffff);
         color: var(--dv2-ink, #07191d);
-        border-top: 3px solid var(--dv2-blue, #fc6c34);
-        border-radius: 18px 18px 0 0;
-        padding: 20px 20px 22px;
-        box-shadow: 0 -10px 40px rgba(22, 55, 63, 0.18);
+        border-top: 4px solid var(--dv2-blue, #fc6c34);
+        border-radius: 18px;
+        padding: 24px 22px 24px;
+        box-shadow: 0 30px 70px rgba(7, 25, 29, .38);
         font-family: var(--dv2-font-body, 'Space Grotesk', system-ui, sans-serif);
-        animation: iptvLangUp .28s ease;
-    }
-
-    @keyframes iptvLangUp {
-        from { transform: translateY(100%); }
-        to   { transform: translateY(0); }
+        animation: iptvLangPop .28s ease;
     }
 
     .iptv-langpick-card:focus { outline: none; }
@@ -307,31 +319,9 @@ add_action('wp_footer', function () {
         color: var(--dv2-ink, #07191d);
     }
 
-    /* Wider than a phone: a proper centred dialog. Google's interstitial rule is
-       about mobile, so the backdrop is safe to introduce here. */
+    /* Wider than a phone: same dialog, a little more generous. */
     @media (min-width: 720px) {
-        .iptv-langpick {
-            align-items: center;
-        }
-
-        .iptv-langpick-backdrop {
-            display: block;
-            pointer-events: auto;
-            position: absolute;
-            inset: 0;
-            background: rgba(7, 25, 29, .55);
-            animation: iptvLangFade .28s ease;
-        }
-
-        .iptv-langpick-card {
-            width: calc(100% - 40px);
-            border-radius: 18px;
-            border-top-width: 4px;
-            padding: 26px 28px 28px;
-            box-shadow: 0 30px 70px rgba(7, 25, 29, .35);
-            animation: iptvLangPop .28s ease;
-        }
-
+        .iptv-langpick-card { padding: 26px 28px 28px; }
         .iptv-langpick-title { font-size: 1.16rem; }
         .iptv-langpick-btn { padding: 15px 16px; font-size: 1.02rem; }
     }
@@ -442,12 +432,11 @@ add_action('wp_footer', function () {
         opener = document.activeElement;
         root.hidden = false;
 
-        // Only lock scrolling where there is a backdrop to justify it. On a
-        // phone the page behind stays scrollable, which is the difference
-        // between a banner and an interstitial.
-        if (window.matchMedia('(min-width: 720px)').matches) {
-            document.documentElement.style.overflow = 'hidden';
-        }
+        // Both elements, not just one: iOS Safari scrolls whichever of the two
+        // still can, so locking only <html> leaves the page draggable behind
+        // the overlay on a phone.
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
 
         document.addEventListener('keydown', onKeydown, true);
 
@@ -459,6 +448,7 @@ add_action('wp_footer', function () {
     function close() {
         root.hidden = true;
         document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
         document.removeEventListener('keydown', onKeydown, true);
 
         if (opener && typeof opener.focus === 'function') {
