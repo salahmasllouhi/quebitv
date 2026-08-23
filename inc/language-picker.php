@@ -246,9 +246,14 @@ add_action('wp_footer', function () {
         margin: 0 .35em;
     }
 
+    /* Stacked on phones, full width each. Two across only reads well when both
+       buttons are comfortably wider than their label — below that the flag and
+       the word start fighting for the same line, and it breaks at a different
+       width in French than in English because "Français" is the longer word.
+       One column sidesteps the whole question and works at any phone size. */
     .iptv-langpick-actions {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
         gap: 10px;
     }
 
@@ -319,7 +324,11 @@ add_action('wp_footer', function () {
         color: var(--dv2-ink, #07191d);
     }
 
-    /* Wider than a phone: same dialog, a little more generous. */
+    /* Wider than a phone: side by side, and a little more generous. */
+    @media (min-width: 600px) {
+        .iptv-langpick-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
     @media (min-width: 720px) {
         .iptv-langpick-card { padding: 26px 28px 28px; }
         .iptv-langpick-title { font-size: 1.16rem; }
@@ -336,10 +345,6 @@ add_action('wp_footer', function () {
         .iptv-langpick-card,
         .iptv-langpick-backdrop { animation: none; }
         .iptv-langpick-btn { transition: none; }
-    }
-
-    @media (max-width: 360px) {
-        .iptv-langpick-actions { grid-template-columns: 1fr; }
     }
 </style>
 
