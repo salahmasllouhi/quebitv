@@ -14,6 +14,14 @@ add_action('wp_footer', function () {
         return;
     }
     ?>
+    <style id="ibos-chat-position">
+        /* Keep the iBos launcher above the existing Chaty contact button and
+         * the sticky CTA bar. The widget reads this variable inside its
+         * shadow root when it positions the launcher. */
+        #ibos-chat-host {
+            --bottom: calc(var(--sticky-cta-offset, 0px) + 100px) !important;
+        }
+    </style>
     <script>
         window.iBosChat = {
             theme: 'auto',
