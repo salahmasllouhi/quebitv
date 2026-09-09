@@ -753,6 +753,7 @@ require_once get_template_directory() . '/inc/front-page-seo.php';
 // Sticky mobile CTA bar (countdown + pricing/trial buttons) — loads after
 // site-config.php and iptv-text.php, both of which it reads through.
 require_once get_template_directory() . '/inc/sticky-cta.php';
+require_once get_template_directory() . '/inc/chatbot-widget.php';
 
 // Plan pages (template-plan.php). plan-strings.php first: it holds the
 // audience and FAQ default copy that plan-data.php reads, as well as the
